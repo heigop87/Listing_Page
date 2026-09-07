@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400..700,0..1,0&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
 :root{--ink:#040011;--purple:#260754;--accent:#6a519a;--text:#494550;--muted:#6a6577;--faint:#8a8594;--line:#e2e8f0;--bg:#f8f9fa;--chip:#f3efff;--chipline:#cbb8ec;--notebg:#1a0b33;--ok:#2e7d32}
 *{box-sizing:border-box} html{scroll-behavior:smooth} @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -67,6 +69,7 @@ dl.spec div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;b
 .feat{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px} .feat li{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:700 13.5px Manrope;color:var(--ink)} .feat .material-symbols-outlined{color:var(--accent);font-size:20px}
 /* media */
 .media{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px} .media .t{position:relative;min-width:0;aspect-ratio:16/9;border-radius:18px;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 26px Manrope;border:1px solid var(--line)} .media .t .lab{position:absolute;top:12px;left:12px;background:#fff;border:1px solid #ece7f5;border-radius:9999px;padding:6px 11px;font:700 12px Manrope;color:var(--ink)} .media .t .btn{position:absolute;width:auto;left:50%;top:50%;transform:translate(-50%,-50%)}
+.nx{display:grid;grid-template-columns:1.25fr 1fr;gap:14px} .nxmap{height:420px;background:#e8eef5} .nxmap .nxpin{width:26px;height:26px;border-radius:9999px;background:var(--purple);color:#fff;font:800 13px Manrope;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.25)}
 /* waylo */
 .waylo{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center} .waylo input{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font:600 14px Manrope} .waylo .sug{grid-column:span 2;display:flex;gap:8px;flex-wrap:wrap} .waylo .sug button{border:1px solid var(--line);background:var(--bg);border-radius:9999px;padding:8px 13px;font:700 12.5px Manrope;color:var(--purple);cursor:pointer} .waylo .lim{grid-column:span 2;font:600 12px Manrope;color:var(--faint)}
 /* value */
@@ -106,7 +109,7 @@ footer.site{background:#fff;border-top:1px solid rgba(4,0,17,.08);margin-top:cla
 body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 0 14px} body.notes .n.top,body.notes .n.in{display:inline-block}
 .notesbar{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;gap:6px;align-items:center;background:var(--notebg);color:#fff;border-radius:9999px;padding:8px 8px 8px 14px;font:700 13px Manrope;box-shadow:0 12px 28px -10px rgba(0,0,0,.5)} .notesbar button{border:none;border-radius:9999px;padding:7px 12px;font:800 12px Manrope;cursor:pointer;background:#fff;color:var(--purple)} .notesbar button[aria-pressed="true"]{background:#c9a3ff;color:var(--notebg)}
 .order{background:var(--notebg);color:#fff;border-radius:20px;padding:20px 22px;margin-top:22px;display:none} body.notes .order{display:block} .order h3{color:#fff;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px} .order ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:32px;font:600 13px/1.6 Manrope} .order li a{color:#fff;text-decoration:none} .order li span{color:#c9a3ff} .order .m{margin-top:12px;font:600 12px Manrope;color:#c9a3ff}
-@media (max-width:900px){nav.main{display:none} .two{grid-template-columns:1fr} .side{display:none} .card.mob{display:block} .gal{grid-template-columns:1fr 1fr;grid-template-rows:180px 110px} .gal .t.cover{grid-row:1;grid-column:1/3} .gal .t:nth-child(n+4){display:none} .facts{grid-template-columns:repeat(2,1fr)} .fact.price{grid-column:span 2} ul.rgrid{grid-template-columns:1fr} .cols,.fcols{grid-template-columns:1fr 1fr} .media,.calc,.sgrid,.waylo{grid-template-columns:1fr} .waylo .sug,.waylo .lim{grid-column:span 1} .basebar{display:flex} body{padding-bottom:78px} .notesbar{bottom:86px} .order ol{columns:1} .jump .qa{display:none}}
+@media (max-width:900px){nav.main{display:none} .two{grid-template-columns:1fr} .side{display:none} .card.mob{display:block} .gal{grid-template-columns:1fr 1fr;grid-template-rows:180px 110px} .gal .t.cover{grid-row:1;grid-column:1/3} .gal .t:nth-child(n+4){display:none} .facts{grid-template-columns:repeat(2,1fr)} .fact.price{grid-column:span 2} ul.rgrid{grid-template-columns:1fr} .cols,.fcols{grid-template-columns:1fr 1fr} .media,.calc,.sgrid,.waylo,.nx{grid-template-columns:1fr} .nxmap{height:300px} .waylo .sug,.waylo .lim{grid-column:span 1} .basebar{display:flex} body{padding-bottom:78px} .notesbar{bottom:86px} .order ol{columns:1} .jump .qa{display:none}}
 @media (max-width:560px){.n{max-width:260px}}
 </style></head>
 <body class="notes">
@@ -125,7 +128,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#about">About this boat</a> <span>· description, highlight, activities</span></li>
       <li><a href="#specs">Specifications</a> <span>· 7 tabs, all in the DOM</span></li>
       <li><a href="#media">Deck layout</a> <span>· only where present, 3D tour stays in the gallery</span></li>
-      <li><a href="#nautix">NautiX range calculator</a> <span>· speed and fuel in, range out</span></li>
+      <li><a href="#nautix">NautiX trip map</a> <span>· A to B, trip time, fuel, tank level</span></li>
       <li><a href="#waylo">Ask Waylo</a> <span>· used at median 6 min</span></li>
       <li><a href="#value">Price and value</a> <span>· factors, price history, warranty detail</span></li>
       <li><a href="#financing">Financing and insurance</a> <span>· calculator, prequalify, insurance</span></li>
@@ -266,20 +269,19 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="nautix">
-    <span class="n top"><b>10</b>NautiX range calculator, its own module after the walk through. Speed and fuel on board in, range and hours out, from the manufacturer consumption curve with a 10% reserve. Range is never shown without its basis.</span>
-    <span class="eyebrow">Range</span>
-    <h2>Azimut 72 Fly Range Calculator</h2>
-    <p class="sub">NautiX Range Finder for <a href="/brands/azimut-yachts-for-sale/72-fly/">Azimut 72 Fly</a> powered by YachtWay. Figures from the manufacturer curve for twin MAN V12 1400, 10% reserve held back.</p>
-    <div class="calc">
+    <span class="n top"><b>10</b>NautiX, its own module after the layout. A map: the buyer sets point A and point B and sees this hull's performance for the trip at the chosen speed: distance, trip time, fuel burned, tank level on arrival, and whether it fits inside the range with a 10% reserve. Figures from the manufacturer curve, basis always stated.</span>
+    <span class="eyebrow">NautiX</span>
+    <h2>Plan a Trip on This Azimut 72 Fly</h2>
+    <p class="sub">Tap the map to set A, then B. Or pick a route. NautiX Range Finder for <a href="/brands/azimut-yachts-for-sale/72-fly/">Azimut 72 Fly</a> powered by YachtWay, twin MAN V12 1400, 4,800 L tank, 10% reserve held back.</p>
+    <div class="nx">
+      <div class="card" style="padding:0;overflow:hidden"><div id="nxmap" class="nxmap" role="application" aria-label="NautiX trip map"></div></div>
       <div class="card">
-        <label for="n-speed">Cruising speed <span id="n-speed-v" style="color:var(--ink)">27 kn</span></label><input id="n-speed" type="range" min="8" max="32" value="27" style="padding:0">
-        <label for="n-fuel">Fuel on board <span id="n-fuel-v" style="color:var(--ink)">100%</span></label><input id="n-fuel" type="range" min="10" max="100" value="100" style="padding:0">
-        <p class="sub" style="font-size:13px;margin:14px 0 0">Tank 4,800 L · 1,268 gal. Max range indicator shows how far you can go with the current fuel at the chosen speed.</p>
-      </div>
-      <div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start">
-        <div><div class="out" id="n-range">320 nm<small>range at this speed</small></div></div>
-        <div><div class="out" id="n-hours">11.9 h<small>hours underway</small></div></div>
-        <div class="kv" style="grid-column:span 2;margin-top:0"><div><b>Fuel burn</b><span id="n-burn">365 L/h · 96 gal/h</span></div><div><b>Usable fuel</b><span id="n-usable">4,320 L</span></div><div><b>Miami to Bimini</b><span id="n-trip">50 nm · 1.9 h</span></div><div><b>Basis</b><span>Manufacturer curve</span></div></div>
+        <div class="chips" style="margin:0 0 12px"><button type="button" class="nxp" data-a="25.77,-80.13" data-b="25.72,-79.30" data-n="Miami to Bimini">Miami to Bimini</button><button type="button" class="nxp" data-a="25.77,-80.13" data-b="24.56,-81.80" data-n="Miami to Key West">Miami to Key West</button><button type="button" class="nxp" data-a="25.77,-80.13" data-b="25.08,-77.34" data-n="Miami to Nassau">Miami to Nassau</button><button type="button" class="nxp" data-a="" data-b="" data-n="">Clear</button></div>
+        <label for="n-speed" style="display:block;font:700 12px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin:6px 0 5px">Cruising speed <span id="n-speed-v" style="color:var(--ink)">27 kn</span></label><input id="n-speed" type="range" min="8" max="32" value="27" style="width:100%">
+        <label for="n-fuel" style="display:block;font:700 12px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin:12px 0 5px">Fuel on board at departure <span id="n-fuel-v" style="color:var(--ink)">100%</span></label><input id="n-fuel" type="range" min="10" max="100" value="100" style="width:100%">
+        <div class="kv" style="margin-top:16px"><div><b>Route</b><span id="n-route">Miami to Bimini</span></div><div><b>Distance</b><span id="n-dist">50 nm</span></div><div><b>Trip time</b><span id="n-time">1 h 51 min</span></div><div><b>Fuel burned</b><span id="n-fuelused">676 L · 179 gal</span></div><div><b>Tank on arrival</b><span id="n-tank">86%</span></div><div><b>Fits in range</b><span id="n-fit">Yes, 320 nm at 27 kn</span></div></div>
+        <div style="margin-top:12px;height:10px;border-radius:9999px;background:var(--bg);overflow:hidden"><div id="n-bar" style="height:100%;width:86%;background:var(--accent);border-radius:9999px;transition:width .2s"></div></div>
+        <p class="sub" style="font-size:12.5px;margin:12px 0 0">Burn curve 30 + 0.46 × speed² L/h, fitted to the manufacturer figure of 320 nm at 27 kn. Straight line distance, no routing around land. Basis shown to the buyer, never a bare number.</p>
       </div>
     </div>
   </section>
@@ -448,7 +450,22 @@ const ids=['overview','about','specs','media','nautix','value','financing','sell
 if(location.search.includes('notes=1'))document.body.classList.add('notes');const tn=document.getElementById('tNotes');tn.setAttribute('aria-pressed',document.body.classList.contains('notes'));tn.textContent=document.body.classList.contains('notes')?'On':'Off';tn.onclick=()=>{const on=document.body.classList.toggle('notes');tn.setAttribute('aria-pressed',on);tn.textContent=on?'On':'Off';};
 function calc(){const p=+document.getElementById('c-price').value||0,d=+document.getElementById('c-down').value||0,n=(+document.getElementById('c-term').value||20)*12,r=(+document.getElementById('c-rate').value||0)/1200;const P=p*(1-d/100);const m=r?P*r/(1-Math.pow(1+r,-n)):P/n;document.getElementById('c-out').firstChild.textContent='$'+Math.round(m).toLocaleString('en-US');}
 ['c-price','c-down','c-term','c-rate'].forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
-function nx(){const v=+document.getElementById('n-speed').value,f=+document.getElementById('n-fuel').value;const lph=30+0.46*v*v;const usable=4800*f/100*0.9;const h=usable/lph,r=h*v;document.getElementById('n-speed-v').textContent=v+' kn';document.getElementById('n-fuel-v').textContent=f+'%';document.getElementById('n-range').firstChild.textContent=Math.round(r).toLocaleString('en-US')+' nm';document.getElementById('n-hours').firstChild.textContent=h.toFixed(1)+' h';document.getElementById('n-burn').textContent=Math.round(lph)+' L/h · '+Math.round(lph/3.785)+' gal/h';document.getElementById('n-usable').textContent=Math.round(usable).toLocaleString('en-US')+' L';document.getElementById('n-trip').textContent='50 nm · '+(50/v).toFixed(1)+' h';}
+let A=[25.77,-80.13],B=[25.72,-79.30],routeName='Miami to Bimini',map,mA,mB,line,pending=0;
+function hav(a,b){const R=3440.065,t=x=>x*Math.PI/180,dl=t(b[0]-a[0]),dg=t(b[1]-a[1]),h=Math.sin(dl/2)**2+Math.cos(t(a[0]))*Math.cos(t(b[0]))*Math.sin(dg/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
+function fmtH(h){const m=Math.round(h*60);return Math.floor(m/60)+' h '+String(m%60).padStart(2,'0')+' min';}
+function nx(){const v=+document.getElementById('n-speed').value,f=+document.getElementById('n-fuel').value;document.getElementById('n-speed-v').textContent=v+' kn';document.getElementById('n-fuel-v').textContent=f+'%';
+const lph=30+0.46*v*v,tank=4800,onboard=tank*f/100,usable=Math.max(0,onboard-tank*0.1),range=usable/lph*v;
+if(!A||!B){['n-dist','n-time','n-fuelused','n-tank'].forEach(id=>document.getElementById(id).textContent='Set A and B');document.getElementById('n-route').textContent='Tap the map';document.getElementById('n-fit').textContent='Range '+Math.round(range)+' nm at '+v+' kn';document.getElementById('n-bar').style.width=f+'%';return;}
+const d=hav(A,B),h=d/v,used=h*lph,left=onboard-used,pct=Math.max(0,Math.round(left/tank*100));
+document.getElementById('n-route').textContent=routeName;document.getElementById('n-dist').textContent=Math.round(d)+' nm';document.getElementById('n-time').textContent=fmtH(h);
+document.getElementById('n-fuelused').textContent=Math.round(used).toLocaleString('en-US')+' L · '+Math.round(used/3.785)+' gal';
+document.getElementById('n-tank').textContent=left<tank*0.1?(left<0?'Empty before arrival':pct+'%, below reserve'):pct+'%';
+document.getElementById('n-fit').textContent=(d<=range?'Yes, ':'No, ')+Math.round(range)+' nm at '+v+' kn';document.getElementById('n-bar').style.width=pct+'%';document.getElementById('n-bar').style.background=d<=range?'var(--accent)':'#b3261e';}
+function pin(l){return L.divIcon({className:'',html:'<div class="nxpin">'+l+'</div>',iconSize:[26,26],iconAnchor:[13,13]});}
+function draw(){if(!map)return;[mA,mB,line].forEach(x=>x&&map.removeLayer(x));mA=mB=line=null;if(A)mA=L.marker(A,{icon:pin('A')}).addTo(map);if(B)mB=L.marker(B,{icon:pin('B')}).addTo(map);if(A&&B){line=L.polyline([A,B],{color:'#6a519a',weight:3,dashArray:'6 6'}).addTo(map);map.fitBounds(line.getBounds(),{padding:[40,40]});}nx();}
+if(window.L){map=L.map('nxmap',{scrollWheelZoom:false}).setView([25.6,-79.6],7);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
+map.on('click',e=>{const p=[e.latlng.lat,e.latlng.lng];if(pending===0||(!A)){A=p;B=null;pending=1;routeName='Custom route';}else{B=p;pending=0;routeName='Custom route';}draw();});draw();}
+document.querySelectorAll('.nxp').forEach(b=>b.addEventListener('click',()=>{if(!b.dataset.a){A=B=null;pending=0;routeName='';}else{A=b.dataset.a.split(',').map(Number);B=b.dataset.b.split(',').map(Number);routeName=b.dataset.n;pending=0;}draw();}));
 ['n-speed','n-fuel'].forEach(id=>document.getElementById(id).addEventListener('input',nx));nx();
 </script>
 </body></html>
