@@ -25,9 +25,9 @@ H2   About this [Brand Model] · highlight · description · ownership strip · 
 H2   What This Boat Comes With · 6 shown · Show all
 H2   [Year Brand Model] Specifications · US | Metric · 6 tabs
 H2   Deck Layout · conditional
-EYE  NautiX · H2 How Far Can This Boat Actually Go? · map · chips · speed slider
+EYE  NautiX · H2 Estimate This Boat’s Range and Trip · map · chips · speed slider · basis line
 H2   Ask Waylo About This Boat
-EYE  Is the price fair · H2 [Year Brand Model] Price and Value · 6 cards
+EYE  Understand the Asking Price · H2 [Year Brand Model] Price and Value · 6 explanatory cards
 EYE  Can I afford it · H2 Finance and Insure This Boat · calculator · pre-qualify · insurance
 EYE  YachtWay Spotlight · H2 [Brand Model] Video Review · conditional
 H2   Seller · facts · Visit seller profile · Contact seller
@@ -77,11 +77,11 @@ Header, pre-footer and footer are sitewide: Home Page PRD rows 1 to 9 and 48 to 
 <tr><td>26</td><td>General · Measurements · Engines · Accommodation · Tanks · Extra details · Rigging</td><td>Tabs. Rigging for sail only</td><td></td><td>Server, every panel in the HTML</td></tr>
 <tr><td>26a</td><td>Information on this listing is provided in good faith by YachtWay and the listing broker/dealer, but accuracy is not guaranteed. All details are subject to change and buyers should independently verify specifications, condition, and availability before purchase.</td><td>Disclaimer, small body, under the tabs</td><td></td><td>Server, every listing, every state including sold</td></tr>
 <tr><td>27</td><td>**Deck Layout**</td><td>H2, conditional</td><td>Gallery popup, Deck Layout tab</td><td>Server, absent with no deck image</td></tr>
-<tr><td>28</td><td>NautiX · YachtWay's range planner · **How Far Can This Boat Actually Go?**</td><td>Eyebrow, H2</td><td></td><td>Server</td></tr>
+<tr><td>28</td><td>NautiX · YachtWay's range planner · **Estimate This Boat’s Range and Trip**</td><td>Eyebrow, H2</td><td></td><td>Server</td></tr>
 <tr><td>29</td><td>Popular trips from [Port] · four place chips · Cruising speed [n] kn</td><td>Chips, slider</td><td>Sets A and B on the map</td><td>Server chips, client map. No counts</td></tr>
 <tr><td>30</td><td>Route · Distance · Trip time · Fuel burned · Tank on arrival · Fits in range · basis line</td><td>Outputs</td><td></td><td>Client from record data. Basis line server</td></tr>
 <tr><td>31</td><td>**Ask Waylo About This Boat** · Ask · four suggested questions</td><td>H2, button, chips</td><td>Waylo</td><td>Server</td></tr>
-<tr><td>32</td><td>Is the price fair · **[Year Brand Model] Price and Value** · Age · Engine · Options and features · Warranty · Price history · Other market factors</td><td>Eyebrow, H2, six cards</td><td></td><td>Server. No price figure when hidden</td></tr>
+<tr><td>32</td><td>Understand the Asking Price · **[Year Brand Model] Price and Value** · Age · Engine · Options and features · Warranty · Price history · Other market factors</td><td>Eyebrow, H2, six cards</td><td></td><td>Server. No price figure when hidden</td></tr>
 <tr><td>33</td><td>Can I afford it · **Finance and Insure This Boat**</td><td>Eyebrow, H2</td><td></td><td>Server. Whole section absent per section 15</td></tr>
 <tr><td>34</td><td>Price · Down payment % · Term · Rate % · Est. monthly payment · Down payment · Credit range</td><td>Calculator fields and result</td><td></td><td>Server fields, client result</td></tr>
 <tr><td>35</td><td>Get pre-qualified for this boat</td><td>CTA</td><td>`/easy-fund/get-prequalified-internal-vessel/[listingId]/`</td><td>Server</td></tr>
@@ -239,12 +239,12 @@ Conditional. One tile per deck image with a deck label, opens the gallery on the
 
 Spec on the [NautiX row](https://app.notion.com/p/3d46d212272c815ea62fd5068986a00b). On the listing:
 
-1. Eyebrow **NautiX · YachtWay's range planner**. H2 **How Far Can This Boat Actually Go?**
+1. Eyebrow **NautiX · YachtWay's range planner**. H2 **Estimate This Boat’s Range and Trip**. Never a categorical range claim; every output is labelled an estimate.
 2. **Popular trips from [Port]** - four chips, the most planned routes from the vessel's port in internal NautiX usage. Counts **NOT shown**. Tap sets A and B.
 3. Map: tap sets A, second tap B, third tap starts over.
 4. **Cruising speed** - slider, hull's displacement speed to top speed, default the record's cruise speed, live label.
 5. Outputs: **Route**, **Distance** nm, **Trip time** h min, **Fuel burned** L and gal, **Tank on arrival** % with a bar, red below the 10% reserve, **Fits in range** Yes or No with the range at that speed.
-6. Basis line always visible: curve used and the manufacturer figure it is fitted to.
+6. Basis line always visible, under the outputs: the manufacturer figure the curve is fitted to, calm water, no weather, current, load or routing around land, and *Real range will differ*.
 7. **NOT shown:** fuel on board slider, preset counts, a link to a NautiX page.
 
 **Done when** two taps on the map produce all six outputs and no number on the module is a usage count.
@@ -255,9 +255,22 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 
 ### 14. Price and Value {color="blue_bg"}
 
-1. Eyebrow **Is the price fair**. H2 **[Year Brand Model] Price and Value**.
-2. Six cards: **Age**, **Engine**, **Options and features**, **Warranty**, **Price history**, **Other market factors**. Copy per Listing Page Guest Price and Value Factors; Price history from the record.
+1. Eyebrow **Understand the Asking Price**. H2 **[Year Brand Model] Price and Value**. The module explains what moves an asking price. It never states or implies a valuation, a fair market conclusion or a verdict.
+2. Six explanatory cards, roles in the table below. Copy per Listing Page Guest Price and Value Factors, rewritten to the safe role where it draws a conclusion; Price history from the record.
 3. Hidden price: cards render without any price figure.
+4. **PLEASE NOTE:** never *fair price*, *below market value*, *overpriced*, *best deal*, a price score, a comparable range presented as a valuation, or any calculation without a transparent method.
+
+<table fit-page-width="true" header-row="true">
+<tr><td>Card</td><td>Safe role</td></tr>
+<tr><td>**Age**</td><td>Explains why build year and production period affect the asking price</td></tr>
+<tr><td>**Engine**</td><td>Explains why engine hours, service history and configuration matter</td></tr>
+<tr><td>**Options and features**</td><td>Explains optional equipment, refits and onboard features fitted to this hull</td></tr>
+<tr><td>**Warranty**</td><td>Explains remaining transferable coverage where verified</td></tr>
+<tr><td>**Price history**</td><td>Shows verified on-platform asking price changes only</td></tr>
+<tr><td>**Other market factors**</td><td>Covers location, tax and duty status, condition, service history and comparable supply</td></tr>
+</table>
+
+**Done when** no card contains a verdict word from the list above and every Price history entry is an on-platform event.
 
 ### 15. Finance and Insure This Boat {color="green_bg"}
 
@@ -385,6 +398,8 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 <tr><td>Styled on @yachtway/ui, Poppins and Figtree</td><td>7 Sep</td></tr>
 <tr><td>Title [Year] [Brand Model] For Sale | YachtWay. Meta description [Year] [Brand Model] for sale in [City, jurisdiction]. [Price or Price on application], [LOA], [n] engine hours. Listed by [Seller] on YachtWay. Example: 2021 Azimut S8 for sale in Miami, FL. $1,650,000, 72 ft, 410 engine hours. Listed by Example Yachts on YachtWay</td><td>7 Sep</td></tr>
 <tr><td>Listing disclaimer text, under the specifications on every listing</td><td>7 Sep</td></tr>
+<tr><td>Price and Value eyebrow Understand the Asking Price. Cards explanatory, never a valuation or verdict</td><td>7 Sep</td></tr>
+<tr><td>NautiX H2 Estimate This Boat’s Range and Trip, basis line with calm water conditions and Real range will differ</td><td>7 Sep</td></tr>
 </table>
 
 ## Non-goals
