@@ -31,16 +31,16 @@ section.blk{position:relative;scroll-margin-top:62px;padding:clamp(40px,5vw,64px
 .meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font:600 14px Manrope;color:var(--muted)} .meta a{text-decoration:none;border-bottom:1px solid var(--chipline)} .meta .dot{color:#cbc7d1}
 .badge{display:inline-flex;align-items:center;gap:5px;font:700 12px Manrope;color:var(--purple);background:var(--chip);border-radius:9999px;padding:4px 10px}
 /* two column layout */
-.two{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:clamp(20px,3vw,36px);align-items:start}
-.maincol{min-width:0} .side{position:sticky;top:16px;margin-top:clamp(28px,4vw,44px)} .card.mob{display:none}
+.two{display:grid;grid-template-columns:360px minmax(0,1fr);gap:clamp(20px,3vw,36px);align-items:start;margin-top:16px}
+.maincol{min-width:0} .side{position:sticky;top:16px} .card.mob{display:none}
 /* gallery */
-.gal{position:relative;display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:8px;border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.gal{position:relative;display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:8px;border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line)}
 .gal .t{position:relative;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 22px Manrope} .gal .t.cover{grid-row:1/3;font-size:42px}
 .gal .t .lab{position:absolute;bottom:10px;left:10px;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.92);border:1px solid #ece7f5;border-radius:9999px;padding:5px 10px;font:700 12px Manrope;color:var(--ink)} .gal .t .lab .material-symbols-outlined{font-size:15px;color:var(--accent)} .gal .t.has3d{outline:2px solid var(--accent);outline-offset:-2px} .gal .t .lab3d{top:10px;bottom:auto;background:var(--purple);color:#fff;border-color:var(--purple)} .gal .t .lab3d .material-symbols-outlined{color:#fff}
 .gal .all{position:absolute;right:12px;bottom:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font:800 13px Manrope;color:var(--purple);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .counts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .counts>span{display:inline-flex;align-items:center;gap:5px;font:700 12px Manrope;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:9999px;padding:6px 11px} .counts .material-symbols-outlined{font-size:15px;color:var(--accent)}
 /* facts */
-.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:16px}
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:0}
 .fact{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 16px} .fact .l{display:flex;align-items:center;gap:6px;font:800 12px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)} .fact .l .material-symbols-outlined{font-size:16px;color:var(--accent)} .fact .v{font:700 15px Manrope;letter-spacing:-.01em;margin-top:6px;line-height:1.35;color:var(--ink)} .fact .v a{color:inherit;text-decoration:none;border-bottom:1px solid var(--chipline)}
 .fact .v small{display:block;font:600 12px Manrope;color:var(--faint);margin-top:3px} .fact.price{grid-column:span 2;background:var(--ink);border-color:var(--ink)} .fact.price .l{color:#a89bc4} .fact.price .v{font-size:26px;color:#fff} .fact.price .v small{color:#c9b8ef} .fact.price .drop{display:inline-flex;align-items:center;gap:4px;margin-top:8px;font:700 12px Manrope;color:#9be0a3} .fact.cond{border-style:dashed}
 /* contact card */
@@ -121,9 +121,9 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <ol>
       <li><a href="#overview">Breadcrumb</a> <span>· link tree, up to the model page</span></li>
       <li><a href="#overview">H1 Year Brand Model For Sale</a> <span>· status, condition, location, name</span></li>
-      <li><a href="#overview">Gallery hero</a> <span>· cover, 4 tiles, 3D tour labelled, media counts</span></li>
+      <li><a href="#overview">Gallery hero</a> <span>· full width, cover, 4 tiles, 3D tour labelled, media counts</span></li>
       <li><a href="#overview">Fact block</a> <span>· price first, then length, year, location</span></li>
-      <li><a href="#contact">Contact block</a> <span>· sticky side on desktop, bottom bar on mobile</span></li>
+      <li><a href="#contact">Contact block</a> <span>· left column under the gallery, sticky on desktop, bottom bar on mobile</span></li>
       <li><a href="#about">Sticky section nav</a> <span>· on scroll, Save, Share, Price alert repeat from the identity row</span></li>
       <li><a href="#about">About this boat</a> <span>· description, highlight, activities</span></li>
       <li><a href="#specs">Specifications</a> <span>· 7 tabs, all in the DOM</span></li>
@@ -143,8 +143,6 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <p class="m">Evidence: Amplitude 748126, 9 Jun to 7 Sep 2026. Phone tapped at median 37 s, Request Info at 3.8 min, Waylo at 6.1 min. 52% of listing opens are mobile. Notion: Listing Page · Information Hierarchy. All vessel facts on this page are prototype data.</p>
   </div>
 
-  <div class="two">
-  <div class="maincol">
   <section id="overview" style="scroll-margin-top:62px;position:relative">
     <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/brands/">Brands</a><span class="sep">›</span><a href="/brands/azimut-yachts-for-sale/">Azimut</a><span class="sep">›</span><a href="/brands/azimut-yachts-for-sale/72-fly/">Azimut 72 Fly</a><span class="sep">›</span><span class="here">2022 Azimut 72 Fly</span></nav>
     <span class="n in"><b>01</b>Breadcrumb. Home › Brands › Brand › Brand Model › Listing. Same string in BreadcrumbList. Server rendered.</span>
@@ -168,6 +166,26 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
           <span class="n" style="top:12px;left:12px"><b>03</b>Gallery hero. Cover plus four tiles: video, 3D tour, photos, deck layout. The 3D tour tile is outlined and labelled This listing has a 3D tour, with Start 3D tour on the tile. See all media opens the full gallery. Photo viewed first in every eye tracking study.</span>
         </div>
         <div class="counts"><span><span class="material-symbols-outlined">photo_camera</span>42 photos</span><span><span class="material-symbols-outlined">play_circle</span>1 video</span><span><span class="material-symbols-outlined">view_in_ar</span>3D tour</span><span><span class="material-symbols-outlined">map</span>2 deck layouts</span><span><span class="material-symbols-outlined">visibility</span>1,240 views</span></div>
+  </section>
+
+  <div class="two">
+      <aside class="side" id="contact" style="scroll-margin-top:76px">
+        <div class="card desk">
+          <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales <span class="material-symbols-outlined" style="font-size:16px;color:var(--accent)" title="Authorized Dealer">verified</span></div><div class="rs">Authorized Azimut dealer · Fort Lauderdale, FL</div></div></div>
+          <div class="stack">
+            <button class="btn p" type="button" id="phone" data-say="Phone revealed, second tap calls"><span class="material-symbols-outlined">call</span><span>Show phone number</span></button>
+            <a class="btn g" href="#" data-say="Opens WhatsApp with the availability message"><span class="material-symbols-outlined">chat</span>WhatsApp</a>
+          </div>
+          <form class="req" onsubmit="return false">
+            <input class="full" placeholder="Full name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
+            <button class="btn p full" type="submit" data-say="Request sent to the seller"><span class="material-symbols-outlined">mail</span>Request info</button>
+          </form>
+          <div class="tour"><div class="slot">Earliest viewing <b>Tomorrow 10:00</b>, vessel local time</div><button class="btn" type="button" style="margin-top:10px" data-say="Tour modal: in person or video, one hour slots"><span class="material-symbols-outlined">event</span>Schedule a tour</button></div>
+          <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get pre-qualified</a></div>
+        </div>
+        <span class="n" style="top:-10px;right:0"><b>05</b>Contact block. Left column under the full width gallery, sticky for the whole page on desktop, bottom bar plus card on mobile. Phone, Request Info, WhatsApp, Schedule a tour, monthly estimate. Phone is tapped at median 37 s and the form at 3.8 min, so this block is in the first viewport on every device.</span>
+      </aside>
+  <div class="maincol">
 
         <div class="facts" style="position:relative">
           <div class="fact price"><div class="l"><span class="material-symbols-outlined" style="color:#c9b8ef">sell</span>Price</div><div class="v">$2,150,000<small>Est. $14,900 per month</small><span class="drop"><span class="material-symbols-outlined" style="font-size:14px">trending_down</span>Reduced $100,000 on 14 Aug</span></div></div>
@@ -196,13 +214,11 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
           <form class="req" onsubmit="return false">
             <input class="full" placeholder="Full name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
             <button class="btn p full" type="submit" data-say="Request sent to the seller"><span class="material-symbols-outlined">mail</span>Request info</button>
-            <p class="fine">Unlimited requests. The message pre-fills the availability question buyers ask first.</p>
           </form>
           <div class="tour"><div class="slot">Earliest viewing <b>Tomorrow 10:00</b>, vessel local time</div><button class="btn" type="button" style="margin-top:10px" data-say="Tour modal: in person or video, one hour slots"><span class="material-symbols-outlined">event</span>Schedule a tour</button></div>
           <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get pre-qualified</a></div>
         </div>
         <span class="n in" style="margin-top:12px"><b>05</b>Contact block on mobile. The same component rendered directly under the fact block, plus the bottom bar with Call and Request info from the first viewport.</span>
-  </section>
 
   <nav class="jump" aria-label="Sections" style="position:sticky"><div class="in">
     <a href="#overview" class="active" data-sec="overview">Gallery</a>
@@ -404,24 +420,6 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
 
   <p class="pillar" id="pillar"><span class="n in"><b>20</b>Contextual pillar link. All yachts for sale, noun from nounForm, destination by length.</span><br><a href="/yachts-for-sale/">All yachts for sale<span class="material-symbols-outlined" style="font-size:16px;vertical-align:-3px;margin-left:5px">arrow_forward</span></a></p>
   </div>
-
-      <aside class="side" id="contact" style="scroll-margin-top:76px">
-        <div class="card desk">
-          <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales <span class="material-symbols-outlined" style="font-size:16px;color:var(--accent)" title="Authorized Dealer">verified</span></div><div class="rs">Authorized Azimut dealer · Fort Lauderdale, FL</div></div></div>
-          <div class="stack">
-            <button class="btn p" type="button" id="phone" data-say="Phone revealed, second tap calls"><span class="material-symbols-outlined">call</span><span>Show phone number</span></button>
-            <a class="btn g" href="#" data-say="Opens WhatsApp with the availability message"><span class="material-symbols-outlined">chat</span>WhatsApp</a>
-          </div>
-          <form class="req" onsubmit="return false">
-            <input class="full" placeholder="Full name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
-            <button class="btn p full" type="submit" data-say="Request sent to the seller"><span class="material-symbols-outlined">mail</span>Request info</button>
-            <p class="fine">Unlimited requests. The message pre-fills the availability question buyers ask first.</p>
-          </form>
-          <div class="tour"><div class="slot">Earliest viewing <b>Tomorrow 10:00</b>, vessel local time</div><button class="btn" type="button" style="margin-top:10px" data-say="Tour modal: in person or video, one hour slots"><span class="material-symbols-outlined">event</span>Schedule a tour</button></div>
-          <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get pre-qualified</a></div>
-        </div>
-        <span class="n" style="top:-10px;right:0"><b>05</b>Contact block. Sticky side column on desktop, bottom bar on mobile. Phone, Request Info, WhatsApp, Schedule a tour, monthly estimate. Phone is tapped at median 37 s and the form at 3.8 min, so this block is in the first viewport on every device.</span>
-      </aside>
   </div>
 
   <section class="prefoot"><h3>Popular Searches</h3><div class="cols">
