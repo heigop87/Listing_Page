@@ -178,17 +178,18 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
           </div>
           <form class="req" onsubmit="return false">
             <input class="full" placeholder="Full name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
-            <button class="btn p full" type="submit" data-say="Request sent to the seller"><span class="material-symbols-outlined">mail</span>Request info</button>
+            <label class="full" style="display:flex;gap:8px;align-items:flex-start;font:600 12.5px Manrope;color:var(--text)"><input type="checkbox" style="width:auto;margin:3px 0 0"><span>Also send me financing options for this boat. No credit impact.</span></label>
+            <button class="btn p full" type="submit" data-say="Request sent to the seller. Financing interest creates an EasyFund lead with the inquiry"><span class="material-symbols-outlined">mail</span>Request info</button>
           </form>
           <div class="tour"><div class="slot">Earliest viewing <b>Tomorrow 10:00</b>, vessel local time</div><button class="btn" type="button" style="margin-top:10px" data-say="Tour modal: in person or video, one hour slots"><span class="material-symbols-outlined">event</span>Schedule a tour</button></div>
-          <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get pre-qualified</a></div>
+          <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get your rate</a></div>
         </div>
-        <span class="n" style="top:-10px;right:0"><b>05</b>Contact block. Right column under the full width gallery, sticky for the whole page on desktop, bottom bar plus card on mobile. Phone, Request Info, WhatsApp, Schedule a tour, monthly estimate. Phone is tapped at median 37 s and the form at 3.8 min, so this block is in the first viewport on every device.</span>
+        <span class="n" style="top:-10px;right:0"><b>05</b>Contact block. Right column under the full width gallery, sticky for the whole page on desktop, bottom bar plus card on mobile. Phone, Request Info, WhatsApp, Schedule a tour, monthly estimate. The financing checkbox on Request Info turns an inquiry into an EasyFund lead too: 78 inquiry users against 15 pre-qualification users since August. Phone is tapped at median 37 s and the form at 3.8 min, so this block is in the first viewport on every device.</span>
       </aside>
   <div class="maincol">
 
         <div class="facts" style="position:relative">
-          <div class="fact price"><div class="l"><span class="material-symbols-outlined" style="color:#c9b8ef">sell</span>Price</div><div class="v">$2,150,000<small>Est. $14,900 per month</small><span class="drop"><span class="material-symbols-outlined" style="font-size:14px">trending_down</span>Reduced $100,000 on 14 Aug</span></div></div>
+          <div class="fact price"><div class="l"><span class="material-symbols-outlined" style="color:#c9b8ef">sell</span>Price</div><div class="v">$2,150,000<small><a href="#financing" style="color:#c9b8ef;text-decoration:none;border-bottom:1px solid #6a519a">Est. $14,900 per month · Get your rate, no credit impact</a></small><span class="drop"><span class="material-symbols-outlined" style="font-size:14px">trending_down</span>Reduced $100,000 on 14 Aug</span></div></div>
           <div class="fact"><div class="l"><span class="material-symbols-outlined">straighten</span>Length</div><div class="v">22.1 m · 72 ft<small>LOA</small></div></div>
           <div class="fact"><div class="l"><span class="material-symbols-outlined">calendar_month</span>Year</div><div class="v">2022<small>Third generation</small></div></div>
           <div class="fact"><div class="l"><span class="material-symbols-outlined">location_on</span>Location</div><div class="v"><a href="/miami-fl-yachts-for-sale/">Miami, FL</a><small>United States</small></div></div>
@@ -213,10 +214,11 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
           </div>
           <form class="req" onsubmit="return false">
             <input class="full" placeholder="Full name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
-            <button class="btn p full" type="submit" data-say="Request sent to the seller"><span class="material-symbols-outlined">mail</span>Request info</button>
+            <label class="full" style="display:flex;gap:8px;align-items:flex-start;font:600 12.5px Manrope;color:var(--text)"><input type="checkbox" style="width:auto;margin:3px 0 0"><span>Also send me financing options for this boat. No credit impact.</span></label>
+            <button class="btn p full" type="submit" data-say="Request sent to the seller. Financing interest creates an EasyFund lead with the inquiry"><span class="material-symbols-outlined">mail</span>Request info</button>
           </form>
           <div class="tour"><div class="slot">Earliest viewing <b>Tomorrow 10:00</b>, vessel local time</div><button class="btn" type="button" style="margin-top:10px" data-say="Tour modal: in person or video, one hour slots"><span class="material-symbols-outlined">event</span>Schedule a tour</button></div>
-          <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get pre-qualified</a></div>
+          <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get your rate</a></div>
         </div>
         <span class="n in" style="margin-top:12px"><b>05</b>Contact block on mobile. The same component rendered directly under the fact block, plus the bottom bar with Call and Request info from the first viewport.</span>
 
@@ -329,7 +331,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="financing">
-    <span class="n top"><b>13</b>Financing and insurance. Loan calculator, Get pre-qualified and insurance estimate together. 34 EasyFund entries came from the listing against 118 from the header, so the calculator sits after value, not above the specs. Hidden under $50,000, over 30 years old, PWC, CAD or AUD.</span>
+    <span class="n top"><b>13</b>Financing and insurance. EasyFund today: 142 entry clicks, 47 reach a form step, 3 pre-qualify, 0 from listings. Two thirds are lost on the hub hop, and 8 of 15 validation failures are boat facts the listing already holds. So this module deep links into the internal vessel pre-qualification with make, model, year, engines and price prefilled, asks only down payment and credit range here, and never routes through the hub. Hidden under $50,000, over 30 years old, PWC, CAD or AUD.</span>
     <span class="eyebrow">Can I afford it</span>
     <h2>Finance and Insure This Boat</h2>
     <div class="calc">
@@ -340,8 +342,10 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
         <label for="c-rate">Rate %</label><input id="c-rate" type="number" step="0.01" value="7.49">
       </div>
       <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;gap:14px">
-        <div><div class="out" id="c-out">$14,900<small>estimated monthly payment</small></div><p class="sub" style="font-size:13px;margin:10px 0 0">Direct bank rates, no markup. Takes less than a minute and does not affect your credit score.</p></div>
-        <a class="btn p" href="#" data-say="EasyFund pre-qualification, cta_location listing_loan_calculator"><span class="material-symbols-outlined">bolt</span>Get pre-qualified</a>
+        <div><div class="out" id="c-out">$14,900<small>estimated monthly payment</small></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px"><div><label for="p-down" style="margin-top:0">Down payment</label><select id="p-down"><option>10%</option><option>15%</option><option>20%</option><option>25% or more</option></select></div><div><label for="p-credit" style="margin-top:0">Credit range</label><select id="p-credit"><option>Excellent, 740+</option><option>Good, 670 to 739</option><option>Fair, 580 to 669</option><option>Not sure</option></select></div></div>
+          <p class="sub" style="font-size:13px;margin:10px 0 0">Boat, price and engines are already filled from this listing. Takes less than a minute. Direct bank rates, no markup. No credit impact.</p></div>
+        <a class="btn p" href="#" data-say="Opens /easy-fund/get-prequalified-internal-vessel/[listing]/ with the boat prefilled. cta_location listing_loan_calculator. No hub hop."><span class="material-symbols-outlined">bolt</span>Get pre-qualified for this boat</a>
         <div class="fin" style="margin-top:0"><div class="est" style="font-size:14px">Planning to buy this 72 Fly?<small>Instant insurance estimate for a 72 Fly in Miami through MasterCover</small></div><a class="btn" href="#" style="width:auto;padding:10px 14px;font-size:13px" data-say="Insurance estimate, cta_location listing">Get estimate</a></div>
       </div>
     </div>
