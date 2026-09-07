@@ -231,7 +231,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
             <div class="ptop"><div class="l"><span class="material-symbols-outlined" style="color:var(--n-brand-200)">sell</span>Price</div><span class="pill"><span class="material-symbols-outlined" style="font-size:14px">trending_down</span>Price reduced</span></div>
             <div class="pmain"><span class="pnow">$2,150,000</span><span class="pwas">$2,250,000</span></div>
             <div class="pdrop">Down $100,000 on 14 Aug 2026</div>
-            <a class="prate" href="#financing"><span class="material-symbols-outlined" style="font-size:18px">bolt</span><span><b>Est. $15,576 / mo</b><small>Get your rate · no credit impact</small></span><span class="material-symbols-outlined" style="font-size:18px;margin-left:auto">chevron_right</span></a>
+            <a class="prate" href="#financing"><span class="material-symbols-outlined" style="font-size:18px">bolt</span><span><b>Est. $15,576 / mo</b><small>Get your rate</small></span><span class="material-symbols-outlined" style="font-size:18px;margin-left:auto">chevron_right</span></a>
           </div>
           <div class="fact"><div class="l"><span class="material-symbols-outlined">new_releases</span>Condition</div><div class="v">Used, one owner<small>410 engine hours · Captain maintained · Never chartered</small></div></div>
           <span class="n" style="bottom:-14px;right:0"><b>04</b>Fact block: price and condition cards, then the four-stat strip from the mobile layout idea, Length, Top speed, Range, Hours. Range links into NautiX. Price card: reduced pill top right, current price large with the previous price struck through, the drop and date beneath, and the monthly estimate as its own button into Financing. Year is in the H1; length, hours and location are on the meta line; cabins, type, fuel and speed are in Specifications; duty, tax, warranty and availability moved to the ownership strip under the description. Price hidden reads Price on application.</span>
@@ -319,7 +319,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   <section class="blk" id="nautix">
     <span class="n top"><b>11</b>NautiX, YachtWay's moat, its own module after the layout. The Range stat under the price links here so nobody misses it. Headline promises an estimate, not a fact: manufacturer curve, calm water, no weather or load. Trip chips are the most planned routes from the vessel's port in internal NautiX analytics, shown without counts. The map takes A and B, the slider sets cruising speed, the outputs give distance, time, fuel, tank on arrival and whether it fits the range. Full tank assumed, manufacturer basis stated.</span>
     <span class="eyebrow">NautiX · YachtWay's range planner</span>
-    <h2>Estimate This Boat’s Range and Trip</h2>
+    <h2>Plan This Boat’s Range and Trip</h2>
     <p class="sub">Set point A and point B on the map, or pick a popular trip. Estimates use this hull's fuel curve, twin MAN V12 1400, a 4,800 L tank and a 10% reserve.</p>
     <div class="nx">
       <div class="card" style="padding:0;overflow:hidden"><div id="nxmap" class="nxmap" role="application" aria-label="NautiX trip map"></div></div>
@@ -327,7 +327,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
         <div style="font:800 12px var(--font-figtree);letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-bottom:8px">Popular trips from Miami</div>
         <div class="chips" style="margin:0 0 14px"><button type="button" class="nxp" data-a="25.77,-80.13" data-b="25.08,-77.34" data-n="Miami to Nassau">Nassau</button><button type="button" class="nxp" data-a="25.77,-80.13" data-b="25.72,-79.30" data-n="Miami to Bimini">Bimini</button><button type="button" class="nxp" data-a="25.77,-80.13" data-b="24.56,-81.80" data-n="Miami to Key West">Key West</button><button type="button" class="nxp" data-a="25.77,-80.13" data-b="24.05,-76.40" data-n="Miami to the Exumas">Exumas</button></div>
         <label for="n-speed" style="display:block;font:700 12px var(--font-figtree);letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin:6px 0 5px">Cruising speed <span id="n-speed-v" style="color:var(--ink)">27 kn</span></label><input id="n-speed" type="range" min="8" max="32" value="27" style="width:100%">
-        <div class="kv" style="margin-top:16px"><div><b>Route</b><span id="n-route">Miami to Bimini</span></div><div><b>Distance, est.</b><span id="n-dist">50 nm</span></div><div><b>Trip time, est.</b><span id="n-time">1 h 51 min</span></div><div><b>Fuel burned, est.</b><span id="n-fuelused">676 L · 179 gal</span></div><div><b>Tank on arrival, est.</b><span id="n-tank">86%</span></div><div><b>Fits in range, est.</b><span id="n-fit">Yes, 320 nm at 27 kn</span></div></div>
+        <div class="kv" style="margin-top:16px"><div><b>Route</b><span id="n-route">Miami to Bimini</span></div><div><b>Estimated distance</b><span id="n-dist">50 nm</span></div><div><b>Estimated trip time</b><span id="n-time">1 h 51 min</span></div><div><b>Estimated fuel burned</b><span id="n-fuelused">676 L · 179 gal</span></div><div><b>Estimated tank on arrival</b><span id="n-tank">86%</span></div><div><b>Estimated range at selected speed</b><span id="n-fit">320 nm at 27 kn · trip fits</span></div></div>
         <div style="margin-top:12px;height:10px;border-radius:9999px;background:var(--bg);overflow:hidden"><div id="n-bar" style="height:100%;width:86%;background:var(--accent);border-radius:9999px;transition:width .2s"></div></div>
         <p class="sub" style="font-size:12.5px;margin:12px 0 0">Estimate. Burn curve 30 + 0.46 × speed² L/h fitted to the manufacturer figure of 320 nm at 27 kn, calm water, no weather, current, load or routing around land. Real range will differ.</p>
       </div>
@@ -375,12 +375,12 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;gap:14px">
         <div><div class="out" id="c-out">$15,576<small>estimated monthly payment</small></div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px"><div><label for="p-down" style="margin-top:0">Down payment</label><select id="p-down"><option>10%</option><option>15%</option><option>20%</option><option>25% or more</option></select></div><div><label for="p-credit" style="margin-top:0">Credit range</label><select id="p-credit"><option>Excellent, 740+</option><option>Good, 670 to 739</option><option>Fair, 580 to 669</option><option>Not sure</option></select></div></div>
-          <p class="sub" style="font-size:13px;margin:10px 0 0">Boat, price and engines are already filled from this listing. Takes less than a minute. Direct bank rates, no markup. No credit impact.</p></div>
+          <p class="sub" style="font-size:13px;margin:10px 0 0">Your boat, price, and engine details are pre-filled from this listing. Complete a short pre-qualification form to see available financing options. Credit requirements vary by lender and application.</p></div>
         <a class="btn p" href="#" data-say="Opens /easy-fund/get-prequalified-internal-vessel/[listing]/ with the boat prefilled. cta_location listing_loan_calculator. No hub hop."><span class="material-symbols-outlined">bolt</span>Get pre-qualified for this boat</a>
       </div>
     </div>
     <div class="card" style="margin-top:14px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center">
-      <div><h3 style="margin:0 0 6px;font-size:18px">Insure this Azimut 72 Fly</h3><p class="sub" style="margin:0;font-size:14px">Instant estimate for a 72 Fly in Miami, FL through MasterCover, backed by A-rated underwriters. Hull, liability and named storm cover in one estimate.</p></div>
+      <div><h3 style="margin:0 0 6px;font-size:18px">Insure this Azimut 72 Fly</h3><p class="sub" style="margin:0;font-size:14px">MasterCover connects you with A-rated marine insurance providers and matches you with eligible options for this 72 Fly. Hull, liability and named storm cover.</p></div>
       <a class="btn p" href="#" style="width:auto" data-say="MasterCover estimate opens with this hull prefilled. cta_location listing_insurance"><span class="material-symbols-outlined">shield</span>Get an insurance estimate</a>
     </div>
   </section>
@@ -450,7 +450,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <div class="faq">
       <details open><summary>Is this 2022 Azimut 72 Fly still available?<span class="material-symbols-outlined">expand_more</span></summary><p>Yes. The listing is active and the boat is available for viewing now in Miami, FL. Use Request info or call the seller to confirm before travelling.</p></details>
       <details><summary>How many engine hours does it have?<span class="material-symbols-outlined">expand_more</span></summary><p>410 hours on average across the twin MAN V12 1400 engines, 412 port and 408 starboard, as of the last update by the seller.</p></details>
-      <details><summary>Is financing available for this boat?<span class="material-symbols-outlined">expand_more</span></summary><p>Yes. The estimated payment is $15,576 a month with 10% down over 20 years at 7.49%. Pre-qualification takes about a minute and does not affect your credit score.</p></details>
+      <details><summary>Is financing available for this boat?<span class="material-symbols-outlined">expand_more</span></summary><p>Yes. The estimated payment is $15,576 a month with 10% down over 20 years at 7.49%. Credit requirements vary by lender and application.</p></details>
       <details><summary>Is the boat US duty paid?<span class="material-symbols-outlined">expand_more</span></summary><p>Yes, US import duty is paid. US sales tax has not been paid and applies at purchase depending on the buyer's state.</p></details>
     </div>
   </section>
@@ -494,12 +494,12 @@ function hav(a,b){const R=3440.065,t=x=>x*Math.PI/180,dl=t(b[0]-a[0]),dg=t(b[1]-
 function fmtH(h){const m=Math.round(h*60);return Math.floor(m/60)+' h '+String(m%60).padStart(2,'0')+' min';}
 function nx(){const v=+document.getElementById('n-speed').value,f=100;document.getElementById('n-speed-v').textContent=v+' kn';
 const lph=30+0.46*v*v,tank=4800,onboard=tank*f/100,usable=Math.max(0,onboard-tank*0.1),range=usable/lph*v;
-if(!A||!B){['n-dist','n-time','n-fuelused','n-tank'].forEach(id=>document.getElementById(id).textContent='Set A and B');document.getElementById('n-route').textContent='Tap the map';document.getElementById('n-fit').textContent='Range '+Math.round(range)+' nm at '+v+' kn';document.getElementById('n-bar').style.width=f+'%';return;}
+if(!A||!B){['n-dist','n-time','n-fuelused','n-tank'].forEach(id=>document.getElementById(id).textContent='Set A and B');document.getElementById('n-route').textContent='Tap the map';document.getElementById('n-fit').textContent=Math.round(range)+' nm at '+v+' kn';document.getElementById('n-bar').style.width=f+'%';return;}
 const d=hav(A,B),h=d/v,used=h*lph,left=onboard-used,pct=Math.max(0,Math.round(left/tank*100));
 document.getElementById('n-route').textContent=routeName;document.getElementById('n-dist').textContent=Math.round(d)+' nm';document.getElementById('n-time').textContent=fmtH(h);
 document.getElementById('n-fuelused').textContent=Math.round(used).toLocaleString('en-US')+' L · '+Math.round(used/3.785)+' gal';
 document.getElementById('n-tank').textContent=left<tank*0.1?(left<0?'Empty before arrival':pct+'%, below reserve'):pct+'%';
-document.getElementById('n-fit').textContent=(d<=range?'Yes, ':'No, ')+Math.round(range)+' nm at '+v+' kn';document.getElementById('n-bar').style.width=pct+'%';document.getElementById('n-bar').style.background=d<=range?'var(--accent)':'var(--text-s-error-primary)';}
+document.getElementById('n-fit').textContent=Math.round(range)+' nm at '+v+' kn'+(d<=range?' · trip fits':' · trip exceeds range');document.getElementById('n-bar').style.width=pct+'%';document.getElementById('n-bar').style.background=d<=range?'var(--accent)':'var(--text-s-error-primary)';}
 function pin(l){return L.divIcon({className:'',html:'<div class="nxpin">'+l+'</div>',iconSize:[26,26],iconAnchor:[13,13]});}
 function draw(){if(!map)return;[mA,mB,line].forEach(x=>x&&map.removeLayer(x));mA=mB=line=null;if(A)mA=L.marker(A,{icon:pin('A')}).addTo(map);if(B)mB=L.marker(B,{icon:pin('B')}).addTo(map);if(A&&B){line=L.polyline([A,B],{color:'var(--accent)',weight:3,dashArray:'6 6'}).addTo(map);map.fitBounds(line.getBounds(),{padding:[40,40]});}nx();}
 if(window.L){map=L.map('nxmap',{scrollWheelZoom:false}).setView([25.6,-79.6],7);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
