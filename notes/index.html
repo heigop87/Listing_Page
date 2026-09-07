@@ -99,6 +99,7 @@ ul.feat li.over{display:none} ul.feat.open li.over{display:flex} .more{margin-to
 /* waylo */
 .waylo{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center} .waylo input{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font:600 14px var(--font-figtree)} .waylo .sug{grid-column:span 2;display:flex;gap:8px;flex-wrap:wrap} .waylo .sug button{border:1px solid var(--line);background:var(--bg);border-radius:9999px;padding:8px 13px;font:700 12.5px var(--font-figtree);color:var(--purple);cursor:pointer} .waylo .lim{grid-column:span 2;font:600 12px var(--font-figtree);color:var(--faint)}
 /* value */
+.wst{display:inline-block;margin-top:10px;font:700 11px var(--font-figtree);letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:#e6f7ec;color:#0a7a3b} .wst.off{background:#f1f1f4;color:#6b6b7a}
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px} .vc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px} .vc b{display:flex;align-items:center;gap:6px;font:800 12px var(--font-figtree);letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-bottom:8px} .vc b .material-symbols-outlined{font-size:16px;color:var(--accent)} .vc p{margin:0;font:500 13.5px var(--font-figtree);line-height:1.55;color:var(--text)}
 .range{margin-top:14px;background:var(--ink);color:#fff;border-radius:20px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center} .range b{font:800 16px var(--font-figtree)} .range p{margin:4px 0 0;font:500 13.5px var(--font-figtree);color:var(--n-brand-200)} .range .btn{width:auto;background:#fff;border-color:#fff}
 .tax{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
@@ -154,7 +155,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#about">Sticky section nav</a> <span>· full width, Save, Share, Price alert on the right</span></li>
       <li><a href="#about">About this boat</a> <span>· highlight, description, ownership strip, activities</span></li>
       <li><a href="#features">What this boat comes with</a> <span>· features grid, Show all</span></li>
-      <li><a href="#specs">Specifications</a> <span>· 6 tabs, unit toggle on Measurements and Tanks</span></li>
+      <li><a href="#specs">Specifications</a><a href="#warranty">Warranties</a> <span>· 6 tabs, unit toggle on Measurements and Tanks</span></li>
       <li><a href="#media">Deck layout</a> <span>· only where present</span></li>
       <li><a href="#nautix">NautiX trip map</a> <span>· range stat links here, popular trips from the port, A to B, speed slider</span></li>
       <li><a href="#waylo">Ask Waylo</a> <span>· used at median 6 min</span></li>
@@ -266,7 +267,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <p>This 2022 Azimut 72 Fly is a third generation hull with the four cabin, four head layout: a full beam owner's suite amidships, a VIP forward and two twin guest cabins, plus a two berth crew cabin aft. Twin MAN V12 1400 engines give a 27 knot cruise and 32 knots top, with 410 hours logged since delivery in March 2022.</p>
     <p>The flybridge carries the second helm, a wet bar with grill, and a hardtop with an opening section over the sunpads. The cockpit connects to the saloon through a full height glass door, and the galley sits aft in the saloon for serving both areas. Electronics are Raymarine Axiom Pro with two 16 inch displays at each helm, FLIR night camera and Seakeeper 9 gyro stabiliser.</p>
     <p>Lying Miami, FL, available for viewing now. US duty paid. Price reduced 14 August 2026 from $2,250,000.</p>
-    <div class="chips" style="margin-top:16px"><span><span class="material-symbols-outlined" style="font-size:15px">check_circle</span>US duty paid</span><span><span class="material-symbols-outlined" style="font-size:15px">receipt_long</span>US tax not paid</span><span><span class="material-symbols-outlined" style="font-size:15px">person</span>One owner</span><span><span class="material-symbols-outlined" style="font-size:15px">sailing</span>Captain maintained</span><span><span class="material-symbols-outlined" style="font-size:15px">block</span>Never chartered</span><span><span class="material-symbols-outlined" style="font-size:15px">verified_user</span>Engine warranty to Mar 2027</span><span><span class="material-symbols-outlined" style="font-size:15px">event_available</span>Available now</span></div>
+    <div class="chips" style="margin-top:16px"><span><span class="material-symbols-outlined" style="font-size:15px">check_circle</span>US duty paid</span><span><span class="material-symbols-outlined" style="font-size:15px">receipt_long</span>US tax not paid</span><span><span class="material-symbols-outlined" style="font-size:15px">person</span>One owner</span><span><span class="material-symbols-outlined" style="font-size:15px">sailing</span>Captain maintained</span><span><span class="material-symbols-outlined" style="font-size:15px">block</span>Never chartered</span><span><a href="#warranty" style="color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:5px"><span class="material-symbols-outlined" style="font-size:15px">verified_user</span>Engine warranty to Mar 2027</a></span><span><span class="material-symbols-outlined" style="font-size:15px">event_available</span>Available now</span></div>
     <div class="chips"><span><span class="material-symbols-outlined" style="font-size:15px">groups</span>Socializing</span><span><span class="material-symbols-outlined" style="font-size:15px">sailing</span>Cruising</span><span><span class="material-symbols-outlined" style="font-size:15px">family_restroom</span>Family</span><span><span class="material-symbols-outlined" style="font-size:15px">anchor</span>Overnight</span></div>
   </section>
 
@@ -306,8 +307,18 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <p class="disc">Information on this listing is provided in good faith by YachtWay and the listing broker/dealer, but accuracy is not guaranteed. All details are subject to change and buyers should independently verify specifications, condition, and availability before purchase.</p>
   </section>
 
-  <section class="blk" id="media">
-    <span class="n top"><b>10</b>Deck layout only. The 3D tour stays in the gallery hero at the top, not mixed in here. Only where present. Floor plans are 31% very useful to buyers in the NAR analogue.</span>
+  <section class="blk" id="warranty">
+<span class="n top"><b>10</b>Warranties, after the specifications. One card per warranty on the listing record: name, provider, expiry date or years after delivery, transferable. Absent with no warranty. The warranty chip in the ownership strip anchors here.</span>
+<span class="eyebrow">Coverage</span>
+<h2>Warranties</h2>
+<div class="vgrid">
+<div class="vc"><b><span class="material-symbols-outlined">verified_user</span>Engine Warranty</b><p>MAN. Expires March 2027. Transferable to the next owner.</p><span class="wst">Active</span></div>
+<div class="vc"><b><span class="material-symbols-outlined">bolt</span>Generator Warranty</b><p>Kohler. Expires 2 years after delivery. Transferable to the next owner.</p><span class="wst">Active</span></div>
+<div class="vc"><b><span class="material-symbols-outlined">sailing</span>Hull Warranty</b><p>Azimut. Expired March 2025.</p><span class="wst off">Expired</span></div>
+</div>
+</section>
+<section class="blk" id="media">
+    <span class="n top"><b>11</b>Deck layout only. The 3D tour stays in the gallery hero at the top, not mixed in here. Only where present. Floor plans are 31% very useful to buyers in the NAR analogue.</span>
     <span class="eyebrow">Layout</span>
     <h2>Deck Layout</h2>
     <div class="media">
@@ -317,7 +328,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="nautix">
-    <span class="n top"><b>11</b>NautiX, YachtWay's moat, its own module after the layout. The Range stat under the price links here so nobody misses it. Headline promises an estimate, not a fact: manufacturer curve, calm water, no weather or load. Trip chips are the most planned routes from the vessel's port in internal NautiX analytics, shown without counts. The map takes A and B, the slider sets cruising speed, the outputs give distance, time, fuel, tank on arrival and whether it fits the range. Full tank assumed, manufacturer basis stated.</span>
+    <span class="n top"><b>12</b>NautiX, YachtWay's moat, its own module after the layout. The Range stat under the price links here so nobody misses it. Headline promises an estimate, not a fact: manufacturer curve, calm water, no weather or load. Trip chips are the most planned routes from the vessel's port in internal NautiX analytics, shown without counts. The map takes A and B, the slider sets cruising speed, the outputs give distance, time, fuel, tank on arrival and whether it fits the range. Full tank assumed, manufacturer basis stated.</span>
     <span class="eyebrow">NautiX · YachtWay's range planner</span>
     <h2>Plan This Boat’s Range and Trip</h2>
     <p class="sub">Set point A and point B on the map, or pick a popular trip. Estimates use this hull's fuel curve, twin MAN V12 1400, a 4,800 L tank and a 10% reserve.</p>
@@ -335,7 +346,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="waylo">
-    <span class="n top"><b>12</b>Ask Waylo after the specs. On mobile a sticky Ask Waylo button sits lower left above the bottom bar and jumps here. Buyers who use it ask about 5 questions at median 6.1 min into the visit. 5 questions a day unlogged, 20 logged, then a prompt to contact the dealer.</span>
+    <span class="n top"><b>13</b>Ask Waylo after the specs. On mobile a sticky Ask Waylo button sits lower left above the bottom bar and jumps here. Buyers who use it ask about 5 questions at median 6.1 min into the visit. 5 questions a day unlogged, 20 logged, then a prompt to contact the dealer.</span>
     <span class="eyebrow">Ask AI</span>
     <h2>Ask Waylo About This Boat</h2>
     <div class="waylo">
@@ -346,7 +357,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="value">
-    <span class="n top"><b>13</b>Price and value. Value factors, price history and warranty detail in one place. Duty and tax status sit in the fact block above. Merges three separate modules from the 5 Aug spec. On a price hidden listing the factors show without the price.</span>
+    <span class="n top"><b>14</b>Price and value. Value factors, price history and warranty detail in one place. Duty and tax status sit in the fact block above. Merges three separate modules from the 5 Aug spec. On a price hidden listing the factors show without the price.</span>
     <span class="eyebrow">Understand the Asking Price</span>
     <h2>2022 Azimut 72 Fly Price and Value</h2>
     <p class="sub">What shapes the asking price of this 2022 Azimut 72 Fly, listed by Gulf Stream Yacht Sales.</p>
@@ -361,7 +372,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="financing">
-    <span class="n top"><b>14</b>Financing and insurance. EasyFund today: 142 entry clicks, 47 reach a form step, 3 pre-qualify, 0 from listings. Two thirds are lost on the hub hop, and 8 of 15 validation failures are boat facts the listing already holds. So this module deep links into the internal vessel pre-qualification with make, model, year, engines and price prefilled, asks only down payment and credit range here, and never routes through the hub. Hidden under $50,000, over 30 years old, PWC, CAD or AUD.</span>
+    <span class="n top"><b>15</b>Financing and insurance. EasyFund today: 142 entry clicks, 47 reach a form step, 3 pre-qualify, 0 from listings. Two thirds are lost on the hub hop, and 8 of 15 validation failures are boat facts the listing already holds. So this module deep links into the internal vessel pre-qualification with make, model, year, engines and price prefilled, asks only down payment and credit range here, and never routes through the hub. Hidden under $50,000, over 30 years old, PWC, CAD or AUD.</span>
     <span class="eyebrow">Can I afford it</span>
     <h2>Finance and Insure This Boat</h2>
     
@@ -386,7 +397,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="videos">
-    <span class="n top"><b>15</b>Video review, before the seller block, where Airbnb, Vrbo and Booking.com place reviews. Only where a YachtWay Spotlight exists for the model. One card, one link to the review page, which holds the video, the transcript and the written review.</span>
+    <span class="n top"><b>16</b>Video review, before the seller block, where Airbnb, Vrbo and Booking.com place reviews. Only where a YachtWay Spotlight exists for the model. One card, one link to the review page, which holds the video, the transcript and the written review.</span>
     <span class="eyebrow">YachtWay Spotlight</span>
     <h2>Azimut 72 Fly Video Review</h2>
     <p class="sub">YachtWay Spotlight takes an in-depth look at the Azimut 72 Fly. The review page carries the full walkthrough, the transcript and the written review.</p>
@@ -396,7 +407,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="seller">
-    <span class="n top"><b>16</b>Seller. About and offices. No response rate or response time on the page. The contact form from the side block repeats here for buyers who arrive at the bottom.</span>
+    <span class="n top"><b>17</b>Seller. About and offices. No response rate or response time on the page. The contact form from the side block repeats here for buyers who arrive at the bottom.</span>
     <span class="eyebrow">Who is selling</span>
     <h2>Seller</h2>
     <div class="sgrid">
@@ -415,7 +426,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="events">
-    <span class="n top"><b>17</b>Events. Live stream and in person event cards, only where a seller has added one. Live in 10 minutes turns the card into Join live. Runs on the listing page, never its own URL.</span>
+    <span class="n top"><b>18</b>Events. Live stream and in person event cards, only where a seller has added one. Live in 10 minutes turns the card into Join live. Runs on the listing page, never its own URL.</span>
     <span class="eyebrow">See it live</span>
     <h2>Events for This Boat</h2>
     <div class="egrid">
@@ -425,7 +436,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="similar">
-    <span class="n top"><b>18</b>Other listings from this seller only. No banner to the model page, no similar boats from other sellers: dealers do not accept competitor inventory on their listing. The breadcrumb is the one link up to the model page. Only 15% of buyers buy the exact boat they inquired about, so the seller's own rail keeps them with the seller. Cards: one anchor, Year Make Model, whole card clickable.</span>
+    <span class="n top"><b>19</b>Other listings from this seller only. No banner to the model page, no similar boats from other sellers: dealers do not accept competitor inventory on their listing. The breadcrumb is the one link up to the model page. Only 15% of buyers buy the exact boat they inquired about, so the seller's own rail keeps them with the seller. Cards: one anchor, Year Make Model, whole card clickable.</span>
     <span class="eyebrow">More from this seller</span>
     <h2>Other Gulf Stream Yacht Sales Listings</h2>
     <ul class="lgrid">
@@ -440,12 +451,12 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="pdf">
-    <span class="n top"><b>19</b>Download PDF. Seller brochure, dealer details added when logged in. Zero downloads tracked since February, so it sits low.</span>
+    <span class="n top"><b>20</b>Download PDF. Seller brochure, dealer details added when logged in. Zero downloads tracked since February, so it sits low.</span>
     <div class="pdf"><div><h3 style="margin:0 0 4px;font-size:16px">Download the PDF for this 2022 Azimut 72 Fly</h3><p>To include dealer information, log in first.</p></div><button class="btn" type="button" data-say="Brochure PDF downloads"><span class="material-symbols-outlined">download</span>Download PDF</button></div>
   </section>
 
   <section class="blk" id="faq">
-    <span class="n top"><b>20</b>FAQ. One H3 per question, answers computed from the record. FAQPage schema only where the answers are visible and complete. Still an open decision whether listings carry a FAQ at all.</span>
+    <span class="n top"><b>21</b>FAQ. One H3 per question, answers computed from the record. FAQPage schema only where the answers are visible and complete. Still an open decision whether listings carry a FAQ at all.</span>
     <h2>Frequently Asked Questions</h2>
     <div class="faq">
       <details open><summary>Is this 2022 Azimut 72 Fly still available?<span class="material-symbols-outlined">expand_more</span></summary><p>Yes. The listing is active and the boat is available for viewing now in Miami, FL. Use Request info or call the seller to confirm before travelling.</p></details>
@@ -455,7 +466,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     </div>
   </section>
 
-  <p class="pillar" id="pillar"><span class="n in"><b>21</b>Contextual pillar link. All yachts for sale, noun from nounForm, destination by length.</span><br><a href="/yachts-for-sale/">All yachts for sale<span class="material-symbols-outlined" style="font-size:16px;vertical-align:-3px;margin-left:5px">arrow_forward</span></a></p>
+  <p class="pillar" id="pillar"><span class="n in"><b>22</b>Contextual pillar link. All yachts for sale, noun from nounForm, destination by length.</span><br><a href="/yachts-for-sale/">All yachts for sale<span class="material-symbols-outlined" style="font-size:16px;vertical-align:-3px;margin-left:5px">arrow_forward</span></a></p>
   </div>
   </div>
 
