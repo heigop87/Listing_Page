@@ -15,7 +15,7 @@
 Header · nav 4 · EN · Sell · Log in or sign up · Home Page PRD
 BC   Home › Brands › [Brand] › [Brand Model] › [Year Brand Model]
 H1   [Year] [Brand Model] For Sale
-     Meta line · status · condition · length · hours · location · badge · views
+     Meta line · status · New or Used · length · hours · location · badge · views
      Gallery hero, full width · cover · video · 3D tour · photos · deck layout
      Sticky section nav, full width · 9 anchors · Save · Share · Price alert
      ── two columns from here · content left · contact block sticky right ──
@@ -52,7 +52,7 @@ Header, pre-footer and footer are sitewide: Home Page PRD rows 1 to 9 and 48 to 
 <tr><td>1</td><td>Home › Brands › [Brand] › [Brand Model]</td><td>Breadcrumb anchors, four</td><td>`/` · `/brands/` · `/brands/[brand]-yachts-for-sale/` · `/brands/[brand]-yachts-for-sale/[model]/`</td><td>Server. Identical for every entry path</td></tr>
 <tr><td>2</td><td>[Year Brand Model]</td><td>Breadcrumb current, plain text</td><td></td><td>Server</td></tr>
 <tr><td>3</td><td>**[Year] [Brand Model] For Sale**</td><td>**H1, the only one**</td><td></td><td>Server, from the record, never from click path</td></tr>
-<tr><td>4</td><td>For sale · Pre-owned · 72 ft · 410 h · **Miami, FL** · Authorized Dealer · 1,240 views</td><td>Meta line. Location is the one anchor</td><td>`/miami-fl-yachts-for-sale/`</td><td>Server. Hours absent on New. Badge absent for Brokerage Firms</td></tr>
+<tr><td>4</td><td>For sale · Used · 72 ft · 410 h · **Miami, FL** · Authorized Dealer · 1,240 views</td><td>Meta line. Location is the one anchor</td><td>`/miami-fl-yachts-for-sale/`</td><td>Server. Hours absent on New. Badge absent for Brokerage Firms</td></tr>
 <tr><td>5</td><td>[n] photos · Video · 3D tour · Deck layout</td><td>Gallery tiles, buttons, one label each</td><td>Gallery popup on that tab</td><td>Server tiles. Tiles with no content absent</td></tr>
 <tr><td>6</td><td>This listing has a 3D tour · Start 3D tour</td><td>3D tile label and button</td><td>3D tour viewer</td><td>Server. Under 900 px the label reads 3D tour, no button</td></tr>
 <tr><td>7</td><td>See all media</td><td>Button on the cover</td><td>Gallery popup, Photos tab</td><td>Server</td></tr>
@@ -61,10 +61,10 @@ Header, pre-footer and footer are sitewide: Home Page PRD rows 1 to 9 and 48 to 
 <tr><td>10</td><td>Price reduced</td><td>Pill, price card</td><td></td><td>Server, only with a recorded drop inside the 48 hour and hidden price rules</td></tr>
 <tr><td>11</td><td>$1,650,000 · ~~$1,745,000~~ · Down $95,000 on 14 Aug</td><td>Price card figures</td><td></td><td>Server. *Price on application* replaces all three when hidden</td></tr>
 <tr><td>12</td><td>Est. $14,900 / mo · Get your rate · no credit impact</td><td>Price card anchor</td><td>Financing module</td><td>Server. Absent where the calculator is hidden</td></tr>
-<tr><td>13</td><td>Pre-owned, 1 owner · 410 engine hours · Captain maintained · Never chartered</td><td>Condition card, two lines</td><td></td><td>Server. Only set flags</td></tr>
+<tr><td>13</td><td>Used, 1 owner · 410 engine hours · Captain maintained · Never chartered</td><td>Condition card, two lines</td><td></td><td>Server. Only set flags</td></tr>
 <tr><td>14</td><td>72 ft Length · 32 kn Top speed · 320 nm Range, plan a trip · 410 h Hours</td><td>Four-stat strip. Range is the one anchor</td><td>NautiX module</td><td>Server. A stat with no value is omitted</td></tr>
 <tr><td>15</td><td>[Seller name] · [City, jurisdiction]</td><td>Contact card head, verified icon where Authorized Dealer or Factory Direct</td><td></td><td>Server. Seller name plain text here</td></tr>
-<tr><td>16</td><td>Show phone number</td><td>Button</td><td>Reveals the number, second click `tel:`</td><td>Server</td></tr>
+<tr><td>16</td><td>Show phone number</td><td>Button, desktop contact card</td><td>Reveals the number as a `tel:` anchor</td><td>Server. Absent with no phone on record</td></tr>
 <tr><td>17</td><td>WhatsApp</td><td>Anchor</td><td>WhatsApp with the availability message</td><td>Server, only where the seller has a WhatsApp number</td></tr>
 <tr><td>18</td><td>Full name · Email · Phone · Message · Request info</td><td>Form, four fields and submit</td><td>Inquiry to the seller</td><td>Server</td></tr>
 <tr><td>19</td><td>Earliest viewing [day time], vessel local time · Schedule a tour</td><td>Line and button</td><td>Tour modal</td><td>Server</td></tr>
@@ -79,7 +79,7 @@ Header, pre-footer and footer are sitewide: Home Page PRD rows 1 to 9 and 48 to 
 <tr><td>27</td><td>**Deck Layout**</td><td>H2, conditional</td><td>Gallery popup, Deck Layout tab</td><td>Server, absent with no deck image</td></tr>
 <tr><td>28</td><td>NautiX · YachtWay's range planner · **Estimate This Boat’s Range and Trip**</td><td>Eyebrow, H2</td><td></td><td>Server</td></tr>
 <tr><td>29</td><td>Popular trips from [Port] · four place chips · Cruising speed [n] kn</td><td>Chips, slider</td><td>Sets A and B on the map</td><td>Server chips, client map. No counts</td></tr>
-<tr><td>30</td><td>Route · Distance · Trip time · Fuel burned · Tank on arrival · Fits in range · basis line</td><td>Outputs</td><td></td><td>Client from record data. Basis line server</td></tr>
+<tr><td>30</td><td>Route · Distance, est. · Trip time, est. · Fuel burned, est. · Tank on arrival, est. · Fits in range, est. · basis line</td><td>Outputs. Every calculated value carries est.</td><td></td><td>Client from record data. Basis line server</td></tr>
 <tr><td>31</td><td>**Ask Waylo About This Boat** · Ask · four suggested questions</td><td>H2, button, chips</td><td>Waylo</td><td>Server</td></tr>
 <tr><td>32</td><td>Understand the Asking Price · **[Year Brand Model] Price and Value** · Age · Engine · Options and features · Warranty · Price history · Other market factors</td><td>Eyebrow, H2, six cards</td><td></td><td>Server. No price figure when hidden</td></tr>
 <tr><td>33</td><td>Can I afford it · **Finance and Insure This Boat**</td><td>Eyebrow, H2</td><td></td><td>Server. Whole section absent per section 15</td></tr>
@@ -93,7 +93,7 @@ Header, pre-footer and footer are sitewide: Home Page PRD rows 1 to 9 and 48 to 
 <tr><td>41</td><td>Download the PDF for this [Year Brand Model] · Download PDF</td><td>H3, button</td><td>PDF</td><td>Server</td></tr>
 <tr><td>42</td><td>**Frequently Asked Questions** · one H3 per question</td><td>H2, details</td><td></td><td>Server, answers in the HTML while collapsed</td></tr>
 <tr><td>43</td><td>All [noun] for sale</td><td>Pillar anchor, footer edge</td><td>`/yachts-for-sale/` or `/boats-for-sale/` by length</td><td>Server</td></tr>
-<tr><td>44</td><td>Price · Year Brand Model · Call · Request info</td><td>Mobile bottom bar</td><td>`tel:` · Request info modal</td><td>Server, under 900 px</td></tr>
+<tr><td>44</td><td>Price · Year Brand Model · Call · Request info</td><td>Mobile bottom bar. Call is a `tel:` anchor, no reveal step</td><td>Dialer · Request info modal</td><td>Server, under 900 px. Call absent with no phone on record</td></tr>
 <tr><td>45</td><td>Ask Waylo</td><td>Mobile sticky pill, lower left</td><td>Ask Waylo module</td><td>Server, under 900 px</td></tr>
 </table>
 
@@ -115,6 +115,8 @@ THEN I see the canonical breadcrumb, one H1, the gallery, the price and the sell
 <tr><td>**G4. Seller exclusivity**</td><td>Zero listings from another seller, zero model page banner, zero response metrics, zero trip counts</td></tr>
 <tr><td>**G5. Pre-qualification**</td><td>One click from the listing reaches the EasyFund first step with the hull prefilled, and EF Prequal Submitted carries `listing_id`</td></tr>
 <tr><td>**G6. Hidden price**</td><td>A hidden price listing shows Price on application everywhere, no drop, no estimate, no price in the message, no Price alert, no price in the Offer</td></tr>
+<tr><td>**G7. Status integrity**</td><td>Status, price, drop history, availability date, contact eligibility and `Offer` all read from the one listing status record. A sold, pending, withdrawn or expired listing exposes no active contact, current price, financing, Price alert or in-stock Offer</td></tr>
+<tr><td>**G8. Inquiry integrity**</td><td>Request info and Price alert are rate limited, bot protected and validated server side. Listing ID and seller routing are assigned server side, never read from a browser field</td></tr>
 </table>
 
 ### 1. Identity and head {color="blue_bg"}
@@ -123,7 +125,8 @@ THEN I see the canonical breadcrumb, one H1, the gallery, the price and the sell
 <tr><td>Field</td><td>Value</td></tr>
 <tr><td>URL</td><td>`/brands/[brand]-yachts-for-sale/[model]/[year]-[model]-[id]/`. Internal ID per the row, eight Crockford Base32 characters, never the HIN. Every live `/vessels/` URL 301s here in one hop</td></tr>
 <tr><td>Title</td><td>**[Year] [Brand Model] For Sale \| YachtWay**</td></tr>
-<tr><td>Meta description</td><td>*[Year] [Brand Model] for sale in [City, jurisdiction]. [Price or Price on application], [LOA], [n] engine hours. Listed by [Seller] on YachtWay.* Hours clause absent on New</td></tr>
+<tr><td>Meta description</td><td>Dynamic template. **Used:** *[Year] [Brand Model] for sale in [City, jurisdiction]. [Price], [LOA], [n] engine hours. Listed by [Seller] on YachtWay.* Example: *2021 Azimut S8 for sale in Miami, FL. $1,650,000, 72 ft, 410 engine hours. Listed by Example Yachts on YachtWay.* **New:** hours clause dropped, *New* prepended: *New 2026 Azimut S8 for sale in …*. **Hidden price:** *Price on application* replaces the figure. **Missing hours:** hours clause dropped. **Sold:** *[Year] [Brand Model], sold. Sold [month year] at a last asking price of [price]. See other [Brand Model] for sale on YachtWay.*, price clause dropped when hidden</td></tr>
+<tr><td>Open Graph and Twitter</td><td>`og:type` product, `og:title` the title, `og:description` the meta description, `og:url` the canonical, `og:image` the cover photo as an absolute URL at 1200 by 630 or larger, `twitter:card` summary_large_image. Every absolute URL from the one configured base URL. A listing with no photo uses the brand placeholder, never an empty tag</td></tr>
 <tr><td>H1</td><td>**[Year] [Brand Model] For Sale**. Exactly one. From the record, never from click path or filter state</td></tr>
 <tr><td>Breadcrumb</td><td>Home › Brands › [Brand] › [Brand Model] › [Year Brand Model]. Same string in `BreadcrumbList`. The only structural link up</td></tr>
 <tr><td>Robots</td><td>index, follow. Self canonical. hreflang six locales plus x-default. Hidden price listings may sit lower in the sitemap or out of it</td></tr>
@@ -147,7 +150,7 @@ THEN I see the canonical breadcrumb, one H1, the gallery, the price and the sell
 One line under the H1, wrapping on mobile, items separated by a dot, in this order:
 
 1. **Status** - pill: For sale, Sale pending. Sold per the row
-2. **Condition** - New or Pre-owned
+2. **Condition** - New or Used. *Used*, never *Pre-owned*, unless a sitewide exception is created
 3. **Length** - LOA, follows the unit toggle
 4. **Engine hours** - average across engines. **NOT shown** for New
 5. **Location** - City, jurisdiction per Site link tree rule 9, the one anchor, to the location page
@@ -162,8 +165,10 @@ One line under the H1, wrapping on mobile, items separated by a dot, in this ord
 2. **3D tour tile** outlined and labelled **This listing has a 3D tour**, with **Start 3D tour** on the tile. Under 900 px the label reads **3D tour** and the button is dropped.
 3. **See all media** opens the gallery popup per Listing Page Guest: Videos, 3D Tour, Photos, Deck Layout.
 4. Tiles with no content are **NOT shown**; the grid collapses.
+5. **Alt text.** Every image with useful visual detail carries listing specific alt text from the media record, *2022 Azimut 72 Fly, flybridge helm*, never a repeated generic string. Decorative duplicates and the cover behind a text label use `alt=""`.
+6. **Gallery popup accessibility.** Keyboard navigation between images and tabs, visible focus, Escape closes, focus returns to the control that opened it, tab labels readable by a screen reader, image count announced.
 
-**Done when** the gallery is the only media entry above the fold and a listing with photos only renders a cover and a photo tile.
+**Done when** the gallery is the only media entry above the fold, a listing with photos only renders a cover and a photo tile, no two images share alt text, and the popup can be opened, browsed and closed on the keyboard alone.
 
 ### 5. Sticky section nav {color="purple"}
 
@@ -183,7 +188,7 @@ One line under the H1, wrapping on mobile, items separated by a dot, in this ord
 4. Price hidden: **Price on application** replaces the figure. No drop line, no estimate.
 
 **Condition card:**
-1. **[New or Pre-owned], [n] owner**
+1. **[New or Used], [n] owner**
 2. Engine hours · Captain maintained · Never chartered. Only the flags that are set
 
 **Four-stat strip** under the two cards: **Length** (unit toggle) · **Top speed** kn · **Range** nm at cruise, manufacturer basis, anchor to NautiX · **Hours** average engine hours.
@@ -195,7 +200,7 @@ One line under the H1, wrapping on mobile, items separated by a dot, in this ord
 Right column on desktop, sticky for the whole page, 64 px under the nav. On mobile a card under the four-stat strip plus the bottom bar.
 
 1. **Seller name** with the verified icon where Authorized Dealer or Factory Direct applies, location beneath. Name is plain text here. **NOT shown:** dealer label text, response rate, response time.
-2. **Show phone number** - first click reveals, second click calls.
+2. **Show phone number** - desktop contact card. Click reveals the number as a `tel:` anchor. On the mobile bottom bar **Call** is a direct `tel:` anchor with no reveal step. Both **NOT shown** when the seller has no phone on record; Request info and WhatsApp carry the intent. Phone reveal and `tel:` click are two separate events.
 3. **WhatsApp** - opens WhatsApp with the availability message. Shown only where the seller has a WhatsApp number.
 4. Request info form:
    - **Full name** - text input, required, max 100 characters
@@ -205,8 +210,9 @@ Right column on desktop, sticky for the whole page, 64 px under the nav. On mobi
    - **Request info** - submits, unlimited, toast *"The request has been sent to the Seller!"*
 5. **Earliest viewing [day time], vessel local time** and **Schedule a tour**, tour modal per Listing Page Guest.
 6. **Est. [amount] / mo, [down]% down, [years] years, [rate]%** and **Get your rate**, anchor to the Financing module. **NOT shown** where the calculator is hidden.
+7. **Integrity, Request info and Price alert.** Rate limited per IP and per account, bot protected, validated server side with the same rules as the client. Duplicate submit prevented; the button disables until the response returns. Consent and privacy line where the jurisdiction requires it. Clear error state with retry, never a silent failure. Listing ID and seller routing are assigned server side from the page identity, never trusted from a hidden field.
 
-**Mobile bottom bar:** price and Year Brand Model left, **Call** and **Request info** right. **Ask Waylo** pill fixed lower left above the bar.
+**Mobile bottom bar:** price and Year Brand Model left, **Call** as a direct `tel:` anchor and **Request info** right. **Ask Waylo** pill fixed lower left above the bar.
 
 **Done when** G1 closes and the pre-filled message carries no price on a hidden price listing.
 
@@ -243,7 +249,7 @@ Spec on the [NautiX row](https://app.notion.com/p/3d46d212272c815ea62fd5068986a0
 2. **Popular trips from [Port]** - four chips, the most planned routes from the vessel's port in internal NautiX usage. Counts **NOT shown**. Tap sets A and B.
 3. Map: tap sets A, second tap B, third tap starts over.
 4. **Cruising speed** - slider, hull's displacement speed to top speed, default the record's cruise speed, live label.
-5. Outputs: **Route**, **Distance** nm, **Trip time** h min, **Fuel burned** L and gal, **Tank on arrival** % with a bar, red below the 10% reserve, **Fits in range** Yes or No with the range at that speed.
+5. Outputs: **Route**, **Distance, est.** nm, **Trip time, est.** h min, **Fuel burned, est.** L and gal, **Tank on arrival, est.** % with a bar, red below the 10% reserve, **Fits in range, est.** Yes or No with the range at that speed. Every calculated value carries *est.*; only record values such as tank capacity appear without it.
 6. Basis line always visible, under the outputs: the manufacturer figure the curve is fitted to, calm water, no weather, current, load or routing around land, and *Real range will differ*.
 7. **NOT shown:** fuel on board slider, preset counts, a link to a NautiX page.
 
@@ -302,7 +308,7 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 1. **Events for This Boat** - live stream and in person cards per Listing Page Guest. **NOT shown** with no current or future event.
 2. **Other [Seller] Listings** - the seller's own active listings, excluding this one. Six cards, one anchor per card, Year Make Model, whole card clickable, price, city and badge outside the anchor. **All [n] [Seller] listings** to `/dealers/[seller]/`. **NOT shown:** a model page banner, listings from any other seller, similar vessels. Section **NOT shown** when the seller has one listing.
 3. **Download the PDF for this [Year Brand Model]** · **Download PDF** per Listing Page Guest.
-4. **Frequently Asked Questions** - one H3 per question, answers from the record, `FAQPage` only where visible and complete. Whether listings carry a FAQ is open.
+4. **Frequently Asked Questions** - optional. Rendered only where every answer comes from the record; a question with no record backed answer is dropped, and the section is dropped with the last question. One H3 per question, `FAQPage` only where visible and complete.
 5. **All [noun] for sale** - noun from `nounForm`, destination by length.
 
 **Done when** G4 closes and every card in Other [Seller] Listings resolves to a listing owned by the same seller.
@@ -317,6 +323,8 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 
 ### 20. Page states {color="orange_bg"}
 
+**One status record.** Listing status, price, price drop history, availability date and seller contact eligibility are generated from the same authoritative listing status record at render. A sold, pending, withdrawn or expired listing must not expose active contact, current price, financing, Price alert or in-stock `Offer` behaviour, on the page, in the head or in the bottom bar.
+
 <table fit-page-width="true" header-row="true">
 <tr><td>State</td><td>Behaviour</td></tr>
 <tr><td>Price hidden</td><td>Price on application in the price card, bottom bar and meta description. No drop line, no estimate, no price in the message, no Price alert, `Offer` without `price`</td></tr>
@@ -326,6 +334,8 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 <tr><td>No events</td><td>Events absent</td></tr>
 <tr><td>Calculator hidden</td><td>Financing section, price card estimate and contact card estimate absent</td></tr>
 <tr><td>Seller with one listing</td><td>Other [Seller] Listings absent</td></tr>
+<tr><td>Sale pending</td><td>Status pill Sale pending. Contact stays open, Price alert and financing estimates absent, `Offer` availability PreOrder is not used; keep InStock with the pending flag in the record only</td></tr>
+<tr><td>Withdrawn or expired</td><td>No active contact, price, financing, Price alert or `Offer`. Status pill Not available. Otherwise as sold without the sold date and last asking price</td></tr>
 <tr><td>Sold</td><td>Per the row: breadcrumb, basic specs, disclaimer, See other [Brand Model] banner, matched active listings, sold date and last asking price. No contact, 3D tour, video or active `Offer`</td></tr>
 </table>
 
@@ -339,6 +349,8 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 2. Amplitude project 748126. Every new event registered in the tracking plan before release. Autocapture on the listing path.
 3. New events: gallery opened, 3D tour opened, video played, spec tab opened, unit toggled, NautiX chip tapped, NautiX slider changed, See all media, section reached at 25, 50, 75, 100 percent scroll.
 4. `listing_id` on EF Prequal Submitted and EF Application Submitted. `listing_page` flag on Listing saved and Listing shared. Revive or remove price_alert_created, listing_pdf_downloaded, image_gallery_viewed.
+
+5. Phone reveal and `tel:` click are separate events, with `surface` desktop_card or mobile_bar.
 
 **Done when** field Core Web Vitals pass on mobile and each new event is a distinct registered event.
 
@@ -374,6 +386,10 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 <tr><td>26</td><td>Analytics events registered and firing, autocapture on the listing path</td><td>22</td></tr>
 <tr><td>27</td><td>Payload budget and Core Web Vitals gate</td><td>22</td></tr>
 <tr><td>28</td><td>@yachtway/ui components replace the prototype CSS</td><td>21</td></tr>
+<tr><td>29</td><td>Open Graph and Twitter tags from the base URL, cover photo as og:image</td><td>1</td></tr>
+<tr><td>30</td><td>Gallery alt text from the media record, popup keyboard and focus behaviour</td><td>4</td></tr>
+<tr><td>31</td><td>Request info and Price alert: rate limit, bot protection, server side validation and routing, duplicate submit, error state</td><td>7</td></tr>
+<tr><td>32</td><td>One listing status record drives status, price, drops, availability, contact eligibility and Offer</td><td>20</td></tr>
 </table>
 
 ## Decisions locked
@@ -399,7 +415,12 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 <tr><td>Title [Year] [Brand Model] For Sale | YachtWay. Meta description [Year] [Brand Model] for sale in [City, jurisdiction]. [Price or Price on application], [LOA], [n] engine hours. Listed by [Seller] on YachtWay. Example: 2021 Azimut S8 for sale in Miami, FL. $1,650,000, 72 ft, 410 engine hours. Listed by Example Yachts on YachtWay</td><td>7 Sep</td></tr>
 <tr><td>Listing disclaimer text, under the specifications on every listing</td><td>7 Sep</td></tr>
 <tr><td>Price and Value eyebrow Understand the Asking Price. Cards explanatory, never a valuation or verdict</td><td>7 Sep</td></tr>
-<tr><td>NautiX H2 Estimate This Boat’s Range and Trip, basis line with calm water conditions and Real range will differ</td><td>7 Sep</td></tr>
+<tr><td>NautiX H2 Estimate This Boat’s Range and Trip, basis line with calm water conditions and Real range will differ. Every calculated output labelled est.</td><td>7 Sep</td></tr>
+<tr><td>Used, never Pre-owned, unless a sitewide exception is created</td><td>7 Sep</td></tr>
+<tr><td>Dynamic meta description with New, hidden price, missing hours and sold variants</td><td>7 Sep</td></tr>
+<tr><td>Mobile Call is a direct tel: anchor. Desktop Show phone number reveals a tel: anchor. Reveal and tel: click tracked separately</td><td>7 Sep</td></tr>
+<tr><td>FAQ optional, record backed answers only</td><td>7 Sep</td></tr>
+<tr><td>Open Graph and image tags, gallery accessibility, inquiry integrity and one status record are requirements, sections 1, 4, 7, 20</td><td>7 Sep</td></tr>
 </table>
 
 ## Non-goals
@@ -407,6 +428,8 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 A similar vessels rail or cross seller recommendation · a model page banner on an active listing · usage figures or trip counts other than the listing's own view count · a YouTube rail or `VideoObject` for the review · dealer performance metrics · a fuel on board slider on the listing · a NautiX page link · a dark theme · a filtered catalog URL of its own.
 
 ## Open
+
+Left to visual testing and product data, not to further specification.
 
 <table fit-page-width="true" header-row="true">
 <tr><td>Question</td><td>Section</td></tr>
@@ -417,7 +440,6 @@ A similar vessels rail or cross seller recommendation · a model page banner on 
 <tr><td>Dealer performance metrics on the listing</td><td>17</td></tr>
 <tr><td>Fact rows over 40 ft: guests, crew, refit year, flag, VAT</td><td>6</td></tr>
 <tr><td>Price and Value shown at all on a hidden price listing</td><td>14</td></tr>
-<tr><td>FAQ on listings at all</td><td>18</td></tr>
 <tr><td>Fuel on board slider: removed from the prototype, required on the NautiX row</td><td>12</td></tr>
 <tr><td>Event banner under the stats and tour calendar in the bottom bar, from the Mobile_layout idea</td><td>6, 7</td></tr>
 <tr><td>Sold pages, three photos or five, on the row</td><td>20</td></tr>
