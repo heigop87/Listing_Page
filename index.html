@@ -34,7 +34,7 @@ section.blk{position:relative;scroll-margin-top:62px;padding:clamp(40px,5vw,64px
 /* gallery */
 .gal{position:relative;display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:8px;border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line)}
 .gal .t{position:relative;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 22px Manrope} .gal .t.cover{grid-row:1/3;font-size:42px}
-.gal .t .lab{position:absolute;bottom:10px;left:10px;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.92);border:1px solid #ece7f5;border-radius:9999px;padding:5px 10px;font:700 12px Manrope;color:var(--ink)} .gal .t .lab .material-symbols-outlined{font-size:15px;color:var(--accent)}
+.gal .t .lab{position:absolute;bottom:10px;left:10px;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.92);border:1px solid #ece7f5;border-radius:9999px;padding:5px 10px;font:700 12px Manrope;color:var(--ink)} .gal .t .lab .material-symbols-outlined{font-size:15px;color:var(--accent)} .gal .t.has3d{outline:2px solid var(--accent);outline-offset:-2px} .gal .t .lab3d{top:10px;bottom:auto;background:var(--purple);color:#fff;border-color:var(--purple)} .gal .t .lab3d .material-symbols-outlined{color:#fff}
 .gal .all{position:absolute;right:12px;bottom:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font:800 13px Manrope;color:var(--purple);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .counts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .counts>span{display:inline-flex;align-items:center;gap:5px;font:700 12px Manrope;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:9999px;padding:6px 11px} .counts .material-symbols-outlined{font-size:15px;color:var(--accent)}
 /* facts */
@@ -66,7 +66,7 @@ dl.spec div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;b
 .disc{font:500 12.5px Manrope;color:var(--faint);margin:14px 0 0;max-width:80ch}
 .feat{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px} .feat li{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:700 13.5px Manrope;color:var(--ink)} .feat .material-symbols-outlined{color:var(--accent);font-size:20px}
 /* media */
-.media{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px} .media .t{position:relative;min-width:0;aspect-ratio:16/9;border-radius:18px;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 26px Manrope;border:1px solid var(--line)} .media .t .lab{position:absolute;top:12px;left:12px;background:#fff;border:1px solid #ece7f5;border-radius:9999px;padding:6px 11px;font:700 12px Manrope;color:var(--ink)} .media .t .btn{position:absolute;width:auto;left:50%;top:50%;transform:translate(-50%,-50%)}
+.media{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px} .media .t{position:relative;min-width:0;aspect-ratio:16/9;border-radius:18px;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 26px Manrope;border:1px solid var(--line)} .media .t .lab{position:absolute;top:12px;left:12px;background:#fff;border:1px solid #ece7f5;border-radius:9999px;padding:6px 11px;font:700 12px Manrope;color:var(--ink)} .media .t .btn{position:absolute;width:auto;left:50%;top:50%;transform:translate(-50%,-50%)}
 /* waylo */
 .waylo{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center} .waylo input{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font:600 14px Manrope} .waylo .sug{grid-column:span 2;display:flex;gap:8px;flex-wrap:wrap} .waylo .sug button{border:1px solid var(--line);background:var(--bg);border-radius:9999px;padding:8px 13px;font:700 12.5px Manrope;color:var(--purple);cursor:pointer} .waylo .lim{grid-column:span 2;font:600 12px Manrope;color:var(--faint)}
 /* value */
@@ -118,13 +118,13 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <ol>
       <li><a href="#overview">Breadcrumb</a> <span>· link tree, up to the model page</span></li>
       <li><a href="#overview">H1 Year Brand Model For Sale</a> <span>· status, condition, location, name</span></li>
-      <li><a href="#overview">Gallery hero</a> <span>· cover, 4 tiles, media counts</span></li>
+      <li><a href="#overview">Gallery hero</a> <span>· cover, 4 tiles, 3D tour labelled, media counts</span></li>
       <li><a href="#overview">Fact block</a> <span>· price first, then length, year, location</span></li>
       <li><a href="#contact">Contact block</a> <span>· sticky side on desktop, bottom bar on mobile</span></li>
       <li><a href="#about">Sticky section nav</a> <span>· on scroll, Save, Share, Price alert repeat from the identity row</span></li>
       <li><a href="#about">About this boat</a> <span>· description, highlight, activities</span></li>
       <li><a href="#specs">Specifications</a> <span>· 7 tabs, all in the DOM</span></li>
-      <li><a href="#media">Deck layout and 3D tour</a> <span>· only where present</span></li>
+      <li><a href="#media">Deck layout</a> <span>· only where present, 3D tour stays in the gallery</span></li>
       <li><a href="#nautix">NautiX range calculator</a> <span>· speed and fuel in, range out</span></li>
       <li><a href="#waylo">Ask Waylo</a> <span>· used at median 6 min</span></li>
       <li><a href="#value">Price and value</a> <span>· factors, price history, warranty, tax</span></li>
@@ -158,11 +158,11 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
         <div class="gal">
           <div class="t cover">72<span class="lab"><span class="material-symbols-outlined">photo_camera</span>42 photos</span></div>
           <div class="t">▶<span class="lab"><span class="material-symbols-outlined">play_circle</span>Video</span></div>
-          <div class="t">3D<span class="lab"><span class="material-symbols-outlined">view_in_ar</span>3D tour</span></div>
+          <div class="t has3d">3D<span class="lab lab3d"><span class="material-symbols-outlined">view_in_ar</span>This listing has a 3D tour</span><button class="btn p" type="button" data-say="3D tour opens full screen" style="position:absolute;width:auto;left:50%;top:50%;transform:translate(-50%,-50%);padding:9px 12px;font-size:12px"><span class="material-symbols-outlined" style="font-size:16px">view_in_ar</span>Start 3D tour</button></div>
           <div class="t">📷<span class="lab"><span class="material-symbols-outlined">photo_library</span>Photos</span></div>
           <div class="t">GA<span class="lab"><span class="material-symbols-outlined">map</span>Deck layout</span></div>
           <button class="all" type="button" data-say="Gallery opens with Videos, 3D Tour, Photos, Deck Layout tabs"><span class="material-symbols-outlined" style="font-size:17px">grid_view</span>See all media</button>
-          <span class="n" style="top:12px;left:12px"><b>03</b>Gallery hero. Cover plus four tiles: video, 3D tour, photo, deck layout. Counts on the tiles. See all media opens the full gallery. Photo viewed first in every eye tracking study.</span>
+          <span class="n" style="top:12px;left:12px"><b>03</b>Gallery hero. Cover plus four tiles: video, 3D tour, photos, deck layout. The 3D tour tile is outlined and labelled This listing has a 3D tour, with Start 3D tour on the tile. See all media opens the full gallery. Photo viewed first in every eye tracking study.</span>
         </div>
         <div class="counts"><span><span class="material-symbols-outlined">photo_camera</span>42 photos</span><span><span class="material-symbols-outlined">play_circle</span>1 video</span><span><span class="material-symbols-outlined">view_in_ar</span>3D tour</span><span><span class="material-symbols-outlined">map</span>2 deck layouts</span><span><span class="material-symbols-outlined">visibility</span>1,240 views</span></div>
 
@@ -188,7 +188,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
             <a class="btn g" href="#" data-say="Opens WhatsApp with the availability message"><span class="material-symbols-outlined">chat</span>WhatsApp</a>
           </div>
           <form class="req" onsubmit="return false">
-            <input placeholder="First name"><input placeholder="Last name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
+            <input class="full" placeholder="Full name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
             <button class="btn p full" type="submit" data-say="Request sent to the seller"><span class="material-symbols-outlined">mail</span>Request info</button>
             <p class="fine">Unlimited requests. The message pre-fills the availability question buyers ask first.</p>
           </form>
@@ -253,18 +253,18 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="media">
-    <span class="n top"><b>09</b>Deck layout and 3D tour. Only where present. 3D tour engagement over 30 s triggers the in person tour prompt. Real estate: 3D tours sell 14% faster, floor plans 31% very useful.</span>
-    <span class="eyebrow">Walk through</span>
-    <h2>Deck Layout and 3D Tour</h2>
+    <span class="n top"><b>09</b>Deck layout only. The 3D tour stays in the gallery hero at the top, not mixed in here. Only where present. Floor plans are 31% very useful to buyers in the NAR analogue.</span>
+    <span class="eyebrow">Layout</span>
+    <h2>Deck Layout</h2>
     <div class="media">
-      <div class="t">3D<span class="lab">3D tour</span><button class="btn p" type="button" data-say="3D tour opens full screen"><span class="material-symbols-outlined">view_in_ar</span>Start 3D tour</button></div>
-      <div class="t">GA<span class="lab">Deck layout · 2 images</span></div>
+      <div class="t">GA<span class="lab">Main deck</span></div>
+      <div class="t">GA<span class="lab">Lower deck</span></div>
     </div>
   </section>
 
   <section class="blk" id="nautix">
     <span class="n top"><b>10</b>NautiX range calculator, its own module after the walk through. Speed and fuel on board in, range and hours out, from the manufacturer consumption curve with a 10% reserve. Range is never shown without its basis.</span>
-    <span class="eyebrow">NautiX</span>
+    <span class="eyebrow">Range</span>
     <h2>Azimut 72 Fly Range Calculator</h2>
     <p class="sub">NautiX Range Finder for <a href="/brands/azimut-yachts-for-sale/72-fly/">Azimut 72 Fly</a> powered by YachtWay. Figures from the manufacturer curve for twin MAN V12 1400, 10% reserve held back.</p>
     <div class="calc">
@@ -410,7 +410,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
             <a class="btn g" href="#" data-say="Opens WhatsApp with the availability message"><span class="material-symbols-outlined">chat</span>WhatsApp</a>
           </div>
           <form class="req" onsubmit="return false">
-            <input placeholder="First name"><input placeholder="Last name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
+            <input class="full" placeholder="Full name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
             <button class="btn p full" type="submit" data-say="Request sent to the seller"><span class="material-symbols-outlined">mail</span>Request info</button>
             <p class="fine">Unlimited requests. The message pre-fills the availability question buyers ask first.</p>
           </form>
