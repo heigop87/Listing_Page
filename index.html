@@ -127,11 +127,11 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#media">Deck layout</a> <span>· only where present, 3D tour stays in the gallery</span></li>
       <li><a href="#nautix">NautiX range calculator</a> <span>· speed and fuel in, range out</span></li>
       <li><a href="#waylo">Ask Waylo</a> <span>· used at median 6 min</span></li>
-      <li><a href="#value">Price and value</a> <span>· factors, price history, warranty, tax</span></li>
+      <li><a href="#value">Price and value</a> <span>· factors, price history, warranty detail</span></li>
       <li><a href="#financing">Financing and insurance</a> <span>· calculator, prequalify, insurance</span></li>
-      <li><a href="#seller">Seller</a> <span>· about, offices, response</span></li>
+      <li><a href="#seller">Seller</a> <span>· about, offices</span></li>
       <li><a href="#events">Events</a> <span>· only where present</span></li>
-      <li><a href="#similar">See other</a> <span>· model banner, other listings from this seller only</span></li>
+      <li><a href="#similar">More from this seller</a> <span>· the seller's own listings only, no model banner</span></li>
       <li><a href="#videos">Videos and reviews</a> <span>· only where present</span></li>
       <li><a href="#pdf">Download PDF</a></li>
       <li><a href="#faq">FAQ</a> <span>· only where answers are real</span></li>
@@ -178,8 +178,11 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
           <div class="fact"><div class="l"><span class="material-symbols-outlined">local_gas_station</span>Fuel</div><div class="v">Diesel<small>Twin MAN V12 1400</small></div></div>
           <div class="fact"><div class="l"><span class="material-symbols-outlined">speed</span>Speed</div><div class="v">27 / 32 kn<small>Cruise / top</small></div></div>
           <div class="fact"><div class="l"><span class="material-symbols-outlined">event_available</span>Availability</div><div class="v">Now</div></div>
+          <div class="fact"><div class="l"><span class="material-symbols-outlined">check_circle</span>Duty</div><div class="v">US duty paid</div></div>
+          <div class="fact"><div class="l"><span class="material-symbols-outlined">receipt_long</span>Tax status</div><div class="v">US tax not paid<small>Applies at purchase by state</small></div></div>
+          <div class="fact"><div class="l"><span class="material-symbols-outlined">verified_user</span>Warranty</div><div class="v">Engine to Mar 2027<small>Hull warranty expired</small></div></div>
           <div class="fact cond"><div class="l"><span class="material-symbols-outlined">flag</span>Flag and VAT</div><div class="v">US flag<small>Shown over 40 ft where the record holds it</small></div></div>
-          <span class="n" style="bottom:-14px;right:0"><b>04</b>Fact block. Price first, then length, year, location, condition, engine hours, cabins, type, fuel, speed, availability. Order follows filter usage: length 30%, price 30%, location 15%, year 9%, cabins 4%. No row with an empty value. Price hidden reads Price on application.</span>
+          <span class="n" style="bottom:-14px;right:0"><b>04</b>Fact block. Price first, then length, year, location, condition, engine hours, cabins, type, fuel, speed, availability, duty, tax status, warranty. Order follows filter usage: length 30%, price 30%, location 15%, year 9%, cabins 4%. Duty, tax and warranty are buying facts and sit here, not lower down. No row with an empty value. Price hidden reads Price on application.</span>
         </div>
 <div class="card mob" style="margin-top:16px">
           <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales <span class="material-symbols-outlined" style="font-size:16px;color:var(--accent)" title="Authorized Dealer">verified</span></div><div class="rs">Authorized Azimut dealer · Fort Lauderdale, FL</div></div></div>
@@ -293,7 +296,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="value">
-    <span class="n top"><b>12</b>Price and value. Value factors, price history, warranty, tax and duty in one place. Merges three separate modules from the 5 Aug spec. On a price hidden listing the factors show without the price.</span>
+    <span class="n top"><b>12</b>Price and value. Value factors, price history and warranty detail in one place. Duty and tax status sit in the fact block above. Merges three separate modules from the 5 Aug spec. On a price hidden listing the factors show without the price.</span>
     <span class="eyebrow">Is the price fair</span>
     <h2>2022 Azimut 72 Fly Price and Value</h2>
     <p class="sub">Several factors determine the value of a yacht like this 2022 Azimut 72 Fly listed by Gulf Stream Yacht Sales.</p>
@@ -305,7 +308,6 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <div class="vc"><b><span class="material-symbols-outlined">trending_down</span>Price history</b><p>Listed at $2,250,000 on 2 June 2026. Reduced to $2,150,000 on 14 August 2026.</p></div>
       <div class="vc"><b><span class="material-symbols-outlined">public</span>Other market factors</b><p>Seasonal demand, available inventory and vessel location also move the asking price.</p></div>
     </div>
-    <div class="tax"><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">check</span>US duty paid</span><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">receipt_long</span>US tax not paid</span><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">verified_user</span>Engine warranty to Mar 2027</span></div>
   </section>
 
   <section class="blk" id="financing">
@@ -328,13 +330,13 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="seller">
-    <span class="n top"><b>14</b>Seller. About, offices, response rate and time. The contact form from the side block repeats here for buyers who arrive at the bottom. Dealer performance metrics from the April note go here, still open.</span>
+    <span class="n top"><b>14</b>Seller. About and offices. No response rate or response time on the page. The contact form from the side block repeats here for buyers who arrive at the bottom.</span>
     <span class="eyebrow">Who is selling</span>
     <h2>Seller</h2>
     <div class="sgrid">
       <div class="card">
         <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales</div><div class="rs">Authorized Azimut dealer · Member since 2021 · Fort Lauderdale, FL</div></div></div>
-        <div class="kv"><div><b>Response rate</b><span>98%</span></div><div><b>Avg. response time</b><span>2 hours</span></div><div><b>Listings</b><span>9 Azimut · 31 total</span></div><div><b>Authorized dealer of</b><span>Azimut, Benetti</span></div></div>
+        <div class="kv"><div><b>Listings</b><span>9 Azimut · 31 total</span></div><div><b>Authorized dealer of</b><span>Azimut, Benetti</span></div><div><b>Member since</b><span>2021</span></div><div><b>Offices</b><span>Fort Lauderdale, Miami, Palm Beach</span></div></div>
         <p class="sub" style="margin:14px 0 0;font-size:14px">Authorized Azimut dealer for Florida with sales offices in Fort Lauderdale and Miami and a service yard on the New River.</p>
         <div class="stack" style="flex-direction:row"><a class="btn" href="/dealers/gulf-stream-yacht-sales/"><span class="material-symbols-outlined">storefront</span>Visit seller profile</a><a class="btn p" href="#contact"><span class="material-symbols-outlined">mail</span>Contact seller</a></div>
       </div>
@@ -357,10 +359,9 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="similar">
-    <span class="n top"><b>16</b>See other. Banner to the model page, then other listings from the same seller only. No similar boats from other sellers: dealers do not accept competitor inventory on their listing. Only 15% of buyers buy the exact boat they inquired about, so the seller's own rail keeps them with the seller. Cards: one anchor, Year Make Model, whole card clickable.</span>
-    <span class="eyebrow">Keep looking</span>
+    <span class="n top"><b>16</b>Other listings from this seller only. No banner to the model page, no similar boats from other sellers: dealers do not accept competitor inventory on their listing. The breadcrumb is the one link up to the model page. Only 15% of buyers buy the exact boat they inquired about, so the seller's own rail keeps them with the seller. Cards: one anchor, Year Make Model, whole card clickable.</span>
+    <span class="eyebrow">More from this seller</span>
     <h2>Other Gulf Stream Yacht Sales Listings</h2>
-    <div class="banner"><div><a href="/brands/azimut-yachts-for-sale/72-fly/">See other Azimut 72 Fly for sale<span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a><p>Model page, every generation and every seller on one page</p></div><span class="badge">Model page</span></div>
     <ul class="lgrid">
       <li class="lc"><span class="lc-tag">Same model</span><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/72-fly/2023-72-fly-k7m2p9xq/">2023 Azimut 72 Fly</a><span class="lc-price">$2,400,000</span><span class="lc-meta">Fort Lauderdale, FL · 180 h</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
       <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/grande-27m/2023-grande-27m-k7m2p9xq/">2023 Azimut Grande 27m</a><span class="lc-price">$5,900,000</span><span class="lc-meta">Fort Lauderdale, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
