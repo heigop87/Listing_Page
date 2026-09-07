@@ -61,6 +61,7 @@ form.req{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px} for
 .about p{font:500 16px Manrope;line-height:1.75;max-width:760px;margin:0 0 14px} .hl{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:14px 18px;margin:0 0 18px;max-width:760px} .hl b{font:800 12px Manrope;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:6px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .chips>span{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:9999px;padding:8px 14px;font:800 12px Manrope;color:var(--purple)}
 /* specs */
+.units{display:inline-flex;background:#f0f1f3;border-radius:9999px;padding:3px} .units button{border:none;cursor:pointer;border-radius:9999px;padding:6px 15px;font:800 12px Manrope;color:var(--muted);background:transparent} .units button[aria-pressed="true"]{background:#fff;color:var(--purple);box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 18px} .tabs button{border:1px solid var(--line);background:#fff;border-radius:9999px;padding:9px 15px;font:800 12.5px Manrope;color:var(--purple);cursor:pointer} .tabs button[aria-selected="true"]{background:var(--purple);color:#fff;border-color:var(--purple)}
 .pane{display:none} .pane.on{display:block}
 dl.spec{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0 28px;margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;padding:8px 22px}
@@ -122,20 +123,20 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#overview">Breadcrumb</a> <span>· link tree, up to the model page</span></li>
       <li><a href="#overview">H1 Year Brand Model For Sale</a> <span>· status, condition, location, name</span></li>
       <li><a href="#overview">Gallery hero</a> <span>· full width, cover, 4 tiles, 3D tour labelled, media counts</span></li>
-      <li><a href="#overview">Fact block</a> <span>· price first, then length, year, location</span></li>
+      <li><a href="#overview">Fact block</a> <span>· price and condition only, the rest on the meta line or in specs</span></li>
       <li><a href="#contact">Contact block</a> <span>· right column under the gallery, sticky on desktop, bottom bar on mobile</span></li>
       <li><a href="#about">Sticky section nav</a> <span>· on scroll, Save, Share, Price alert repeat from the identity row</span></li>
       <li><a href="#about">About this boat</a> <span>· description, highlight, activities</span></li>
       <li><a href="#specs">Specifications</a> <span>· 7 tabs, all in the DOM</span></li>
       <li><a href="#media">Deck layout</a> <span>· only where present, 3D tour stays in the gallery</span></li>
-      <li><a href="#nautix">NautiX trip map</a> <span>· A to B, trip time, fuel, tank level</span></li>
+      <li><a href="#nautix">NautiX trip map</a> <span>· A to B, speed slider, trip time, fuel, tank level</span></li>
       <li><a href="#waylo">Ask Waylo</a> <span>· used at median 6 min</span></li>
       <li><a href="#value">Price and value</a> <span>· factors, price history, warranty detail</span></li>
       <li><a href="#financing">Financing and insurance</a> <span>· calculator, prequalify, insurance</span></li>
       <li><a href="#seller">Seller</a> <span>· about, offices</span></li>
       <li><a href="#events">Events</a> <span>· only where present</span></li>
       <li><a href="#similar">More from this seller</a> <span>· the seller's own listings only, no model banner</span></li>
-      <li><a href="#videos">Videos and reviews</a> <span>· only where present</span></li>
+      <li><a href="#videos">Video review</a> <span>· one Spotlight card, only where present</span></li>
       <li><a href="#pdf">Download PDF</a></li>
       <li><a href="#faq">FAQ</a> <span>· only where answers are real</span></li>
       <li><a href="#pillar">Pillar link</a> <span>· footer</span></li>
@@ -150,11 +151,11 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <div class="ident">
       <div>
         <h1>2022 Azimut 72 Fly For Sale</h1>
-        <div class="meta"><span class="status sale"><span class="material-symbols-outlined" style="font-size:14px">check_circle</span>For sale</span><span>Pre-owned</span><span class="dot">·</span><a href="/miami-fl-yachts-for-sale/">Miami, FL</a><span class="dot">·</span><span>Vessel name <i>Bella Vita</i></span><span class="dot">·</span><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">verified</span>Listed by Authorized Dealer</span></div>
+        <div class="meta"><span class="status sale"><span class="material-symbols-outlined" style="font-size:14px">check_circle</span>For sale</span><span>Pre-owned</span><span class="dot">·</span><span data-m="22.1 m" data-us="72 ft">72 ft</span><span class="dot">·</span><span>410 h</span><span class="dot">·</span><a href="/miami-fl-yachts-for-sale/">Miami, FL</a><span class="dot">·</span><span>Vessel name <i>Bella Vita</i></span><span class="dot">·</span><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">verified</span>Listed by Authorized Dealer</span></div>
       </div>
       <div class="qa"><button type="button" id="save" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
     </div>
-    <span class="n in"><b>02</b>H1 pattern Year Brand Model For Sale. Status label reads For sale, Sale pending or Sold. Condition, location and vessel name on one line. Save, Share and Price alert sit here above the fold and repeat in the sticky section nav on scroll.</span>
+    <span class="n in"><b>02</b>H1 pattern Year Brand Model For Sale. One meta line under it, the way Airbnb states guests, bedrooms and baths: status, condition, length, engine hours, location, vessel name, dealer badge. Year is in the H1 so it is not repeated. Save, Share and Price alert sit here above the fold and repeat in the sticky section nav.</span>
 
         <div class="gal">
           <div class="t cover">72<span class="lab"><span class="material-symbols-outlined">photo_camera</span>42 photos</span></div>
@@ -188,23 +189,10 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       </aside>
   <div class="maincol">
 
-        <div class="facts" style="position:relative">
+        <div class="facts" style="position:relative;grid-template-columns:2fr 1fr">
           <div class="fact price"><div class="l"><span class="material-symbols-outlined" style="color:#c9b8ef">sell</span>Price</div><div class="v">$2,150,000<small><a href="#financing" style="color:#c9b8ef;text-decoration:none;border-bottom:1px solid #6a519a">Est. $14,900 per month · Get your rate, no credit impact</a></small><span class="drop"><span class="material-symbols-outlined" style="font-size:14px">trending_down</span>Reduced $100,000 on 14 Aug</span></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">straighten</span>Length</div><div class="v">22.1 m · 72 ft<small>LOA</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">calendar_month</span>Year</div><div class="v">2022<small>Third generation</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">location_on</span>Location</div><div class="v"><a href="/miami-fl-yachts-for-sale/">Miami, FL</a><small>United States</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">new_releases</span>Condition</div><div class="v">Pre-owned<small>One owner</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">timer</span>Engine hours</div><div class="v">410 h<small>Average of 2 engines</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">bed</span>Cabins</div><div class="v">4<small>8 guests · 2 crew</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">category</span>Type</div><div class="v"><a href="/flybridge-yachts-for-sale/">Flybridge yacht</a></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">local_gas_station</span>Fuel</div><div class="v">Diesel<small>Twin MAN V12 1400</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">speed</span>Speed</div><div class="v">27 / 32 kn<small>Cruise / top</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">event_available</span>Availability</div><div class="v">Now</div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">check_circle</span>Duty</div><div class="v">US duty paid</div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">receipt_long</span>Tax status</div><div class="v">US tax not paid<small>Applies at purchase by state</small></div></div>
-          <div class="fact"><div class="l"><span class="material-symbols-outlined">verified_user</span>Warranty</div><div class="v">Engine to Mar 2027<small>Hull warranty expired</small></div></div>
-          <div class="fact cond"><div class="l"><span class="material-symbols-outlined">flag</span>Flag and VAT</div><div class="v">US flag<small>Shown over 40 ft where the record holds it</small></div></div>
-          <span class="n" style="bottom:-14px;right:0"><b>04</b>Fact block. Price first, then length, year, location, condition, engine hours, cabins, type, fuel, speed, availability, duty, tax status, warranty. Order follows filter usage: length 30%, price 30%, location 15%, year 9%, cabins 4%. Duty, tax and warranty are buying facts and sit here, not lower down. No row with an empty value. Price hidden reads Price on application.</span>
+          <div class="fact"><div class="l"><span class="material-symbols-outlined">new_releases</span>Condition</div><div class="v">Pre-owned, one owner<small>410 engine hours · Captain maintained · Never chartered</small></div></div>
+          <span class="n" style="bottom:-14px;right:0"><b>04</b>Fact block cut to two cards: price and condition. Year is in the H1; length, hours and location are on the meta line; cabins, type, fuel and speed are in Specifications; duty, tax, warranty and availability moved to the ownership strip under the description. Price hidden reads Price on application.</span>
         </div>
 <div class="card mob" style="margin-top:16px">
           <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales <span class="material-symbols-outlined" style="font-size:16px;color:var(--accent)" title="Authorized Dealer">verified</span></div><div class="rs">Fort Lauderdale, FL</div></div></div>
@@ -232,23 +220,24 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <a href="#financing" data-sec="financing">Financing</a>
     <a href="#seller" data-sec="seller">Seller</a>
     <a href="#similar" data-sec="similar">More from seller</a>
-    <div class="qa"><button type="button" id="save2" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
+    <div class="qa"><a class="btn p" href="#contact" style="width:auto;padding:7px 12px;font-size:12px;border-radius:9999px"><span class="material-symbols-outlined" style="font-size:16px">call</span>Call</a><a class="btn" href="#contact" style="width:auto;padding:7px 12px;font-size:12px;border-radius:9999px"><span class="material-symbols-outlined" style="font-size:16px">mail</span>Request info</a><button type="button" id="save2" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
   </div></nav>
-  <div style="position:relative;height:0"><span class="n" style="top:8px;left:0"><b>06</b>Sticky section nav appears on scroll. Anchors for Gallery, Overview, Specs, Media, Value, Financing, Seller, Similar. Save, Share and Price alert ride along on the right. Anchors highlight as the reader passes each section.</span></div>
+  <div style="position:relative;height:0"><span class="n" style="top:8px;left:0"><b>06</b>Sticky section nav appears on scroll. Section anchors on the left. On the right, Call and Request info first, then Save, Share and Price alert. Contact stays one tap away before sharing does.</span></div>
 
   <section class="blk about" id="about">
-    <span class="n top"><b>07</b>About this boat. Seller highlight first, then the description, then activity chips. 700+ characters scores as complete. Show more after about 400 words.</span>
+    <span class="n top"><b>07</b>About this boat. Seller highlight first, then the description, then the ownership strip: duty, tax, warranty, availability. Then activity chips. 700+ characters scores as complete. Show more after about 400 words.</span>
     <h2>About this Azimut 72 Fly</h2>
     <div class="hl"><b>Seller highlight</b>Captain maintained, one owner from new, full Azimut service history at the Miami yard. Never chartered. Hydraulic swim platform and Seakeeper 9 fitted at build.</div>
     <p>This 2022 Azimut 72 Fly is a third generation hull with the four cabin, four head layout: a full beam owner's suite amidships, a VIP forward and two twin guest cabins, plus a two berth crew cabin aft. Twin MAN V12 1400 engines give a 27 knot cruise and 32 knots top, with 410 hours logged since delivery in March 2022.</p>
     <p>The flybridge carries the second helm, a wet bar with grill, and a hardtop with an opening section over the sunpads. The cockpit connects to the saloon through a full height glass door, and the galley sits aft in the saloon for serving both areas. Electronics are Raymarine Axiom Pro with two 16 inch displays at each helm, FLIR night camera and Seakeeper 9 gyro stabiliser.</p>
     <p>Lying Miami, FL, available for viewing now. US duty paid. Price reduced 14 August 2026 from $2,250,000.</p>
+    <div class="chips" style="margin-top:16px"><span><span class="material-symbols-outlined" style="font-size:15px">check_circle</span>US duty paid</span><span><span class="material-symbols-outlined" style="font-size:15px">receipt_long</span>US tax not paid</span><span><span class="material-symbols-outlined" style="font-size:15px">verified_user</span>Engine warranty to Mar 2027</span><span><span class="material-symbols-outlined" style="font-size:15px">event_available</span>Available now</span></div>
     <div class="chips"><span><span class="material-symbols-outlined" style="font-size:15px">groups</span>Socializing</span><span><span class="material-symbols-outlined" style="font-size:15px">sailing</span>Cruising</span><span><span class="material-symbols-outlined" style="font-size:15px">family_restroom</span>Family</span><span><span class="material-symbols-outlined" style="font-size:15px">anchor</span>Overnight</span></div>
   </section>
 
   <section class="blk" id="specs">
-    <span class="n top"><b>08</b>Specifications directly after the description. Tabs: General, Measurements, Engines, Accommodation, Tanks, Features, Extra Details. Rigging appears for sail. Every tab is in the DOM at initial render. Disclaimer persists below the tabs.</span>
-    <h2>2022 Azimut 72 Fly Specifications</h2>
+    <span class="n top"><b>08</b>Specifications directly after the description. US or Metric toggle at the top right, remembered per visitor, applied to every length, weight and volume on the page. Tabs: General, Measurements, Engines, Accommodation, Tanks, Features, Extra Details. Rigging appears for sail. Every tab is in the DOM at initial render.</span>
+    <div class="tools"><h2 style="margin:0">2022 Azimut 72 Fly Specifications</h2><div class="units" role="group" aria-label="Units"><button type="button" data-u="us" aria-pressed="true">US</button><button type="button" data-u="m" aria-pressed="false">Metric</button></div></div>
     <div class="tabs" role="tablist">
       <button role="tab" aria-selected="true" data-pane="general">General</button><button role="tab" aria-selected="false" data-pane="meas">Measurements</button><button role="tab" aria-selected="false" data-pane="eng">Engines</button><button role="tab" aria-selected="false" data-pane="acc">Accommodation</button><button role="tab" aria-selected="false" data-pane="tanks">Tanks</button><button role="tab" aria-selected="false" data-pane="feat">Features</button><button role="tab" aria-selected="false" data-pane="extra">Extra details</button>
     </div>
@@ -256,7 +245,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <div><dt>Builder</dt><dd>Azimut Yachts</dd></div><div><dt>Model</dt><dd>72 Fly</dd></div><div><dt>Generation</dt><dd>Third · 2019 to present</dd></div><div><dt>Type</dt><dd>Flybridge yacht</dd></div><div><dt>Built in</dt><dd>🇮🇹 Italy</dd></div><div><dt>Designer</dt><dd>Achille Salvagni, Alberto Mancini</dd></div><div><dt>Hull material</dt><dd>GRP with carbon fibre</dd></div><div><dt>Hull number</dt><dd>Shown when real, never in the URL</dd></div><div><dt>Condition</dt><dd>Pre-owned</dd></div><div><dt>Year</dt><dd>2022</dd></div>
     </dl></div>
     <div class="pane" id="p-meas"><dl class="spec">
-      <div><dt>Length overall</dt><dd>22.1 m · 72 ft 6 in</dd></div><div><dt>Waterline length</dt><dd>17.6 m · 57 ft 9 in</dd></div><div><dt>Beam</dt><dd>5.65 m · 18 ft 6 in</dd></div><div><dt>Draft</dt><dd>1.85 m · 6 ft 1 in</dd></div><div><dt>Dry weight</dt><dd>52,000 kg · 114,640 lb</dd></div><div><dt>Air draft</dt><dd>6.9 m · 22 ft 8 in</dd></div>
+      <div><dt>Length overall</dt><dd data-m="22.1 m" data-us="72 ft 6 in">72 ft 6 in</dd></div><div><dt>Waterline length</dt><dd data-m="17.6 m" data-us="57 ft 9 in">57 ft 9 in</dd></div><div><dt>Beam</dt><dd data-m="5.65 m" data-us="18 ft 6 in">18 ft 6 in</dd></div><div><dt>Draft</dt><dd data-m="1.85 m" data-us="6 ft 1 in">6 ft 1 in</dd></div><div><dt>Dry weight</dt><dd data-m="52,000 kg" data-us="114,640 lb">114,640 lb</dd></div><div><dt>Air draft</dt><dd data-m="6.9 m" data-us="22 ft 8 in">22 ft 8 in</dd></div>
     </dl></div>
     <div class="pane" id="p-eng"><dl class="spec">
       <div><dt>Engines</dt><dd>2 × MAN V12 1400</dd></div><div><dt>Power per engine</dt><dd>1,400 hp</dd></div><div><dt>Drive</dt><dd>Shaft</dd></div><div><dt>Fuel</dt><dd>Diesel</dd></div><div><dt>Hours, port</dt><dd>412 h</dd></div><div><dt>Hours, starboard</dt><dd>408 h</dd></div><div><dt>Cruise speed</dt><dd>27 kn</dd></div><div><dt>Top speed</dt><dd>32 kn</dd></div><div><dt>Range</dt><dd>320 nm at 27 kn, manufacturer figure</dd></div><div><dt>Generators</dt><dd>2 × Kohler 28 kW · 610 h</dd></div><div><dt>Stabiliser</dt><dd>Seakeeper 9</dd></div>
@@ -265,7 +254,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <div><dt>Cabins</dt><dd>4</dd></div><div><dt>Guests</dt><dd>8</dd></div><div><dt>Double beds</dt><dd>2</dd></div><div><dt>Single beds</dt><dd>4</dd></div><div><dt>Total berths</dt><dd>8</dd></div><div><dt>Heads</dt><dd>4 wet</dd></div><div><dt>Crew cabins</dt><dd>1</dd></div><div><dt>Crew berths</dt><dd>2</dd></div><div><dt>Crew heads</dt><dd>1</dd></div>
     </dl></div>
     <div class="pane" id="p-tanks"><dl class="spec">
-      <div><dt>Fuel capacity</dt><dd>4,800 L · 1,268 gal</dd></div><div><dt>Fuel tanks</dt><dd>2 · aluminium</dd></div><div><dt>Fresh water</dt><dd>1,100 L · 291 gal</dd></div><div><dt>Black water</dt><dd>420 L · 111 gal</dd></div>
+      <div><dt>Fuel capacity</dt><dd data-m="4,800 L" data-us="1,268 gal">1,268 gal</dd></div><div><dt>Fuel tanks</dt><dd>2 · aluminium</dd></div><div><dt>Fresh water</dt><dd data-m="1,100 L" data-us="291 gal">291 gal</dd></div><div><dt>Black water</dt><dd data-m="420 L" data-us="111 gal">111 gal</dd></div>
     </dl></div>
     <div class="pane" id="p-feat"><ul class="feat">
       <li><span class="material-symbols-outlined">waves</span>Seakeeper 9 gyro</li><li><span class="material-symbols-outlined">radar</span>Raymarine Axiom Pro</li><li><span class="material-symbols-outlined">nights_stay</span>FLIR night camera</li><li><span class="material-symbols-outlined">pool</span>Hydraulic swim platform</li><li><span class="material-symbols-outlined">ac_unit</span>Tropical air conditioning</li><li><span class="material-symbols-outlined">water_drop</span>Watermaker 180 L/h</li><li><span class="material-symbols-outlined">wifi</span>Starlink</li><li><span class="material-symbols-outlined">outdoor_grill</span>Flybridge grill and wet bar</li><li><span class="material-symbols-outlined">directions_boat</span>Williams 395 tender</li>
@@ -287,16 +276,14 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="nautix">
-    <span class="n top"><b>10</b>NautiX, its own module after the layout. A map: the buyer sets point A and point B and sees this hull's performance for the trip at the chosen speed: distance, trip time, fuel burned, tank level on arrival, and whether it fits inside the range with a 10% reserve. Figures from the manufacturer curve, basis always stated.</span>
+    <span class="n top"><b>10</b>NautiX, its own module after the layout. A map: the buyer sets point A and point B and sees this hull's performance for the trip at the chosen cruising speed: distance, trip time, fuel burned, tank level on arrival, and whether it fits inside the range with a 10% reserve. Full tank assumed. Figures from the manufacturer curve, basis always stated.</span>
     <span class="eyebrow">NautiX</span>
     <h2>Plan a Trip on This Azimut 72 Fly</h2>
-    <p class="sub">Tap the map to set A, then B. Or pick a route. NautiX Range Finder for <a href="/brands/azimut-yachts-for-sale/72-fly/">Azimut 72 Fly</a> powered by YachtWay, twin MAN V12 1400, 4,800 L tank, 10% reserve held back.</p>
+    <p class="sub">Tap the map to set A, then B. Tap again to start over. NautiX Range Finder for <a href="/brands/azimut-yachts-for-sale/72-fly/">Azimut 72 Fly</a> powered by YachtWay, twin MAN V12 1400, 4,800 L tank, 10% reserve held back.</p>
     <div class="nx">
       <div class="card" style="padding:0;overflow:hidden"><div id="nxmap" class="nxmap" role="application" aria-label="NautiX trip map"></div></div>
       <div class="card">
-        <div class="chips" style="margin:0 0 12px"><button type="button" class="nxp" data-a="25.77,-80.13" data-b="25.72,-79.30" data-n="Miami to Bimini">Miami to Bimini</button><button type="button" class="nxp" data-a="25.77,-80.13" data-b="24.56,-81.80" data-n="Miami to Key West">Miami to Key West</button><button type="button" class="nxp" data-a="25.77,-80.13" data-b="25.08,-77.34" data-n="Miami to Nassau">Miami to Nassau</button><button type="button" class="nxp" data-a="" data-b="" data-n="">Clear</button></div>
         <label for="n-speed" style="display:block;font:700 12px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin:6px 0 5px">Cruising speed <span id="n-speed-v" style="color:var(--ink)">27 kn</span></label><input id="n-speed" type="range" min="8" max="32" value="27" style="width:100%">
-        <label for="n-fuel" style="display:block;font:700 12px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin:12px 0 5px">Fuel on board at departure <span id="n-fuel-v" style="color:var(--ink)">100%</span></label><input id="n-fuel" type="range" min="10" max="100" value="100" style="width:100%">
         <div class="kv" style="margin-top:16px"><div><b>Route</b><span id="n-route">Miami to Bimini</span></div><div><b>Distance</b><span id="n-dist">50 nm</span></div><div><b>Trip time</b><span id="n-time">1 h 51 min</span></div><div><b>Fuel burned</b><span id="n-fuelused">676 L · 179 gal</span></div><div><b>Tank on arrival</b><span id="n-tank">86%</span></div><div><b>Fits in range</b><span id="n-fit">Yes, 320 nm at 27 kn</span></div></div>
         <div style="margin-top:12px;height:10px;border-radius:9999px;background:var(--bg);overflow:hidden"><div id="n-bar" style="height:100%;width:86%;background:var(--accent);border-radius:9999px;transition:width .2s"></div></div>
         <p class="sub" style="font-size:12.5px;margin:12px 0 0">Burn curve 30 + 0.46 × speed² L/h, fitted to the manufacturer figure of 320 nm at 27 kn. Straight line distance, no routing around land. Basis shown to the buyer, never a bare number.</p>
@@ -334,6 +321,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <span class="n top"><b>13</b>Financing and insurance. EasyFund today: 142 entry clicks, 47 reach a form step, 3 pre-qualify, 0 from listings. Two thirds are lost on the hub hop, and 8 of 15 validation failures are boat facts the listing already holds. So this module deep links into the internal vessel pre-qualification with make, model, year, engines and price prefilled, asks only down payment and credit range here, and never routes through the hub. Hidden under $50,000, over 30 years old, PWC, CAD or AUD.</span>
     <span class="eyebrow">Can I afford it</span>
     <h2>Finance and Insure This Boat</h2>
+    <p class="sub">Loan first, insurance second, equal weight. 14 insurance estimates were unlocked sitewide in 90 days against 179 loan calculator uses, so the page gives insurance a full card rather than a footnote to close that gap.</p>
     <div class="calc">
       <div class="card">
         <label for="c-price">Price</label><input id="c-price" type="number" value="2150000">
@@ -346,8 +334,11 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px"><div><label for="p-down" style="margin-top:0">Down payment</label><select id="p-down"><option>10%</option><option>15%</option><option>20%</option><option>25% or more</option></select></div><div><label for="p-credit" style="margin-top:0">Credit range</label><select id="p-credit"><option>Excellent, 740+</option><option>Good, 670 to 739</option><option>Fair, 580 to 669</option><option>Not sure</option></select></div></div>
           <p class="sub" style="font-size:13px;margin:10px 0 0">Boat, price and engines are already filled from this listing. Takes less than a minute. Direct bank rates, no markup. No credit impact.</p></div>
         <a class="btn p" href="#" data-say="Opens /easy-fund/get-prequalified-internal-vessel/[listing]/ with the boat prefilled. cta_location listing_loan_calculator. No hub hop."><span class="material-symbols-outlined">bolt</span>Get pre-qualified for this boat</a>
-        <div class="fin" style="margin-top:0"><div class="est" style="font-size:14px">Planning to buy this 72 Fly?<small>Instant insurance estimate for a 72 Fly in Miami through MasterCover</small></div><a class="btn" href="#" style="width:auto;padding:10px 14px;font-size:13px" data-say="Insurance estimate, cta_location listing">Get estimate</a></div>
       </div>
+    </div>
+    <div class="card" style="margin-top:14px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center">
+      <div><h3 style="margin:0 0 6px;font-size:18px">Insure this Azimut 72 Fly</h3><p class="sub" style="margin:0;font-size:14px">Instant estimate for a 72 Fly in Miami, FL through MasterCover, backed by A-rated underwriters. Hull, liability and named storm cover in one quote.</p></div>
+      <a class="btn p" href="#" style="width:auto" data-say="MasterCover estimate opens with this hull prefilled. cta_location listing_insurance"><span class="material-symbols-outlined">shield</span>Get an insurance estimate</a>
     </div>
   </section>
 
@@ -396,13 +387,12 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="videos">
-    <span class="n top"><b>17</b>Videos and reviews, second to last. The Spotlight review of the model, then YouTube videos titled with the make and model, longer than four minutes, not from BoatTEST, YachtWorld, YATCO or Rightboat. Only where present.</span>
+    <span class="n top"><b>17</b>Video review, only where a YachtWay Spotlight exists for the model. One card, one link to the review page, which holds the video, the transcript and the written review. No YouTube rail: the review and the article are the same piece.</span>
     <span class="eyebrow">YachtWay Spotlight</span>
-    <h2>Azimut 72 Fly Videos and Reviews</h2>
-    <ul class="rgrid">
-      <li class="rv"><span class="rv-img" aria-hidden="true"><span class="material-symbols-outlined">play_arrow</span></span><a class="rv-name" href="/brands/azimut-yachts-for-sale/72-fly/video-review/">Azimut 72 Fly video review</a><span class="rv-meta">YachtWay Spotlight · Full walkthrough, 12 min</span></li>
-      <li class="rv"><span class="rv-img" aria-hidden="true"><span class="material-symbols-outlined">play_arrow</span></span><a class="rv-name" href="#">Azimut 72 Fly sea trial, Miami to Bimini</a><span class="rv-meta">YouTube · Gulf Stream Yacht Sales, 9 min</span></li>
-      <li class="rv"><span class="rv-img" aria-hidden="true"><span class="material-symbols-outlined">play_arrow</span></span><a class="rv-name" href="#">Azimut 72 Fly flybridge and galley tour</a><span class="rv-meta">YouTube · Azimut Yachts, 6 min</span></li>
+    <h2>Azimut 72 Fly Video Review</h2>
+    <p class="sub">YachtWay Spotlight takes an in-depth look at the Azimut 72 Fly. The review page carries the full walkthrough, the transcript and the written review.</p>
+    <ul class="rgrid" style="grid-template-columns:minmax(0,420px)">
+      <li class="rv"><span class="rv-img" aria-hidden="true"><span class="material-symbols-outlined">play_arrow</span></span><a class="rv-name" href="/brands/azimut-yachts-for-sale/72-fly/video-review/">Watch the Azimut 72 Fly video review</a><span class="rv-meta">YachtWay Spotlight · Full walkthrough, 12 min · transcript and written review on the page</span></li>
     </ul>
   </section>
 
@@ -449,13 +439,15 @@ document.querySelectorAll('.lc-name,.rv-name,.fact a,.meta a,.crumb a,.banner a,
 document.querySelectorAll('#phone,#phone2').forEach(ph=>ph.addEventListener('click',()=>{ph.querySelector('span:last-child').textContent='+1 305 000 0000';}));
 document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected','false'));b.setAttribute('aria-selected','true');document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));document.getElementById('p-'+b.dataset.pane).classList.add('on');}));
 const ids=['overview','about','specs','media','nautix','value','financing','seller','similar'];function spy(){let a='overview';ids.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=90)a=id;});document.querySelectorAll('.jump a').forEach(l=>l.classList.toggle('active',l.dataset.sec===a));}addEventListener('scroll',spy,{passive:true});spy();
-if(location.search.includes('notes=1'))document.body.classList.add('notes');const tn=document.getElementById('tNotes');tn.setAttribute('aria-pressed',document.body.classList.contains('notes'));tn.textContent=document.body.classList.contains('notes')?'On':'Off';tn.onclick=()=>{const on=document.body.classList.toggle('notes');tn.setAttribute('aria-pressed',on);tn.textContent=on?'On':'Off';};
+if(location.search.includes('notes=1'))document.body.classList.add('notes');function setUnits(u){document.querySelectorAll('[data-m]').forEach(e=>e.textContent=e.dataset[u]);document.querySelectorAll('.units button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.u===u));try{localStorage.setItem('yw-units',u)}catch(e){}}
+document.querySelectorAll('.units button').forEach(b=>b.addEventListener('click',()=>setUnits(b.dataset.u)));let _u='us';try{_u=localStorage.getItem('yw-units')||'us'}catch(e){}setUnits(_u);
+const tn=document.getElementById('tNotes');tn.setAttribute('aria-pressed',document.body.classList.contains('notes'));tn.textContent=document.body.classList.contains('notes')?'On':'Off';tn.onclick=()=>{const on=document.body.classList.toggle('notes');tn.setAttribute('aria-pressed',on);tn.textContent=on?'On':'Off';};
 function calc(){const p=+document.getElementById('c-price').value||0,d=+document.getElementById('c-down').value||0,n=(+document.getElementById('c-term').value||20)*12,r=(+document.getElementById('c-rate').value||0)/1200;const P=p*(1-d/100);const m=r?P*r/(1-Math.pow(1+r,-n)):P/n;document.getElementById('c-out').firstChild.textContent='$'+Math.round(m).toLocaleString('en-US');}
 ['c-price','c-down','c-term','c-rate'].forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
 let A=[25.77,-80.13],B=[25.72,-79.30],routeName='Miami to Bimini',map,mA,mB,line,pending=0;
 function hav(a,b){const R=3440.065,t=x=>x*Math.PI/180,dl=t(b[0]-a[0]),dg=t(b[1]-a[1]),h=Math.sin(dl/2)**2+Math.cos(t(a[0]))*Math.cos(t(b[0]))*Math.sin(dg/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
 function fmtH(h){const m=Math.round(h*60);return Math.floor(m/60)+' h '+String(m%60).padStart(2,'0')+' min';}
-function nx(){const v=+document.getElementById('n-speed').value,f=+document.getElementById('n-fuel').value;document.getElementById('n-speed-v').textContent=v+' kn';document.getElementById('n-fuel-v').textContent=f+'%';
+function nx(){const v=+document.getElementById('n-speed').value,f=100;document.getElementById('n-speed-v').textContent=v+' kn';
 const lph=30+0.46*v*v,tank=4800,onboard=tank*f/100,usable=Math.max(0,onboard-tank*0.1),range=usable/lph*v;
 if(!A||!B){['n-dist','n-time','n-fuelused','n-tank'].forEach(id=>document.getElementById(id).textContent='Set A and B');document.getElementById('n-route').textContent='Tap the map';document.getElementById('n-fit').textContent='Range '+Math.round(range)+' nm at '+v+' kn';document.getElementById('n-bar').style.width=f+'%';return;}
 const d=hav(A,B),h=d/v,used=h*lph,left=onboard-used,pct=Math.max(0,Math.round(left/tank*100));
@@ -467,7 +459,6 @@ function pin(l){return L.divIcon({className:'',html:'<div class="nxpin">'+l+'</d
 function draw(){if(!map)return;[mA,mB,line].forEach(x=>x&&map.removeLayer(x));mA=mB=line=null;if(A)mA=L.marker(A,{icon:pin('A')}).addTo(map);if(B)mB=L.marker(B,{icon:pin('B')}).addTo(map);if(A&&B){line=L.polyline([A,B],{color:'#6a519a',weight:3,dashArray:'6 6'}).addTo(map);map.fitBounds(line.getBounds(),{padding:[40,40]});}nx();}
 if(window.L){map=L.map('nxmap',{scrollWheelZoom:false}).setView([25.6,-79.6],7);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
 map.on('click',e=>{const p=[e.latlng.lat,e.latlng.lng];if(pending===0||(!A)){A=p;B=null;pending=1;routeName='Custom route';}else{B=p;pending=0;routeName='Custom route';}draw();});draw();}
-document.querySelectorAll('.nxp').forEach(b=>b.addEventListener('click',()=>{if(!b.dataset.a){A=B=null;pending=0;routeName='';}else{A=b.dataset.a.split(',').map(Number);B=b.dataset.b.split(',').map(Number);routeName=b.dataset.n;pending=0;}draw();}));
-['n-speed','n-fuel'].forEach(id=>document.getElementById(id).addEventListener('input',nx));nx();
+document.getElementById('n-speed').addEventListener('input',nx);nx();
 </script>
 </body></html>
