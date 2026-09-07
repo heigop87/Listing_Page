@@ -44,6 +44,7 @@ section.blk{position:relative;scroll-margin-top:62px;padding:clamp(40px,5vw,64px
 .fact{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 16px} .fact .l{display:flex;align-items:center;gap:6px;font:800 12px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)} .fact .l .material-symbols-outlined{font-size:16px;color:var(--accent)} .fact .v{font:700 15px Manrope;letter-spacing:-.01em;margin-top:6px;line-height:1.35;color:var(--ink)} .fact .v a{color:inherit;text-decoration:none;border-bottom:1px solid var(--chipline)}
 .fact .v small{display:block;font:600 12px Manrope;color:var(--faint);margin-top:3px} .fact.price{background:var(--ink);border-color:var(--ink);padding:16px 18px 14px} .fact.price .l{color:#a89bc4} .ptop{display:flex;align-items:center;justify-content:space-between;gap:10px} .pill{display:inline-flex;align-items:center;gap:5px;background:#1f7a3a;color:#dff5e3;border-radius:9999px;padding:5px 10px;font:800 11px Manrope;letter-spacing:.04em;text-transform:uppercase} .pmain{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:8px} .pnow{font:800 34px Manrope;letter-spacing:-.02em;color:#fff;line-height:1} .pwas{font:600 16px Manrope;color:#8a8594;text-decoration:line-through} .pdrop{font:700 12.5px Manrope;color:#9be0a3;margin-top:6px} @media (max-width:560px){.pnow{font-size:28px}}
 .prate{display:flex;align-items:center;gap:10px;margin-top:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:10px 12px;color:#fff;text-decoration:none} .prate b{display:block;font:800 14px Manrope} .prate small{display:block;font:600 11.5px Manrope;color:#c9b8ef;margin-top:1px} .prate:hover{background:rgba(255,255,255,.14)} .fact.cond{border-style:dashed}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 8px} .stats>*{text-align:center;text-decoration:none;color:inherit;border-radius:10px;padding:4px} .stats b{display:block;font:800 20px Manrope;letter-spacing:-.01em;color:var(--ink)} .stats span{display:block;font:700 11px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin-top:2px} .stats a span{color:var(--accent)} .stats a:hover{background:var(--chip)}
 .nxteaser{display:flex;align-items:center;gap:10px;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;font:600 13.5px Manrope;color:var(--text);text-decoration:none} .nxteaser b{color:var(--ink)} .nxteaser:hover{border-color:var(--chipline)}
 /* contact card */
 .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 24px 48px -30px rgba(20,20,31,.13)}
@@ -126,14 +127,14 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#overview">Breadcrumb</a> <span>· link tree, up to the model page</span></li>
       <li><a href="#overview">H1 and meta line</a> <span>· status, condition, length, hours, location, badge</span></li>
       <li><a href="#overview">Gallery hero</a> <span>· full width, 3D tour labelled, media counts</span></li>
-      <li><a href="#overview">Fact block</a> <span>· price and condition only</span></li>
+      <li><a href="#overview">Fact block</a> <span>· price and condition cards, four-stat strip</span></li>
       <li><a href="#contact">Contact block</a> <span>· right column, sticky on desktop, bottom bar on mobile</span></li>
       <li><a href="#about">Sticky section nav</a> <span>· full width, Save, Share, Price alert on the right</span></li>
       <li><a href="#about">About this boat</a> <span>· highlight, description, ownership strip, activities</span></li>
       <li><a href="#features">What this boat comes with</a> <span>· features grid, Show all</span></li>
       <li><a href="#specs">Specifications</a> <span>· 6 tabs, unit toggle on Measurements and Tanks</span></li>
       <li><a href="#media">Deck layout</a> <span>· only where present</span></li>
-      <li><a href="#nautix">NautiX trip map</a> <span>· teaser under the price, popular trips from the port, A to B, speed slider</span></li>
+      <li><a href="#nautix">NautiX trip map</a> <span>· range stat links here, popular trips from the port, A to B, speed slider</span></li>
       <li><a href="#waylo">Ask Waylo</a> <span>· used at median 6 min</span></li>
       <li><a href="#value">Price and value</a> <span>· factors, price history, warranty detail</span></li>
       <li><a href="#financing">Financing and insurance</a> <span>· deep link prequal, insurance card</span></li>
@@ -212,9 +213,14 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
             <a class="prate" href="#financing"><span class="material-symbols-outlined" style="font-size:18px">bolt</span><span><b>Est. $14,900 / mo</b><small>Get your rate · no credit impact</small></span><span class="material-symbols-outlined" style="font-size:18px;margin-left:auto">chevron_right</span></a>
           </div>
           <div class="fact"><div class="l"><span class="material-symbols-outlined">new_releases</span>Condition</div><div class="v">Pre-owned, one owner<small>410 engine hours · Captain maintained · Never chartered</small></div></div>
-          <span class="n" style="bottom:-14px;right:0"><b>04</b>Fact block cut to two cards: price and condition. Price card: reduced pill top right, current price large with the previous price struck through, the drop and date beneath, and the monthly estimate as its own button into Financing. Year is in the H1; length, hours and location are on the meta line; cabins, type, fuel and speed are in Specifications; duty, tax, warranty and availability moved to the ownership strip under the description. Price hidden reads Price on application.</span>
+          <span class="n" style="bottom:-14px;right:0"><b>04</b>Fact block: price and condition cards, then the four-stat strip from the mobile layout idea, Length, Top speed, Range, Hours. Range links into NautiX. Price card: reduced pill top right, current price large with the previous price struck through, the drop and date beneath, and the monthly estimate as its own button into Financing. Year is in the H1; length, hours and location are on the meta line; cabins, type, fuel and speed are in Specifications; duty, tax, warranty and availability moved to the ownership strip under the description. Price hidden reads Price on application.</span>
         </div>
-        <a class="nxteaser" href="#nautix"><span class="material-symbols-outlined" style="font-size:18px;color:var(--accent)">explore</span><span><b>How far can this boat go?</b> 320 nm at 27 kn on one tank. Miami to Nassau in about 5 h 50 min.</span><span style="margin-left:auto;font:800 13px Manrope;color:var(--purple);white-space:nowrap">Plan a trip with NautiX <span class="material-symbols-outlined" style="font-size:16px;vertical-align:-3px">arrow_downward</span></span></a>
+        <div class="stats">
+          <div><b data-m="22.1 m" data-us="72 ft">72 ft</b><span>Length</span></div>
+          <div><b>32 kn</b><span>Top speed</span></div>
+          <a href="#nautix"><b>320 nm</b><span>Range · plan a trip</span></a>
+          <div><b>410 h</b><span>Hours</span></div>
+        </div>
 <div class="card mob" style="margin-top:16px">
           <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales <span class="material-symbols-outlined" style="font-size:16px;color:var(--accent)" title="Authorized Dealer">verified</span></div><div class="rs">Fort Lauderdale, FL</div></div></div>
           <div class="stack">
@@ -291,7 +297,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="nautix">
-    <span class="n top"><b>11</b>NautiX, YachtWay's moat, its own module after the layout with a teaser link under the price so nobody misses it. Headline names the question every buyer has: how far can it go. Trip chips are the most planned routes from the vessel's port in internal NautiX analytics, shown without counts. The map takes A and B, the slider sets cruising speed, the outputs give distance, time, fuel, tank on arrival and whether it fits the range. Full tank assumed, manufacturer basis stated.</span>
+    <span class="n top"><b>11</b>NautiX, YachtWay's moat, its own module after the layout. The Range stat under the price links here so nobody misses it. Headline names the question every buyer has: how far can it go. Trip chips are the most planned routes from the vessel's port in internal NautiX analytics, shown without counts. The map takes A and B, the slider sets cruising speed, the outputs give distance, time, fuel, tank on arrival and whether it fits the range. Full tank assumed, manufacturer basis stated.</span>
     <span class="eyebrow">NautiX · YachtWay's range planner</span>
     <h2>How Far Can This Boat Actually Go?</h2>
     <p class="sub">Range is the number every buyer asks about and no brochure answers honestly. NautiX runs this hull's own fuel curve, twin MAN V12 1400 and a 4,800 L tank with 10% held back, over any trip you draw. Tap the map to set A, then B, or start from a trip other owners plan most.</p>
