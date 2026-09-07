@@ -75,6 +75,7 @@ Header, pre-footer and footer are sitewide: Home Page PRD rows 1 to 9 and 48 to 
 <tr><td>24</td><td>**What This Boat Comes With** · Show all [n] features</td><td>H2, button</td><td>Expands in place</td><td>Server, every feature in the HTML</td></tr>
 <tr><td>25</td><td>**[Year Brand Model] Specifications** · US | Metric</td><td>H2, toggle</td><td>Client state, remembered per visitor</td><td>Server H2. Toggle visible on Measurements and Tanks only</td></tr>
 <tr><td>26</td><td>General · Measurements · Engines · Accommodation · Tanks · Extra details · Rigging</td><td>Tabs. Rigging for sail only</td><td></td><td>Server, every panel in the HTML</td></tr>
+<tr><td>26a</td><td>Information on this listing is provided in good faith by YachtWay and the listing broker/dealer, but accuracy is not guaranteed. All details are subject to change and buyers should independently verify specifications, condition, and availability before purchase.</td><td>Disclaimer, small body, under the tabs</td><td></td><td>Server, every listing, every state including sold</td></tr>
 <tr><td>27</td><td>**Deck Layout**</td><td>H2, conditional</td><td>Gallery popup, Deck Layout tab</td><td>Server, absent with no deck image</td></tr>
 <tr><td>28</td><td>NautiX · YachtWay's range planner · **How Far Can This Boat Actually Go?**</td><td>Eyebrow, H2</td><td></td><td>Server</td></tr>
 <tr><td>29</td><td>Popular trips from [Port] · four place chips · Cruising speed [n] kn</td><td>Chips, slider</td><td>Sets A and B on the map</td><td>Server chips, client map. No counts</td></tr>
@@ -226,7 +227,7 @@ Right column on desktop, sticky for the whole page, 64 px under the nav. On mobi
 1. H2 **[Year Brand Model] Specifications**.
 2. **US | Metric** toggle, top right. Visible only while Measurements or Tanks is the active tab. Remembered per visitor. Applies to every length, weight and volume on the page, meta line and stat strip included. Default US.
 3. Tabs in order: **General**, **Measurements**, **Engines**, **Accommodation**, **Tanks**, **Extra Details**, **Rigging** for sail. Every panel in the DOM at initial render. Field lists per Listing Page Guest, plus **Vessel name** in General. No Features tab.
-4. Disclaimer beneath, persists across tabs, text per Listing Page Guest.
+4. Disclaimer beneath, persists across tabs, on every listing: *"Information on this listing is provided in good faith by YachtWay and the listing broker/dealer, but accuracy is not guaranteed. All details are subject to change and buyers should independently verify specifications, condition, and availability before purchase."*
 
 **Done when** switching to Metric changes the meta line length, the stat strip and every measurement in one action, and the toggle is absent on General.
 
@@ -312,7 +313,7 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 <tr><td>No events</td><td>Events absent</td></tr>
 <tr><td>Calculator hidden</td><td>Financing section, price card estimate and contact card estimate absent</td></tr>
 <tr><td>Seller with one listing</td><td>Other [Seller] Listings absent</td></tr>
-<tr><td>Sold</td><td>Per the row: breadcrumb, basic specs, See other [Brand Model] banner, matched active listings, sold date and last asking price. No contact, 3D tour, video or active `Offer`</td></tr>
+<tr><td>Sold</td><td>Per the row: breadcrumb, basic specs, disclaimer, See other [Brand Model] banner, matched active listings, sold date and last asking price. No contact, 3D tour, video or active `Offer`</td></tr>
 </table>
 
 ### 21. Design system {color="purple"}
@@ -382,6 +383,8 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 <tr><td>Full name in one field. Message pre-filled with the availability question</td><td>7 Sep</td></tr>
 <tr><td>Pre-qualification deep links to the internal vessel flow with the hull prefilled, never via `/boat-loans/`. EasyFund listing entries were 34 of 142</td><td>7 Sep</td></tr>
 <tr><td>Styled on @yachtway/ui, Poppins and Figtree</td><td>7 Sep</td></tr>
+<tr><td>Title [Year] [Brand Model] For Sale | YachtWay. Meta description [Year] [Brand Model] for sale in [City, jurisdiction]. [Price or Price on application], [LOA], [n] engine hours. Listed by [Seller] on YachtWay. Example: 2021 Azimut S8 for sale in Miami, FL. $1,650,000, 72 ft, 410 engine hours. Listed by Example Yachts on YachtWay</td><td>7 Sep</td></tr>
+<tr><td>Listing disclaimer text, under the specifications on every listing</td><td>7 Sep</td></tr>
 </table>
 
 ## Non-goals
@@ -392,7 +395,6 @@ A similar vessels rail or cross seller recommendation · a model page banner on 
 
 <table fit-page-width="true" header-row="true">
 <tr><td>Question</td><td>Section</td></tr>
-<tr><td>Title and meta description pattern confirmed before the re-path, so titles and URLs ship as one crawl event</td><td>1</td></tr>
 <tr><td>Ask Waylo after NautiX, or beside the description as a product bet</td><td>13</td></tr>
 <tr><td>Duty and warranty chips above the fold, as on the Mobile_layout idea</td><td>3, 8</td></tr>
 <tr><td>NautiX before Value, or after insurance as on the Mobile_layout idea</td><td>12</td></tr>
