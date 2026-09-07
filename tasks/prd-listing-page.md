@@ -349,7 +349,6 @@ Per Listing Page Guest: input, four suggested questions, 5 a day unlogged, 20 lo
 2. Amplitude project 748126. Every new event registered in the tracking plan before release. Autocapture on the listing path.
 3. New events: gallery opened, 3D tour opened, video played, spec tab opened, unit toggled, NautiX chip tapped, NautiX slider changed, See all media, section reached at 25, 50, 75, 100 percent scroll.
 4. `listing_id` on EF Prequal Submitted and EF Application Submitted. `listing_page` flag on Listing saved and Listing shared. Revive or remove price_alert_created, listing_pdf_downloaded, image_gallery_viewed.
-
 5. Phone reveal and `tel:` click are separate events, with `surface` desktop_card or mobile_bar.
 
 **Done when** field Core Web Vitals pass on mobile and each new event is a distinct registered event.
@@ -447,4 +446,4 @@ Left to visual testing and product data, not to further specification.
 
 ---
 
-*Written 7 September 2026 from the day's decisions, the prototype at commit a6248a1 and Listing Page · Information Hierarchy. Same shape as the Home Page and Location index requirements. Round one by Heigo on the yachtway-user-stories conventions; BAs finalise.*
+*Written 7 September 2026 from the day's decisions, the prototype at commit f032521 and Listing Page · Information Hierarchy. Same shape as the Home Page and Location index requirements. Round one by Heigo on the yachtway-user-stories conventions; BAs finalise.*
