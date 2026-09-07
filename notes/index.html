@@ -36,7 +36,7 @@ section.blk{position:relative;scroll-margin-top:62px;padding:clamp(40px,5vw,64px
 .gal .t{position:relative;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 22px Manrope} .gal .t.cover{grid-row:1/3;font-size:42px}
 .gal .t .lab{position:absolute;bottom:10px;left:10px;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.92);border:1px solid #ece7f5;border-radius:9999px;padding:5px 10px;font:700 12px Manrope;color:var(--ink)} .gal .t .lab .material-symbols-outlined{font-size:15px;color:var(--accent)}
 .gal .all{position:absolute;right:12px;bottom:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font:800 13px Manrope;color:var(--purple);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-.counts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .counts span{display:inline-flex;align-items:center;gap:5px;font:700 12px Manrope;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:9999px;padding:6px 11px} .counts .material-symbols-outlined{font-size:15px;color:var(--accent)}
+.counts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .counts>span{display:inline-flex;align-items:center;gap:5px;font:700 12px Manrope;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:9999px;padding:6px 11px} .counts .material-symbols-outlined{font-size:15px;color:var(--accent)}
 /* facts */
 .facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:16px}
 .fact{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 16px} .fact .l{display:flex;align-items:center;gap:6px;font:800 12px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)} .fact .l .material-symbols-outlined{font-size:16px;color:var(--accent)} .fact .v{font:700 15px Manrope;letter-spacing:-.01em;margin-top:6px;line-height:1.35;color:var(--ink)} .fact .v a{color:inherit;text-decoration:none;border-bottom:1px solid var(--chipline)}
@@ -57,7 +57,7 @@ form.req{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px} for
 .qa{display:flex;gap:6px;flex:0 0 auto;flex-wrap:wrap} .jump .qa{margin-left:auto} .qa button{border:1px solid var(--line);background:#fff;border-radius:9999px;padding:8px 13px;font:800 12px Manrope;color:var(--purple);cursor:pointer;display:inline-flex;align-items:center;gap:5px} .qa .material-symbols-outlined{font-size:16px} .ident .qa{padding-top:6px}
 /* about */
 .about p{font:500 16px Manrope;line-height:1.75;max-width:760px;margin:0 0 14px} .hl{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:14px 18px;margin:0 0 18px;max-width:760px} .hl b{font:800 12px Manrope;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:6px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .chips span{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:9999px;padding:8px 14px;font:800 12px Manrope;color:var(--purple)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .chips>span{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:9999px;padding:8px 14px;font:800 12px Manrope;color:var(--purple)}
 /* specs */
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 18px} .tabs button{border:1px solid var(--line);background:#fff;border-radius:9999px;padding:9px 15px;font:800 12.5px Manrope;color:var(--purple);cursor:pointer} .tabs button[aria-selected="true"]{background:var(--purple);color:#fff;border-color:var(--purple)}
 .pane{display:none} .pane.on{display:block}
@@ -125,8 +125,9 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#about">About this boat</a> <span>· description, highlight, activities</span></li>
       <li><a href="#specs">Specifications</a> <span>· 7 tabs, all in the DOM</span></li>
       <li><a href="#media">Deck layout and 3D tour</a> <span>· only where present</span></li>
+      <li><a href="#nautix">NautiX range calculator</a> <span>· speed and fuel in, range out</span></li>
       <li><a href="#waylo">Ask Waylo</a> <span>· used at median 6 min</span></li>
-      <li><a href="#value">Price and value</a> <span>· factors, NautiX, warranty, tax</span></li>
+      <li><a href="#value">Price and value</a> <span>· factors, price history, warranty, tax</span></li>
       <li><a href="#financing">Financing and insurance</a> <span>· calculator, prequalify, insurance</span></li>
       <li><a href="#seller">Seller</a> <span>· about, offices, response</span></li>
       <li><a href="#events">Events</a> <span>· only where present</span></li>
@@ -202,6 +203,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <a href="#about" data-sec="about">Overview</a>
     <a href="#specs" data-sec="specs">Specs</a>
     <a href="#media" data-sec="media">Media</a>
+    <a href="#nautix" data-sec="nautix">NautiX</a>
     <a href="#value" data-sec="value">Value</a>
     <a href="#financing" data-sec="financing">Financing</a>
     <a href="#seller" data-sec="seller">Seller</a>
@@ -260,8 +262,27 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     </div>
   </section>
 
+  <section class="blk" id="nautix">
+    <span class="n top"><b>10</b>NautiX range calculator, its own module after the walk through. Speed and fuel on board in, range and hours out, from the manufacturer consumption curve with a 10% reserve. Range is never shown without its basis.</span>
+    <span class="eyebrow">NautiX</span>
+    <h2>Azimut 72 Fly Range Calculator</h2>
+    <p class="sub">NautiX Range Finder for <a href="/brands/azimut-yachts-for-sale/72-fly/">Azimut 72 Fly</a> powered by YachtWay. Figures from the manufacturer curve for twin MAN V12 1400, 10% reserve held back.</p>
+    <div class="calc">
+      <div class="card">
+        <label for="n-speed">Cruising speed <span id="n-speed-v" style="color:var(--ink)">27 kn</span></label><input id="n-speed" type="range" min="8" max="32" value="27" style="padding:0">
+        <label for="n-fuel">Fuel on board <span id="n-fuel-v" style="color:var(--ink)">100%</span></label><input id="n-fuel" type="range" min="10" max="100" value="100" style="padding:0">
+        <p class="sub" style="font-size:13px;margin:14px 0 0">Tank 4,800 L · 1,268 gal. Max range indicator shows how far you can go with the current fuel at the chosen speed.</p>
+      </div>
+      <div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start">
+        <div><div class="out" id="n-range">320 nm<small>range at this speed</small></div></div>
+        <div><div class="out" id="n-hours">11.9 h<small>hours underway</small></div></div>
+        <div class="kv" style="grid-column:span 2;margin-top:0"><div><b>Fuel burn</b><span id="n-burn">365 L/h · 96 gal/h</span></div><div><b>Usable fuel</b><span id="n-usable">4,320 L</span></div><div><b>Miami to Bimini</b><span id="n-trip">50 nm · 1.9 h</span></div><div><b>Basis</b><span>Manufacturer curve</span></div></div>
+      </div>
+    </div>
+  </section>
+
   <section class="blk" id="waylo">
-    <span class="n top"><b>10</b>Ask Waylo after the specs. Buyers who use it ask about 5 questions at median 6.1 min into the visit. 5 questions a day unlogged, 20 logged, then a prompt to contact the dealer.</span>
+    <span class="n top"><b>11</b>Ask Waylo after the specs. Buyers who use it ask about 5 questions at median 6.1 min into the visit. 5 questions a day unlogged, 20 logged, then a prompt to contact the dealer.</span>
     <span class="eyebrow">Ask AI</span>
     <h2>Ask Waylo About This Boat</h2>
     <div class="waylo">
@@ -272,7 +293,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="value">
-    <span class="n top"><b>11</b>Price and value. Value factors, NautiX range, warranty, tax and duty in one place. Merges four separate modules from the 5 Aug spec. On a price hidden listing the factors show without the price.</span>
+    <span class="n top"><b>12</b>Price and value. Value factors, price history, warranty, tax and duty in one place. Merges three separate modules from the 5 Aug spec. On a price hidden listing the factors show without the price.</span>
     <span class="eyebrow">Is the price fair</span>
     <h2>2022 Azimut 72 Fly Price and Value</h2>
     <p class="sub">Several factors determine the value of a yacht like this 2022 Azimut 72 Fly listed by Gulf Stream Yacht Sales.</p>
@@ -284,12 +305,11 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <div class="vc"><b><span class="material-symbols-outlined">trending_down</span>Price history</b><p>Listed at $2,250,000 on 2 June 2026. Reduced to $2,150,000 on 14 August 2026.</p></div>
       <div class="vc"><b><span class="material-symbols-outlined">public</span>Other market factors</b><p>Seasonal demand, available inventory and vessel location also move the asking price.</p></div>
     </div>
-    <div class="range"><div><b>NautiX Range Finder for Azimut 72 Fly</b><p>How far this hull goes on a tank at your cruising speed, from the manufacturer curve.</p></div><button class="btn" type="button" data-say="NautiX opens with this hull's fuel curve"><span class="material-symbols-outlined">explore</span>Open range finder</button></div>
     <div class="tax"><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">check</span>US duty paid</span><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">receipt_long</span>US tax not paid</span><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">verified_user</span>Engine warranty to Mar 2027</span></div>
   </section>
 
   <section class="blk" id="financing">
-    <span class="n top"><b>12</b>Financing and insurance. Loan calculator, Get pre-qualified and insurance estimate together. 34 EasyFund entries came from the listing against 118 from the header, so the calculator sits after value, not above the specs. Hidden under $50,000, over 30 years old, PWC, CAD or AUD.</span>
+    <span class="n top"><b>13</b>Financing and insurance. Loan calculator, Get pre-qualified and insurance estimate together. 34 EasyFund entries came from the listing against 118 from the header, so the calculator sits after value, not above the specs. Hidden under $50,000, over 30 years old, PWC, CAD or AUD.</span>
     <span class="eyebrow">Can I afford it</span>
     <h2>Finance and Insure This Boat</h2>
     <div class="calc">
@@ -308,7 +328,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="seller">
-    <span class="n top"><b>13</b>Seller. About, offices, response rate and time. The contact form from the side block repeats here for buyers who arrive at the bottom. Dealer performance metrics from the April note go here, still open.</span>
+    <span class="n top"><b>14</b>Seller. About, offices, response rate and time. The contact form from the side block repeats here for buyers who arrive at the bottom. Dealer performance metrics from the April note go here, still open.</span>
     <span class="eyebrow">Who is selling</span>
     <h2>Seller</h2>
     <div class="sgrid">
@@ -327,7 +347,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="events">
-    <span class="n top"><b>14</b>Events. Live stream and in person event cards, only where a seller has added one. Live in 10 minutes turns the card into Join live. Runs on the listing page, never its own URL.</span>
+    <span class="n top"><b>15</b>Events. Live stream and in person event cards, only where a seller has added one. Live in 10 minutes turns the card into Join live. Runs on the listing page, never its own URL.</span>
     <span class="eyebrow">See it live</span>
     <h2>Events for This Boat</h2>
     <div class="egrid">
@@ -337,7 +357,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="similar">
-    <span class="n top"><b>15</b>See other. Banner to the model page, then other listings from the same seller only. No similar boats from other sellers: dealers do not accept competitor inventory on their listing. Only 15% of buyers buy the exact boat they inquired about, so the seller's own rail keeps them with the seller. Cards: one anchor, Year Make Model, whole card clickable.</span>
+    <span class="n top"><b>16</b>See other. Banner to the model page, then other listings from the same seller only. No similar boats from other sellers: dealers do not accept competitor inventory on their listing. Only 15% of buyers buy the exact boat they inquired about, so the seller's own rail keeps them with the seller. Cards: one anchor, Year Make Model, whole card clickable.</span>
     <span class="eyebrow">Keep looking</span>
     <h2>Other Gulf Stream Yacht Sales Listings</h2>
     <div class="banner"><div><a href="/brands/azimut-yachts-for-sale/72-fly/">See other Azimut 72 Fly for sale<span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a><p>Model page, every generation and every seller on one page</p></div><span class="badge">Model page</span></div>
@@ -353,7 +373,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="videos">
-    <span class="n top"><b>16</b>Videos and reviews, second to last. The Spotlight review of the model, then YouTube videos titled with the make and model, longer than four minutes, not from BoatTEST, YachtWorld, YATCO or Rightboat. Only where present.</span>
+    <span class="n top"><b>17</b>Videos and reviews, second to last. The Spotlight review of the model, then YouTube videos titled with the make and model, longer than four minutes, not from BoatTEST, YachtWorld, YATCO or Rightboat. Only where present.</span>
     <span class="eyebrow">YachtWay Spotlight</span>
     <h2>Azimut 72 Fly Videos and Reviews</h2>
     <ul class="rgrid">
@@ -364,12 +384,12 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="pdf">
-    <span class="n top"><b>17</b>Download PDF. Seller brochure, dealer details added when logged in. Zero downloads tracked since February, so it sits low.</span>
+    <span class="n top"><b>18</b>Download PDF. Seller brochure, dealer details added when logged in. Zero downloads tracked since February, so it sits low.</span>
     <div class="pdf"><div><h3 style="margin:0 0 4px;font-size:16px">Download the PDF for this 2022 Azimut 72 Fly</h3><p>To include dealer information, log in first.</p></div><button class="btn" type="button" data-say="Brochure PDF downloads"><span class="material-symbols-outlined">download</span>Download PDF</button></div>
   </section>
 
   <section class="blk" id="faq">
-    <span class="n top"><b>18</b>FAQ. One H3 per question, answers computed from the record. FAQPage schema only where the answers are visible and complete. Still an open decision whether listings carry a FAQ at all.</span>
+    <span class="n top"><b>19</b>FAQ. One H3 per question, answers computed from the record. FAQPage schema only where the answers are visible and complete. Still an open decision whether listings carry a FAQ at all.</span>
     <h2>Frequently Asked Questions</h2>
     <div class="faq">
       <details open><summary>Is this 2022 Azimut 72 Fly still available?<span class="material-symbols-outlined">expand_more</span></summary><p>Yes. The listing is active and the boat is available for viewing now in Miami, FL. Use Request info or call the seller to confirm before travelling.</p></details>
@@ -379,7 +399,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     </div>
   </section>
 
-  <p class="pillar" id="pillar"><span class="n in"><b>19</b>Contextual pillar link. All yachts for sale, noun from nounForm, destination by length.</span><br><a href="/yachts-for-sale/">All yachts for sale<span class="material-symbols-outlined" style="font-size:16px;vertical-align:-3px;margin-left:5px">arrow_forward</span></a></p>
+  <p class="pillar" id="pillar"><span class="n in"><b>20</b>Contextual pillar link. All yachts for sale, noun from nounForm, destination by length.</span><br><a href="/yachts-for-sale/">All yachts for sale<span class="material-symbols-outlined" style="font-size:16px;vertical-align:-3px;margin-left:5px">arrow_forward</span></a></p>
   </div>
 
       <aside class="side" id="contact" style="scroll-margin-top:76px">
@@ -423,9 +443,11 @@ document.querySelectorAll('[data-say]').forEach(el=>el.addEventListener('click',
 document.querySelectorAll('.lc-name,.rv-name,.fact a,.meta a,.crumb a,.banner a,.pillar a').forEach(a=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();flash('→ '+a.getAttribute('href'));}));
 document.querySelectorAll('#phone,#phone2').forEach(ph=>ph.addEventListener('click',()=>{ph.querySelector('span:last-child').textContent='+1 305 000 0000';}));
 document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected','false'));b.setAttribute('aria-selected','true');document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));document.getElementById('p-'+b.dataset.pane).classList.add('on');}));
-const ids=['overview','about','specs','media','value','financing','seller','similar'];function spy(){let a='overview';ids.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=90)a=id;});document.querySelectorAll('.jump a').forEach(l=>l.classList.toggle('active',l.dataset.sec===a));}addEventListener('scroll',spy,{passive:true});spy();
+const ids=['overview','about','specs','media','nautix','value','financing','seller','similar'];function spy(){let a='overview';ids.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=90)a=id;});document.querySelectorAll('.jump a').forEach(l=>l.classList.toggle('active',l.dataset.sec===a));}addEventListener('scroll',spy,{passive:true});spy();
 if(location.search.includes('notes=1'))document.body.classList.add('notes');const tn=document.getElementById('tNotes');tn.setAttribute('aria-pressed',document.body.classList.contains('notes'));tn.textContent=document.body.classList.contains('notes')?'On':'Off';tn.onclick=()=>{const on=document.body.classList.toggle('notes');tn.setAttribute('aria-pressed',on);tn.textContent=on?'On':'Off';};
 function calc(){const p=+document.getElementById('c-price').value||0,d=+document.getElementById('c-down').value||0,n=(+document.getElementById('c-term').value||20)*12,r=(+document.getElementById('c-rate').value||0)/1200;const P=p*(1-d/100);const m=r?P*r/(1-Math.pow(1+r,-n)):P/n;document.getElementById('c-out').firstChild.textContent='$'+Math.round(m).toLocaleString('en-US');}
 ['c-price','c-down','c-term','c-rate'].forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
+function nx(){const v=+document.getElementById('n-speed').value,f=+document.getElementById('n-fuel').value;const lph=30+0.46*v*v;const usable=4800*f/100*0.9;const h=usable/lph,r=h*v;document.getElementById('n-speed-v').textContent=v+' kn';document.getElementById('n-fuel-v').textContent=f+'%';document.getElementById('n-range').firstChild.textContent=Math.round(r).toLocaleString('en-US')+' nm';document.getElementById('n-hours').firstChild.textContent=h.toFixed(1)+' h';document.getElementById('n-burn').textContent=Math.round(lph)+' L/h · '+Math.round(lph/3.785)+' gal/h';document.getElementById('n-usable').textContent=Math.round(usable).toLocaleString('en-US')+' L';document.getElementById('n-trip').textContent='50 nm · '+(50/v).toFixed(1)+' h';}
+['n-speed','n-fuel'].forEach(id=>document.getElementById(id).addEventListener('input',nx));nx();
 </script>
 </body></html>
