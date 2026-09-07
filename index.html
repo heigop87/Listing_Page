@@ -103,10 +103,10 @@ footer.site{background:#fff;border-top:1px solid rgba(4,0,17,.08);margin-top:cla
 .basebar .pr{flex:1;min-width:0} .basebar .pr b{display:block;font:800 16px Manrope;color:var(--ink);white-space:nowrap} .basebar .pr small{display:block;font:600 11.5px Manrope;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .basebar .btn{width:auto;padding:11px 14px;font-size:13px}
 /* annotations */
 .n{display:none;position:absolute;z-index:5;background:var(--notebg);color:#fff;border-radius:10px;padding:7px 10px 7px 8px;font:600 12px/1.4 Manrope;max-width:340px;box-shadow:0 12px 28px -10px rgba(0,0,0,.5)} .n b{display:inline-block;background:#c9a3ff;color:var(--notebg);border-radius:6px;padding:1px 6px;font:800 11px Manrope;margin-right:6px;vertical-align:1px}
-body.notes .n{display:block} .n.top{top:-10px;right:0} .n.in{position:static;display:none;margin:0 0 12px} body.notes .n.in{display:inline-block}
+body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 0 14px} body.notes .n.top,body.notes .n.in{display:inline-block}
 .notesbar{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;gap:6px;align-items:center;background:var(--notebg);color:#fff;border-radius:9999px;padding:8px 8px 8px 14px;font:700 13px Manrope;box-shadow:0 12px 28px -10px rgba(0,0,0,.5)} .notesbar button{border:none;border-radius:9999px;padding:7px 12px;font:800 12px Manrope;cursor:pointer;background:#fff;color:var(--purple)} .notesbar button[aria-pressed="true"]{background:#c9a3ff;color:var(--notebg)}
 .order{background:var(--notebg);color:#fff;border-radius:20px;padding:20px 22px;margin-top:22px;display:none} body.notes .order{display:block} .order h3{color:#fff;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px} .order ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:32px;font:600 13px/1.6 Manrope} .order li a{color:#fff;text-decoration:none} .order li span{color:#c9a3ff} .order .m{margin-top:12px;font:600 12px Manrope;color:#c9a3ff}
-@media (max-width:900px){nav.main{display:none} .two{grid-template-columns:1fr} .side{position:static} .side .card.desk{display:none} .gal{grid-template-columns:1fr 1fr;grid-template-rows:180px 110px} .gal .t.cover{grid-row:1;grid-column:1/3} .gal .t:nth-child(n+4){display:none} .facts{grid-template-columns:repeat(2,1fr)} .fact.price{grid-column:span 2} ul.lgrid{grid-template-columns:repeat(2,1fr)} ul.rgrid{grid-template-columns:1fr} .cols,.fcols{grid-template-columns:1fr 1fr} .media,.calc,.sgrid,.waylo{grid-template-columns:1fr} .waylo .sug,.waylo .lim{grid-column:span 1} .basebar{display:flex} body{padding-bottom:78px} .notesbar{bottom:86px} .order ol{columns:1} .jump .qa{display:none}}
+@media (max-width:900px){nav.main{display:none} .two{grid-template-columns:1fr} .side{position:static;margin-top:16px} .gal{grid-template-columns:1fr 1fr;grid-template-rows:180px 110px} .gal .t.cover{grid-row:1;grid-column:1/3} .gal .t:nth-child(n+4){display:none} .facts{grid-template-columns:repeat(2,1fr)} .fact.price{grid-column:span 2} ul.lgrid{grid-template-columns:repeat(2,1fr)} ul.rgrid{grid-template-columns:1fr} .cols,.fcols{grid-template-columns:1fr 1fr} .media,.calc,.sgrid,.waylo{grid-template-columns:1fr} .waylo .sug,.waylo .lim{grid-column:span 1} .basebar{display:flex} body{padding-bottom:78px} .notesbar{bottom:86px} .order ol{columns:1} .jump .qa{display:none}}
 @media (max-width:560px){ul.lgrid{grid-template-columns:1fr} .n{max-width:260px}}
 </style></head>
 <body class="notes">
@@ -157,7 +157,7 @@ body.notes .n{display:block} .n.top{top:-10px;right:0} .n.in{position:static;dis
           <div class="t cover">72<span class="lab"><span class="material-symbols-outlined">photo_camera</span>42 photos</span></div>
           <div class="t">▶<span class="lab"><span class="material-symbols-outlined">play_circle</span>Video</span></div>
           <div class="t">3D<span class="lab"><span class="material-symbols-outlined">view_in_ar</span>3D tour</span></div>
-          <div class="t"></div>
+          <div class="t">📷<span class="lab"><span class="material-symbols-outlined">photo_library</span>Photos</span></div>
           <div class="t">GA<span class="lab"><span class="material-symbols-outlined">map</span>Deck layout</span></div>
           <button class="all" type="button" data-say="Gallery opens with Videos, 3D Tour, Photos, Deck Layout tabs"><span class="material-symbols-outlined" style="font-size:17px">grid_view</span>See all media</button>
           <span class="n" style="top:12px;left:12px"><b>03</b>Gallery hero. Cover plus four tiles: video, 3D tour, photo, deck layout. Counts on the tiles. See all media opens the full gallery. Photo viewed first in every eye tracking study.</span>
@@ -196,7 +196,7 @@ body.notes .n{display:block} .n.top{top:-10px;right:0} .n.in{position:static;dis
           <div class="tour"><div class="slot">Earliest viewing <b>Tomorrow 10:00</b>, vessel local time</div><button class="btn" type="button" style="margin-top:10px" data-say="Tour modal: in person or video, one hour slots"><span class="material-symbols-outlined">event</span>Schedule a tour</button></div>
           <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get pre-qualified</a></div>
         </div>
-        <span class="n" style="top:-10px;right:-6px"><b>05</b>Contact block. Sticky side column on desktop, bottom bar on mobile. Phone, Request Info, WhatsApp, Schedule a tour, monthly estimate. Phone is tapped at median 37 s and the form at 3.8 min, so this block is in the first viewport on every device.</span>
+        <span class="n" style="top:-10px;right:0"><b>05</b>Contact block. Sticky side column on desktop, bottom bar on mobile. Phone, Request Info, WhatsApp, Schedule a tour, monthly estimate. Phone is tapped at median 37 s and the form at 3.8 min, so this block is in the first viewport on every device.</span>
       </aside>
     </div>
   </section>
