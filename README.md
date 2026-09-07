@@ -1,6 +1,6 @@
 # Listing_Page
 
-YachtWay listing page template. Module order, fact block and contact placement set from Amplitude data (project 748126, 9 Jun to 7 Sep 2026), four converting session replays and graded buyer research. Requirements: Notion, Listing pages row, child page Listing Page · Product Requirements (mirrored in `tasks/prd-listing-page.md`). Evidence: child page Listing Page · Information Hierarchy.
+YachtWay listing page template. Module order, fact block and contact placement set from Amplitude data (project 748126, 9 Jun to 7 Sep 2026), four converting session replays and graded buyer research. Requirements: Notion, Page Roadmap, Listing pages row. One page, facts only.
 
 Two stages, same markup:
 
