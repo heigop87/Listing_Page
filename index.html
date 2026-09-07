@@ -32,7 +32,7 @@ section.blk{position:relative;scroll-margin-top:62px;padding:clamp(40px,5vw,64px
 .badge{display:inline-flex;align-items:center;gap:5px;font:700 12px Manrope;color:var(--purple);background:var(--chip);border-radius:9999px;padding:4px 10px}
 /* two column layout */
 .two{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:clamp(20px,3vw,36px);align-items:start;margin-top:16px} .side{order:2}
-.maincol{min-width:0} .side{position:sticky;top:16px} .card.mob{display:none}
+.maincol{min-width:0} .side{position:sticky;top:64px} .card.mob{display:none}
 /* gallery */
 .gal{position:relative;display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:8px;border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line)}
 .gal .t{position:relative;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 22px Manrope} .gal .t.cover{grid-row:1/3;font-size:42px}
@@ -55,7 +55,7 @@ form.req{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px} for
 .fin{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px} .fin .est{font:800 16px Manrope;color:var(--ink)} .fin .est small{display:block;font:600 12px Manrope;color:var(--faint)}
 /* jump nav */
 .jump{position:sticky;top:0;z-index:20;background:rgba(248,249,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:22px 0 0}
-.jump .in{display:flex;align-items:center;gap:clamp(20px,3vw,38px);overflow-x:auto;scrollbar-width:none}
+.jump .in{display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);flex-wrap:wrap;row-gap:0}
 .jump a{flex:0 0 auto;padding:13px 0;font:700 13.5px Manrope;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
 .jump a:hover{color:var(--purple)} .jump a.active{color:var(--purple);border-bottom-color:var(--purple)}
 .qa{display:flex;gap:6px;flex:0 0 auto;flex-wrap:wrap} .jump .qa{margin-left:auto} .qa button{border:1px solid var(--line);background:#fff;border-radius:9999px;padding:8px 13px;font:800 12px Manrope;color:var(--purple);cursor:pointer;display:inline-flex;align-items:center;gap:5px} .qa .material-symbols-outlined{font-size:16px} .ident .qa{padding-top:6px}
@@ -128,7 +128,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#overview">Gallery hero</a> <span>· full width, 3D tour labelled, media counts</span></li>
       <li><a href="#overview">Fact block</a> <span>· price and condition only</span></li>
       <li><a href="#contact">Contact block</a> <span>· right column, sticky on desktop, bottom bar on mobile</span></li>
-      <li><a href="#about">Sticky section nav</a> <span>· Call, Request info, then Save, Share, Price alert</span></li>
+      <li><a href="#about">Sticky section nav</a> <span>· full width, Call, Request info, then Save, Share, Price alert</span></li>
       <li><a href="#about">About this boat</a> <span>· highlight, description, ownership strip, activities</span></li>
       <li><a href="#features">What this boat comes with</a> <span>· features grid, Show all</span></li>
       <li><a href="#specs">Specifications</a> <span>· 6 tabs, unit toggle on Measurements and Tanks</span></li>
@@ -157,9 +157,8 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
         <h1>2022 Azimut 72 Fly For Sale</h1>
         <div class="meta"><span class="status sale"><span class="material-symbols-outlined" style="font-size:14px">check_circle</span>For sale</span><span>Pre-owned</span><span class="dot">·</span><span data-m="22.1 m" data-us="72 ft">72 ft</span><span class="dot">·</span><span>410 h</span><span class="dot">·</span><a href="/miami-fl-yachts-for-sale/">Miami, FL</a><span class="dot">·</span><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">verified</span>Listed by Authorized Dealer</span></div>
       </div>
-      <div class="qa"><button type="button" id="save" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
     </div>
-    <span class="n in"><b>02</b>H1 pattern Year Brand Model For Sale. One meta line under it, the way Airbnb states guests, bedrooms and baths: status, condition, length, engine hours, location, dealer badge. Five facts, the Airbnb count. Year is in the H1 and the vessel name is in Specifications. Save, Share and Price alert sit here above the fold and repeat in the sticky section nav.</span>
+    <span class="n in"><b>02</b>H1 pattern Year Brand Model For Sale. One meta line under it, the way Airbnb states guests, bedrooms and baths: status, condition, length, engine hours, location, dealer badge. Five facts, the Airbnb count. Year is in the H1 and the vessel name is in Specifications. Save, Share and Price alert live in the full width sticky nav directly below, above the contact column.</span>
 
         <div class="gal">
           <div class="t cover">72<span class="lab"><span class="material-symbols-outlined">photo_camera</span>42 photos</span></div>
@@ -172,6 +171,20 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
         </div>
         <div class="counts"><span><span class="material-symbols-outlined">photo_camera</span>42 photos</span><span><span class="material-symbols-outlined">play_circle</span>1 video</span><span><span class="material-symbols-outlined">view_in_ar</span>3D tour</span><span><span class="material-symbols-outlined">map</span>2 deck layouts</span><span><span class="material-symbols-outlined">visibility</span>1,240 views</span></div>
   </section>
+
+  <nav class="jump" aria-label="Sections" style="position:sticky"><div class="in">
+    <a href="#overview" class="active" data-sec="overview">Gallery</a>
+    <a href="#about" data-sec="about">Overview</a>
+    <a href="#features" data-sec="features">Features</a>
+    <a href="#specs" data-sec="specs">Specs</a>
+    <a href="#media" data-sec="media">Media</a>
+    <a href="#nautix" data-sec="nautix">NautiX</a>
+    <a href="#value" data-sec="value">Value</a>
+    <a href="#financing" data-sec="financing">Financing</a>
+    <a href="#seller" data-sec="seller">Seller</a>
+    <a href="#similar" data-sec="similar">More from seller</a>
+    <div class="qa"><a class="btn p" href="#contact" style="width:auto;padding:7px 12px;font-size:12px;border-radius:9999px"><span class="material-symbols-outlined" style="font-size:16px">call</span>Call</a><a class="btn" href="#contact" style="width:auto;padding:7px 12px;font-size:12px;border-radius:9999px"><span class="material-symbols-outlined" style="font-size:16px">mail</span>Request info</a><button type="button" id="save" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
+  </div></nav>
 
   <div class="two">
       <aside class="side" id="contact" style="scroll-margin-top:76px">
@@ -220,20 +233,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
         </div>
         <span class="n in" style="margin-top:12px"><b>05</b>Contact block on mobile. The same component rendered directly under the fact block, plus the bottom bar with Call and Request info from the first viewport.</span>
 
-  <nav class="jump" aria-label="Sections" style="position:sticky"><div class="in">
-    <a href="#overview" class="active" data-sec="overview">Gallery</a>
-    <a href="#about" data-sec="about">Overview</a>
-    <a href="#features" data-sec="features">Features</a>
-    <a href="#specs" data-sec="specs">Specs</a>
-    <a href="#media" data-sec="media">Media</a>
-    <a href="#nautix" data-sec="nautix">NautiX</a>
-    <a href="#value" data-sec="value">Value</a>
-    <a href="#financing" data-sec="financing">Financing</a>
-    <a href="#seller" data-sec="seller">Seller</a>
-    <a href="#similar" data-sec="similar">More from seller</a>
-    <div class="qa"><a class="btn p" href="#contact" style="width:auto;padding:7px 12px;font-size:12px;border-radius:9999px"><span class="material-symbols-outlined" style="font-size:16px">call</span>Call</a><a class="btn" href="#contact" style="width:auto;padding:7px 12px;font-size:12px;border-radius:9999px"><span class="material-symbols-outlined" style="font-size:16px">mail</span>Request info</a><button type="button" id="save2" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
-  </div></nav>
-  <div style="position:relative;height:0"><span class="n" style="top:8px;left:0"><b>06</b>Sticky section nav appears on scroll. Section anchors on the left. On the right, Call and Request info first, then Save, Share and Price alert. Contact stays one tap away before sharing does.</span></div>
+  <div style="position:relative;height:0"><span class="n" style="top:8px;left:0"><b>06</b>Sticky section nav spans the full page width under the gallery and sticks on scroll. No horizontal scrolling, anchors wrap. Section anchors on the left. On the right, above the contact column, Call and Request info first, then Save, Share and Price alert.</span></div>
 
   <section class="blk about" id="about">
     <span class="n top"><b>07</b>About this boat. Seller highlight first, then the description, then the ownership strip: duty, tax, warranty, availability. Then activity chips. 700+ characters scores as complete. Show more after about 400 words.</span>
