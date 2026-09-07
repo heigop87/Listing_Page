@@ -29,8 +29,8 @@ section.blk{position:relative;scroll-margin-top:62px;padding:clamp(40px,5vw,64px
 .meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font:600 14px Manrope;color:var(--muted)} .meta a{text-decoration:none;border-bottom:1px solid var(--chipline)} .meta .dot{color:#cbc7d1}
 .badge{display:inline-flex;align-items:center;gap:5px;font:700 12px Manrope;color:var(--purple);background:var(--chip);border-radius:9999px;padding:4px 10px}
 /* two column layout */
-.two{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:clamp(20px,3vw,36px);align-items:start;margin-top:22px}
-.maincol{min-width:0} .side{position:sticky;top:76px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:clamp(20px,3vw,36px);align-items:start}
+.maincol{min-width:0} .side{position:sticky;top:16px;margin-top:clamp(28px,4vw,44px)} .card.mob{display:none}
 /* gallery */
 .gal{position:relative;display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:8px;border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line)}
 .gal .t{position:relative;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 22px Manrope} .gal .t.cover{grid-row:1/3;font-size:42px}
@@ -54,7 +54,7 @@ form.req{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:8px} for
 .jump .in{display:flex;align-items:center;gap:clamp(20px,3vw,38px);overflow-x:auto;scrollbar-width:none}
 .jump a{flex:0 0 auto;padding:13px 0;font:700 13.5px Manrope;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
 .jump a:hover{color:var(--purple)} .jump a.active{color:var(--purple);border-bottom-color:var(--purple)}
-.jump .qa{margin-left:auto;display:flex;gap:6px;flex:0 0 auto} .jump .qa button{border:1px solid var(--line);background:#fff;border-radius:9999px;padding:7px 12px;font:800 12px Manrope;color:var(--purple);cursor:pointer;display:inline-flex;align-items:center;gap:5px} .jump .qa .material-symbols-outlined{font-size:16px}
+.qa{display:flex;gap:6px;flex:0 0 auto;flex-wrap:wrap} .jump .qa{margin-left:auto} .qa button{border:1px solid var(--line);background:#fff;border-radius:9999px;padding:8px 13px;font:800 12px Manrope;color:var(--purple);cursor:pointer;display:inline-flex;align-items:center;gap:5px} .qa .material-symbols-outlined{font-size:16px} .ident .qa{padding-top:6px}
 /* about */
 .about p{font:500 16px Manrope;line-height:1.75;max-width:760px;margin:0 0 14px} .hl{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px;padding:14px 18px;margin:0 0 18px;max-width:760px} .hl b{font:800 12px Manrope;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:6px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .chips span{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:9999px;padding:8px 14px;font:800 12px Manrope;color:var(--purple)}
@@ -83,7 +83,7 @@ dl.spec div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;b
 .egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px} .ev{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px} .ev .k{display:inline-flex;align-items:center;gap:5px;font:800 11px Manrope;letter-spacing:.06em;text-transform:uppercase;color:var(--purple);background:var(--chip);border-radius:9999px;padding:4px 9px} .ev .k.live{background:#fde8e8;color:#b3261e} .ev h3{margin:10px 0 4px;font-size:16px} .ev p{margin:0 0 12px;font:600 13px Manrope;color:var(--muted)} .ev .btn{width:auto;padding:10px 14px;font-size:13px}
 /* similar */
 .banner{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin-bottom:22px} .banner a{font:800 15px Manrope;color:var(--purple);text-decoration:none;display:inline-flex;align-items:center;gap:6px} .banner p{margin:0;font:600 13px Manrope;color:var(--muted)}
-ul.lgrid,ul.rgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px} ul.rgrid{grid-template-columns:repeat(3,1fr)}
+ul.lgrid,ul.rgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px} ul.rgrid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
 .lc,.rv{position:relative;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:0 20px 40px -28px rgba(20,20,31,.11);overflow:hidden}
 .lc-img,.rv-img{display:block;aspect-ratio:16/10;margin:-14px -16px 12px;background:linear-gradient(135deg,#f3efff,#e8e2f7);display:flex;align-items:center;justify-content:center;color:#c9b8ef;font:800 26px Manrope}
 .lc-name,.rv-name{display:block;font:800 16px Manrope;letter-spacing:-.01em;color:var(--ink);text-decoration:none} .lc-name::after,.rv-name::after{content:"";position:absolute;inset:0} .lc-name:hover,.rv-name:hover{color:var(--purple)}
@@ -106,8 +106,8 @@ footer.site{background:#fff;border-top:1px solid rgba(4,0,17,.08);margin-top:cla
 body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 0 14px} body.notes .n.top,body.notes .n.in{display:inline-block}
 .notesbar{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;gap:6px;align-items:center;background:var(--notebg);color:#fff;border-radius:9999px;padding:8px 8px 8px 14px;font:700 13px Manrope;box-shadow:0 12px 28px -10px rgba(0,0,0,.5)} .notesbar button{border:none;border-radius:9999px;padding:7px 12px;font:800 12px Manrope;cursor:pointer;background:#fff;color:var(--purple)} .notesbar button[aria-pressed="true"]{background:#c9a3ff;color:var(--notebg)}
 .order{background:var(--notebg);color:#fff;border-radius:20px;padding:20px 22px;margin-top:22px;display:none} body.notes .order{display:block} .order h3{color:#fff;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px} .order ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:32px;font:600 13px/1.6 Manrope} .order li a{color:#fff;text-decoration:none} .order li span{color:#c9a3ff} .order .m{margin-top:12px;font:600 12px Manrope;color:#c9a3ff}
-@media (max-width:900px){nav.main{display:none} .two{grid-template-columns:1fr} .side{position:static;margin-top:16px} .gal{grid-template-columns:1fr 1fr;grid-template-rows:180px 110px} .gal .t.cover{grid-row:1;grid-column:1/3} .gal .t:nth-child(n+4){display:none} .facts{grid-template-columns:repeat(2,1fr)} .fact.price{grid-column:span 2} ul.lgrid{grid-template-columns:repeat(2,1fr)} ul.rgrid{grid-template-columns:1fr} .cols,.fcols{grid-template-columns:1fr 1fr} .media,.calc,.sgrid,.waylo{grid-template-columns:1fr} .waylo .sug,.waylo .lim{grid-column:span 1} .basebar{display:flex} body{padding-bottom:78px} .notesbar{bottom:86px} .order ol{columns:1} .jump .qa{display:none}}
-@media (max-width:560px){ul.lgrid{grid-template-columns:1fr} .n{max-width:260px}}
+@media (max-width:900px){nav.main{display:none} .two{grid-template-columns:1fr} .side{display:none} .card.mob{display:block} .gal{grid-template-columns:1fr 1fr;grid-template-rows:180px 110px} .gal .t.cover{grid-row:1;grid-column:1/3} .gal .t:nth-child(n+4){display:none} .facts{grid-template-columns:repeat(2,1fr)} .fact.price{grid-column:span 2} ul.rgrid{grid-template-columns:1fr} .cols,.fcols{grid-template-columns:1fr 1fr} .media,.calc,.sgrid,.waylo{grid-template-columns:1fr} .waylo .sug,.waylo .lim{grid-column:span 1} .basebar{display:flex} body{padding-bottom:78px} .notesbar{bottom:86px} .order ol{columns:1} .jump .qa{display:none}}
+@media (max-width:560px){.n{max-width:260px}}
 </style></head>
 <body class="notes">
 <header class="site"><div class="wrap bar"><a class="logo" href="/">YachtWay</a><nav class="main"><a href="/yachts-for-sale/">Yachts for Sale</a><a href="/places-to-go/">Places to Go</a><a href="/boat-loans/">Boat Loans</a><a href="/boat-insurance/">Boat Insurance</a></nav><div class="util"><span>EN</span><a href="/pro">Sell</a><a class="login" href="#">Log in or sign up</a></div></div></header>
@@ -121,7 +121,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#overview">Gallery hero</a> <span>· cover, 4 tiles, media counts</span></li>
       <li><a href="#overview">Fact block</a> <span>· price first, then length, year, location</span></li>
       <li><a href="#contact">Contact block</a> <span>· sticky side on desktop, bottom bar on mobile</span></li>
-      <li><a href="#about">Sticky section nav</a> <span>· on scroll, with Save, Share, Price alert</span></li>
+      <li><a href="#about">Sticky section nav</a> <span>· on scroll, Save, Share, Price alert repeat from the identity row</span></li>
       <li><a href="#about">About this boat</a> <span>· description, highlight, activities</span></li>
       <li><a href="#specs">Specifications</a> <span>· 7 tabs, all in the DOM</span></li>
       <li><a href="#media">Deck layout and 3D tour</a> <span>· only where present</span></li>
@@ -130,7 +130,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
       <li><a href="#financing">Financing and insurance</a> <span>· calculator, prequalify, insurance</span></li>
       <li><a href="#seller">Seller</a> <span>· about, offices, response</span></li>
       <li><a href="#events">Events</a> <span>· only where present</span></li>
-      <li><a href="#similar">See other</a> <span>· model banner, similar rail, seller rail</span></li>
+      <li><a href="#similar">See other</a> <span>· model banner, other listings from this seller only</span></li>
       <li><a href="#videos">Videos and reviews</a> <span>· only where present</span></li>
       <li><a href="#pdf">Download PDF</a></li>
       <li><a href="#faq">FAQ</a> <span>· only where answers are real</span></li>
@@ -139,6 +139,8 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <p class="m">Evidence: Amplitude 748126, 9 Jun to 7 Sep 2026. Phone tapped at median 37 s, Request Info at 3.8 min, Waylo at 6.1 min. 52% of listing opens are mobile. Notion: Listing Page · Information Hierarchy. All vessel facts on this page are prototype data.</p>
   </div>
 
+  <div class="two">
+  <div class="maincol">
   <section id="overview" style="scroll-margin-top:62px;position:relative">
     <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">›</span><a href="/brands/">Brands</a><span class="sep">›</span><a href="/brands/azimut-yachts-for-sale/">Azimut</a><span class="sep">›</span><a href="/brands/azimut-yachts-for-sale/72-fly/">Azimut 72 Fly</a><span class="sep">›</span><span class="here">2022 Azimut 72 Fly</span></nav>
     <span class="n in"><b>01</b>Breadcrumb. Home › Brands › Brand › Brand Model › Listing. Same string in BreadcrumbList. Server rendered.</span>
@@ -148,11 +150,10 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
         <h1>2022 Azimut 72 Fly For Sale</h1>
         <div class="meta"><span class="status sale"><span class="material-symbols-outlined" style="font-size:14px">check_circle</span>For sale</span><span>Pre-owned</span><span class="dot">·</span><a href="/miami-fl-yachts-for-sale/">Miami, FL</a><span class="dot">·</span><span>Vessel name <i>Bella Vita</i></span><span class="dot">·</span><span class="badge"><span class="material-symbols-outlined" style="font-size:14px">verified</span>Listed by Authorized Dealer</span></div>
       </div>
-      <span class="n in" style="margin:0"><b>02</b>H1 pattern Year Brand Model For Sale. Status label reads For sale, Sale pending or Sold. Condition, location and vessel name on one line. Location anchors to the location page.</span>
+      <div class="qa"><button type="button" id="save" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
     </div>
+    <span class="n in"><b>02</b>H1 pattern Year Brand Model For Sale. Status label reads For sale, Sale pending or Sold. Condition, location and vessel name on one line. Save, Share and Price alert sit here above the fold and repeat in the sticky section nav on scroll.</span>
 
-    <div class="two">
-      <div class="maincol">
         <div class="gal">
           <div class="t cover">72<span class="lab"><span class="material-symbols-outlined">photo_camera</span>42 photos</span></div>
           <div class="t">▶<span class="lab"><span class="material-symbols-outlined">play_circle</span>Video</span></div>
@@ -179,13 +180,10 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
           <div class="fact cond"><div class="l"><span class="material-symbols-outlined">flag</span>Flag and VAT</div><div class="v">US flag<small>Shown over 40 ft where the record holds it</small></div></div>
           <span class="n" style="bottom:-14px;right:0"><b>04</b>Fact block. Price first, then length, year, location, condition, engine hours, cabins, type, fuel, speed, availability. Order follows filter usage: length 30%, price 30%, location 15%, year 9%, cabins 4%. No row with an empty value. Price hidden reads Price on application.</span>
         </div>
-      </div>
-
-      <aside class="side" id="contact" style="scroll-margin-top:76px;position:relative">
-        <div class="card desk">
-          <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales <span class="material-symbols-outlined" style="font-size:16px;color:var(--accent)" title="Authorized Dealer">verified</span></div><div class="rs">Authorized Azimut dealer · Replies within 2 h · 98% response</div></div></div>
+<div class="card mob" style="margin-top:16px">
+          <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales <span class="material-symbols-outlined" style="font-size:16px;color:var(--accent)" title="Authorized Dealer">verified</span></div><div class="rs">Authorized Azimut dealer · Fort Lauderdale, FL</div></div></div>
           <div class="stack">
-            <button class="btn p" type="button" id="phone" data-say="Phone revealed, second tap calls"><span class="material-symbols-outlined">call</span><span>Show phone number</span></button>
+            <button class="btn p" type="button" id="phone2" data-say="Phone revealed, second tap calls"><span class="material-symbols-outlined">call</span><span>Show phone number</span></button>
             <a class="btn g" href="#" data-say="Opens WhatsApp with the availability message"><span class="material-symbols-outlined">chat</span>WhatsApp</a>
           </div>
           <form class="req" onsubmit="return false">
@@ -196,9 +194,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
           <div class="tour"><div class="slot">Earliest viewing <b>Tomorrow 10:00</b>, vessel local time</div><button class="btn" type="button" style="margin-top:10px" data-say="Tour modal: in person or video, one hour slots"><span class="material-symbols-outlined">event</span>Schedule a tour</button></div>
           <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get pre-qualified</a></div>
         </div>
-        <span class="n" style="top:-10px;right:0"><b>05</b>Contact block. Sticky side column on desktop, bottom bar on mobile. Phone, Request Info, WhatsApp, Schedule a tour, monthly estimate. Phone is tapped at median 37 s and the form at 3.8 min, so this block is in the first viewport on every device.</span>
-      </aside>
-    </div>
+        <span class="n in" style="margin-top:12px"><b>05</b>Contact block on mobile. The same component rendered directly under the fact block, plus the bottom bar with Call and Request info from the first viewport.</span>
   </section>
 
   <nav class="jump" aria-label="Sections" style="position:sticky"><div class="in">
@@ -209,8 +205,8 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
     <a href="#value" data-sec="value">Value</a>
     <a href="#financing" data-sec="financing">Financing</a>
     <a href="#seller" data-sec="seller">Seller</a>
-    <a href="#similar" data-sec="similar">Similar</a>
-    <div class="qa"><button type="button" id="save" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
+    <a href="#similar" data-sec="similar">More from seller</a>
+    <div class="qa"><button type="button" id="save2" data-say="Saved to My Favorites"><span class="material-symbols-outlined">favorite</span>Save</button><button type="button" data-say="Share: link copied"><span class="material-symbols-outlined">ios_share</span>Share</button><button type="button" data-say="Price alert set for this hull"><span class="material-symbols-outlined">notifications</span>Price alert</button></div>
   </div></nav>
   <div style="position:relative;height:0"><span class="n" style="top:8px;left:0"><b>06</b>Sticky section nav appears on scroll. Anchors for Gallery, Overview, Specs, Media, Value, Financing, Seller, Similar. Save, Share and Price alert ride along on the right. Anchors highlight as the reader passes each section.</span></div>
 
@@ -341,25 +337,19 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <section class="blk" id="similar">
-    <span class="n top"><b>15</b>See other. Banner to the model page first, then similar vessels: same model, then same type and size band, then price band. Other seller listings last. Only 15% of buyers buy the exact boat they inquired about. Cards: one anchor, Year Make Model, whole card clickable, seller plain text.</span>
+    <span class="n top"><b>15</b>See other. Banner to the model page, then other listings from the same seller only. No similar boats from other sellers: dealers do not accept competitor inventory on their listing. Only 15% of buyers buy the exact boat they inquired about, so the seller's own rail keeps them with the seller. Cards: one anchor, Year Make Model, whole card clickable.</span>
     <span class="eyebrow">Keep looking</span>
-    <h2>Similar Yachts for Sale</h2>
-    <div class="banner"><div><a href="/brands/azimut-yachts-for-sale/72-fly/">See other Azimut 72 Fly for sale<span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a><p>12 for sale on YachtWay, $1,740,000 to $2,400,000, every generation on one page</p></div><span class="badge">Model page</span></div>
+    <h2>Other Gulf Stream Yacht Sales Listings</h2>
+    <div class="banner"><div><a href="/brands/azimut-yachts-for-sale/72-fly/">See other Azimut 72 Fly for sale<span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span></a><p>Model page, every generation and every seller on one page</p></div><span class="badge">Model page</span></div>
     <ul class="lgrid">
-      <li class="lc"><span class="lc-tag">Same model</span><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/72-fly/2019-72-fly-k7m2p9xq/">2019 Azimut 72 Fly</a><span class="lc-price">$1,740,000</span><span class="lc-meta">Saint-Tropez, France · 620 h</span><span class="lc-seller">Riviera Yacht Center</span></li>
       <li class="lc"><span class="lc-tag">Same model</span><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/72-fly/2023-72-fly-k7m2p9xq/">2023 Azimut 72 Fly</a><span class="lc-price">$2,400,000</span><span class="lc-meta">Fort Lauderdale, FL · 180 h</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
-      <li class="lc"><span class="lc-tag">Same size and type</span><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/fly-68/2021-fly-68-k7m2p9xq/">2021 Azimut Fly 68</a><span class="lc-price">$2,380,000</span><span class="lc-meta">Cannes, France · 390 h</span><span class="lc-seller">Riviera Yacht Center</span></li>
-      <li class="lc"><span class="lc-tag">Same price band</span><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/sunseeker-yachts-for-sale/manhattan-68/2021-manhattan-68-k7m2p9xq/">2021 Sunseeker Manhattan 68</a><span class="lc-price">$2,190,000</span><span class="lc-meta">Palm Beach, FL · 450 h</span><span class="lc-seller">Ocean Edge Brokerage</span></li>
+      <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/grande-27m/2023-grande-27m-k7m2p9xq/">2023 Azimut Grande 27m</a><span class="lc-price">$5,900,000</span><span class="lc-meta">Fort Lauderdale, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
+      <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/s7/2024-s7-k7m2p9xq/">2024 Azimut S7</a><span class="lc-price">$3,450,000</span><span class="lc-meta">Miami, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
+      <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/55-fly/2022-55-fly-k7m2p9xq/">2022 Azimut 55 Fly</a><span class="lc-price">$1,290,000</span><span class="lc-meta">Miami, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
+      <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/benetti-yachts-for-sale/oasis-34m/2021-oasis-34m-k7m2p9xq/">2021 Benetti Oasis 34M</a><span class="lc-price">$14,500,000</span><span class="lc-meta">Fort Lauderdale, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
+      <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/verve-48/2023-verve-48-k7m2p9xq/">2023 Azimut Verve 48</a><span class="lc-price">$1,190,000</span><span class="lc-meta">Palm Beach, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
     </ul>
-    <div class="rail">
-      <h3>Other Gulf Stream Yacht Sales Listings</h3>
-      <ul class="lgrid">
-        <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/grande-27m/2023-grande-27m-k7m2p9xq/">2023 Azimut Grande 27m</a><span class="lc-price">$5,900,000</span><span class="lc-meta">Fort Lauderdale, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
-        <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/s7/2024-s7-k7m2p9xq/">2024 Azimut S7</a><span class="lc-price">$3,450,000</span><span class="lc-meta">Miami, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
-        <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/azimut-yachts-for-sale/55-fly/2022-55-fly-k7m2p9xq/">2022 Azimut 55 Fly</a><span class="lc-price">$1,290,000</span><span class="lc-meta">Miami, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
-        <li class="lc"><span class="lc-img" aria-hidden="true"></span><a class="lc-name" href="/brands/benetti-yachts-for-sale/oasis-34m/2021-oasis-34m-k7m2p9xq/">2021 Benetti Oasis 34M</a><span class="lc-price">$14,500,000</span><span class="lc-meta">Fort Lauderdale, FL</span><span class="lc-seller">Gulf Stream Yacht Sales</span></li>
-      </ul>
-    </div>
+    <p style="margin:18px 0 0;font:800 14px Manrope"><a href="/dealers/gulf-stream-yacht-sales/" style="color:var(--purple);text-decoration:none">All 31 Gulf Stream Yacht Sales listings<span class="material-symbols-outlined" style="font-size:16px;vertical-align:-3px;margin-left:5px">arrow_forward</span></a></p>
   </section>
 
   <section class="blk" id="videos">
@@ -390,6 +380,26 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
   </section>
 
   <p class="pillar" id="pillar"><span class="n in"><b>19</b>Contextual pillar link. All yachts for sale, noun from nounForm, destination by length.</span><br><a href="/yachts-for-sale/">All yachts for sale<span class="material-symbols-outlined" style="font-size:16px;vertical-align:-3px;margin-left:5px">arrow_forward</span></a></p>
+  </div>
+
+      <aside class="side" id="contact" style="scroll-margin-top:76px">
+        <div class="card desk">
+          <div class="seller"><span class="avatar">G</span><div><div class="nm">Gulf Stream Yacht Sales <span class="material-symbols-outlined" style="font-size:16px;color:var(--accent)" title="Authorized Dealer">verified</span></div><div class="rs">Authorized Azimut dealer · Fort Lauderdale, FL</div></div></div>
+          <div class="stack">
+            <button class="btn p" type="button" id="phone" data-say="Phone revealed, second tap calls"><span class="material-symbols-outlined">call</span><span>Show phone number</span></button>
+            <a class="btn g" href="#" data-say="Opens WhatsApp with the availability message"><span class="material-symbols-outlined">chat</span>WhatsApp</a>
+          </div>
+          <form class="req" onsubmit="return false">
+            <input placeholder="First name"><input placeholder="Last name"><input class="full" type="email" placeholder="Email"><input class="full" type="tel" placeholder="Phone"><textarea>Hi, I'd like to know if the 2022 Azimut 72 Fly listed on YachtWay for $2,150,000 is still available.</textarea>
+            <button class="btn p full" type="submit" data-say="Request sent to the seller"><span class="material-symbols-outlined">mail</span>Request info</button>
+            <p class="fine">Unlimited requests. The message pre-fills the availability question buyers ask first.</p>
+          </form>
+          <div class="tour"><div class="slot">Earliest viewing <b>Tomorrow 10:00</b>, vessel local time</div><button class="btn" type="button" style="margin-top:10px" data-say="Tour modal: in person or video, one hour slots"><span class="material-symbols-outlined">event</span>Schedule a tour</button></div>
+          <div class="fin"><div class="est">$14,900 / mo<small>10% down, 20 years, 7.49%</small></div><a class="btn" href="#financing" style="width:auto;padding:10px 14px;font-size:13px">Get pre-qualified</a></div>
+        </div>
+        <span class="n" style="top:-10px;right:0"><b>05</b>Contact block. Sticky side column on desktop, bottom bar on mobile. Phone, Request Info, WhatsApp, Schedule a tour, monthly estimate. Phone is tapped at median 37 s and the form at 3.8 min, so this block is in the first viewport on every device.</span>
+      </aside>
+  </div>
 
   <section class="prefoot"><h3>Popular Searches</h3><div class="cols">
     <div><p>Search by Boat Type</p><a href="/motor-yachts-for-sale/">Motor Yachts for Sale</a><a href="/flybridge-yachts-for-sale/">Flybridge Yachts for Sale</a><a href="/sailing-yachts-for-sale/">Sailing Yachts for Sale</a><a href="/superyachts-for-sale/">Superyachts for Sale</a><a href="/center-console-boats-for-sale/">Center Console Boats for Sale</a><a href="/sport-fishing-boats-for-sale/">Sport Fishing Boats for Sale</a></div>
@@ -411,7 +421,7 @@ body.notes .n{display:block} .n.top,.n.in{position:static;display:none;margin:0 
 const t=document.getElementById('toast');let tt;function flash(m){t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2400);}
 document.querySelectorAll('[data-say]').forEach(el=>el.addEventListener('click',e=>{if(el.tagName==='A'&&el.getAttribute('href')&&el.getAttribute('href')!=='#')return;e.preventDefault();flash(el.dataset.say);}));
 document.querySelectorAll('.lc-name,.rv-name,.fact a,.meta a,.crumb a,.banner a,.pillar a').forEach(a=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();flash('→ '+a.getAttribute('href'));}));
-const ph=document.getElementById('phone');ph.addEventListener('click',()=>{ph.querySelector('span:last-child').textContent='+1 305 000 0000';});
+document.querySelectorAll('#phone,#phone2').forEach(ph=>ph.addEventListener('click',()=>{ph.querySelector('span:last-child').textContent='+1 305 000 0000';}));
 document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected','false'));b.setAttribute('aria-selected','true');document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));document.getElementById('p-'+b.dataset.pane).classList.add('on');}));
 const ids=['overview','about','specs','media','value','financing','seller','similar'];function spy(){let a='overview';ids.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=90)a=id;});document.querySelectorAll('.jump a').forEach(l=>l.classList.toggle('active',l.dataset.sec===a));}addEventListener('scroll',spy,{passive:true});spy();
 if(location.search.includes('notes=1'))document.body.classList.add('notes');const tn=document.getElementById('tNotes');tn.setAttribute('aria-pressed',document.body.classList.contains('notes'));tn.textContent=document.body.classList.contains('notes')?'On':'Off';tn.onclick=()=>{const on=document.body.classList.toggle('notes');tn.setAttribute('aria-pressed',on);tn.textContent=on?'On':'Off';};
